@@ -1,3 +1,5 @@
+# Welcome!
+
 [Team Contract](https://docs.google.com/a/cornell.edu/document/d/1CoW08NZTIM5XFL9buUvyedzuWjra59PjsZewyJCq0u4/edit?usp=sharing)
 
 ## Labs
