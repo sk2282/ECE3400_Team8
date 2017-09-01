@@ -51,7 +51,7 @@ We then added a potentiometer to control the brightness of the LED by reading an
 We hooked up the circuit to an oscilloscope to see the frequency and duty cycles of the signal as the potentiometer changed. ([video](https://youtu.be/mmyfeO612Gs))
 
 ### 6. Potentiometer-controlled servo
-We then edited the code to control the servo with the potentiometer. (https://youtu.be/uiUPPhVC5jA)
+We then edited the code to control the servo with the potentiometer. ![video](https://youtu.be/uiUPPhVC5jA)
 ![pot-controlled servo](https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/Servo_setup.JPG)
 
 ### 7. Robot Demo
