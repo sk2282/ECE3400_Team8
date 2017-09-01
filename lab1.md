@@ -32,7 +32,7 @@ Before the lab, each of us downloaded [Arduino IDE](https://www.arduino.cc/en/Ma
 We read the documentation for the [Parallax Continuous Rotation Servo](http://www.parallax.com/downloads/continuous-rotation-servo-documentation) and the [Arduino Reference pages](http://arduino.cc/en/Reference/HomePage) for additional help.
 
 ### 2. Test the built-in blink sketch
-We tested the blink example code provided by the Arduino IDE (File > Examples > 1.Basics > Blink) to [test the internal LED](https://youtu.be/fLsoTSbzcxY)
+We tested the blink example code provided by the Arduino IDE (File > Examples > 1.Basics > Blink) to [test the internal LED](https://youtu.be/fLsoTSbzcxY).
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/blink.JPG?raw=true" height="300" />
 
