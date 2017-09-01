@@ -1,5 +1,3 @@
-[<- Home](https://sk2282.github.io/ECE3400_Team8/)
-
 # Lab 1: Microcontrollers
 
 ## Objective:
