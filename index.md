@@ -1,7 +1,6 @@
-<div style="background-color:#333;">
-  <a href="#home">Home</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+<div style="background-color:#333; overflow:hidden">
+  <a href="https://sk2282.github.io/ECE3400_Team8/">Home</a>
+  <a href="#team members">Team Members</a>
 </div>
 
 Team members: Meghan Chen, Serena Krech, Rohit Krishnakumar, Alice Song, Victoria Tu, Michael Yee
