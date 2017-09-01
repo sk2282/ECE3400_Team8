@@ -4,8 +4,8 @@
 The objective of this lab was to learn how to use Arduino Uno and Arduino IDE by implementing simple tasks. By the end we had a basic robot that could autonomously move back and forth and spin in place.
 
 ## Team Division:
-Meghan Chen, Serena Krech, Alice Song
-Rohit Krishnakumar, Victoria Tu, Michael Yee
+* Meghan Chen, Serena Krech, Alice Song
+* Rohit Krishnakumar, Victoria Tu, Michael Yee
 
 ## Materials used:
 * 1 Arduino Uno
