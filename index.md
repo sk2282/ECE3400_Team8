@@ -4,6 +4,6 @@ Team members: Meghan Chen, Serena Krech, Rohit Krishnakumar, Alice Song, Victori
 [Team Contract](https://docs.google.com/a/cornell.edu/document/d/1CoW08NZTIM5XFL9buUvyedzuWjra59PjsZewyJCq0u4/edit?usp=sharing)
 
 ## Labs
-[Lab 1](https://sk2282.github.io/ECE3400_Team8/lab1.md)
+[Lab 1](https://sk2282.github.io/ECE3400_Team8/lab1)
 
 
