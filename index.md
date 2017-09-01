@@ -1,3 +1,9 @@
+<div style="background-color:#333;">
+  <a href="#home">Home</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
 Team members: Meghan Chen, Serena Krech, Rohit Krishnakumar, Alice Song, Victoria Tu, Michael Yee
 
 [Team Contract](https://docs.google.com/a/cornell.edu/document/d/1CoW08NZTIM5XFL9buUvyedzuWjra59PjsZewyJCq0u4/edit?usp=sharing)
