@@ -1,4 +1,4 @@
-<h1 style="text-align:center">Meet the Team</h1>
+<p style="text-align:center"><h1>Meet the Team</h1></p>
 
 Name | Photo
 -----|------
