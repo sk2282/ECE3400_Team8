@@ -1,3 +1,5 @@
+# Meet the Team
+
 Name | Photo
 -----|------
 Meghan Chen | <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Members/meghan.png?raw=true" height="200" />
