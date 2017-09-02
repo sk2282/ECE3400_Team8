@@ -6,6 +6,8 @@ Serena Krech
 
 Rohit Krishnakumar
 
+<img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Members/rohit.png?raw=true" height="300" />
+
 Alice Song
 
 <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Members/AliceSong.png?raw=true" height="300" />
