@@ -14,7 +14,7 @@
     .topnav a {
         float: left;
         display: block;
-        color: rgba(242,242,242,0.8);
+        color: rgb(242,242,242);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -305,7 +305,7 @@ Full-Width Styles
   border-width: 1px;
 }
 
-#forkme_banner a:hover {
+#forkme_banner:hover {
     background-color: rgba(0,0,200,0.5);
     text-decoration: none;
     color: #ffff00;
