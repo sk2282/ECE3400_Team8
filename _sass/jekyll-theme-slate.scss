@@ -307,11 +307,7 @@ Full-Width Styles
 
 #header_wrap {
   background: #333333;
-  background: -moz-linear-gradient(top, #333333, #000013);
-  background: -webkit-linear-gradient(top, #333333, #000013);
-  background: -ms-linear-gradient(top, #333333, #000013);
-  background: -o-linear-gradient(top, #333333, #000013);
-  background: linear-gradient(top, #333333, #000013);
+  background-image: url("https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/starry_sky.jpg?raw=true");
 }
 
 #header_wrap .inner {
