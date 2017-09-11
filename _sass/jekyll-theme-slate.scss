@@ -14,7 +14,7 @@
     .topnav a {
         float: left;
         display: block;
-        color: rgba(242,242,242,0.2);
+        color: rgba(242,242,242,0.8);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -23,7 +23,7 @@
     
     /* Change the color of links on hover */
     .topnav a:hover {
-        background-color: rgba(0,0,200,0.2);
+        background-color: rgba(0,0,200,0.5);
         text-decoration: none;
         color: #ffff00;
     }
