@@ -52,8 +52,8 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-body, head {
-  cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur), auto;
+p {
+  cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -130,7 +130,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #5555ff;
+  color: #9999ff;
   text-shadow: none;
 
   transition: color 0.5s ease;
