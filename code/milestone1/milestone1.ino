@@ -76,7 +76,7 @@ void loop() {
       case 8:
         roboStop = 1;
         intsec = 0;
-        rightTurn(); 
+        leftTurn(); 
       break;
       default:
         roboStop = 0;
