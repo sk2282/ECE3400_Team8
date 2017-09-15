@@ -9,12 +9,12 @@ void leftTurn(){
 }
 
 void rightTurn(){
-  right.write(103);
-  left.write(103);
+  right.write(93);
+  left.write(93);
   delay(50);
   while(analogRead(leftWide)<=thresh || analogRead(rightWide)<=thresh){
-      right.write(103);
-      left.write(103);
+      right.write(93);
+      left.write(93);
   }
 }
 
