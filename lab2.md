@@ -71,8 +71,49 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Solderless breadboard
 
 ### Procedure:
-1. Read over FFT library documentation
-2. Assemble circuit with phototransistor
-3. Test frequency adjustments of treasure board
-4. Test IR sensors
-5.
+1. Read over FFT library
+2. Tested FFT output with square wave
+3. Assemble phototransistor circuit
+4. Test frequency of IR LED on treasure board
+5. Test phototransistor circuit output with treasure board IR learned
+6. Connect circuit to Arduino pins and use given FFT
+7. Plot output of FFT at different frequencies
+
+#### 1. Read Over FFT Library:
+* We read the documentation provided (refer to Audio Team)
+* The provided code used the ADC and because we are using the treasure boards at high frequencies like 17kHz, we left it like this, as the analogRead() would not be fast enough
+
+#### 2. Tested FFT Output with Square Wave:
+* We used the function generator to create a 7 kHz square wave
+* We connected the output of the function generator to an analog pin on the Arduino
+* We ran the fft code provided on the square wave data and collected the data
+* Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins.<show bad data>
+* Instead we had to use the analog-to-digital converter
+* We repeated this for 12 kHz and 17 kHz as well
+* We plotted the data below
+* This data seemed reasonable and showed us that the fft was working
+
+#### 3. Assemble Circuit with Phototransistor:
+* We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor
+* The phototransistor is being used to detect the IR LED on the treasure board so we used one that detects around 800 nm light (this is IR).
+* The phototransistor allows current to pass under light so the circuit is completed when an IR light shines upon it
+
+#### 4. Test Frequency of IR LED on Treasure Board:
+* We used a screwdriver to manipulate the potentiometer on the treasure board
+* We probed the treasure board and checked that the frequency output was actually changing with the potentiometer
+
+#### 5. Test Phototransistor Circuit Output with Treasure Board IR LED:
+* Using the oscilloscope we set the treasure board LED to 7 kHz
+* We held the treasure board IR near the phototransistor
+* We probed the circuit with the oscilloscope to [view the output](https://youtu.be/PQ-ewypb3p8)
+
+#### 6. Connect Circuit to Arduino Pins and Use Given FFT Code:
+* We connected the phototransistor circuit to the Arduino using analog pins
+* We put a 300Ω resistor in the circuit to protect the Arduino pin
+* We held the treasure board IR (still at 7 kHz) near the phototransistor
+* We ran the provided fft sample code on the data the Arduino collected
+
+#### 7. Plot Output of FFT for Treasure Board at Different Frequencies:
+* We repeated the previous step but set the treasure board IR to 12 kHz and 17 kHz as well
+* We collected the data outputted from the fft for each frequency and plotted it on the same graph:
+* This data shows discernible peaks for each frequency making us confident that our robot will be able to distinguish between the different treasures
