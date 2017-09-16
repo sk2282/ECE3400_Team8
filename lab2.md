@@ -95,6 +95,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 3. Assemble Circuit with Phototransistor:
 * We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Lab2_Phototransistor.jpg?raw=true" height="300" />
 * The phototransistor is being used to detect the IR LED on the treasure board so we used one that detects around 800 nm light (this is IR).
 * The phototransistor allows current to pass under light so the circuit is completed when an IR light shines upon it
 
@@ -105,7 +106,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 #### 5. Test Phototransistor Circuit Output with Treasure Board IR LED:
 * Using the oscilloscope we set the treasure board LED to 7 kHz
 * We held the treasure board IR near the phototransistor
-* We probed the circuit with the oscilloscope to [view the output](https://youtu.be/PQ-ewypb3p8)
+* We probed the circuit with the oscilloscope to [view the output](https://youtu.be/5V0mCAM8lDY)
 
 #### 6. Connect Circuit to Arduino Pins and Use Given FFT Code:
 * We connected the phototransistor circuit to the Arduino using analog pins
@@ -115,5 +116,5 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 7. Plot Output of FFT for Treasure Board at Different Frequencies:
 * We repeated the previous step but set the treasure board IR to 12 kHz and 17 kHz as well
-* We collected the data outputted from the fft for each frequency and plotted it on the same graph:
+* We collected the data outputted from the FFT for each frequency and plotted it on the same graph:
 * This data shows discernible peaks for each frequency making us confident that our robot will be able to distinguish between the different treasures
