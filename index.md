@@ -3,8 +3,11 @@
 [Team Contract](https://docs.google.com/a/cornell.edu/document/d/1CoW08NZTIM5XFL9buUvyedzuWjra59PjsZewyJCq0u4/edit?usp=sharing)
 
 ## Labs
-[Lab 1](https://sk2282.github.io/ECE3400_Team8/lab1)
+[Lab 1](https://sk2282.github.io/ECE3400_Team8/lab1)  
 [Lab 2](https://sk2282.github.io/ECE3400_Team8/lab2)
+
+## Milestones
+[Milestone 1](https://sk2282.github.io/ECE3400_Team8/milestone1)
 
 ## Meeting Minutes
 [31 August 2017](https://docs.google.com/a/cornell.edu/document/d/1dVXc5hVIiBzm_1vL9nOCoFMn-4mMeLHOMNEJl790Ix4/edit?usp=sharing)  

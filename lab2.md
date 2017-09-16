@@ -7,14 +7,30 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Audio: Serena Krech, Alice Song, Victoria Tu
 * Treasure: Meghan Chen, Rohit Krishnakumar, Michael Yee
 
-## Materials used:
-# Audio Team:
+## Audio Team:
+### Materials used:
 * Arduino Uno
 * Electret microphone
 * 1 µF capacitor
 * 300 Ω resistors
 * ~3 kΩ resistor
-# Treasure Team:
+
+### Procedure:
+1. Read over FFT library
+2. Tested an example using function generator at 660Hz and other frequencies
+3. Used single mic
+4. Tested with clapping
+5. Used a tone generator
+6. Build an amplifier (2)
+7. Switched to adafruit mic - built in amplification
+8. Tested mic at different distances
+
+#### 1. Read Over FFT Library:
+* We read [documentation](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) about the FFT library
+* We used fft_adc_serial as an example to see how the adc worked as well as fourier transforms
+
+## Treasure Team:
+### Materials used:
 * Arduino Uno
 * IR receiver
 * 300 Ω resistors
@@ -22,14 +38,8 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Treasure board
 * Solderless breadboard
 
-## Procedure:
-1. Install the Arduino IDE
-2. Test the built-in blink sketch
-3. Modify the blink sketch to blink an external LED
-4. Add a potentiometer to control brightness of the external LED
-5. Check the duty cycle on oscilloscope
-6. Use the potentiometer to control a continuous rotation servo motor
-7. Assemble a robot and program it to run autonomously
+
+
 
 ### 1. Install the Arduino IDE:
 Before the lab, each of us downloaded [Arduino IDE](https://www.arduino.cc/en/Main/Software) to our laptops.
