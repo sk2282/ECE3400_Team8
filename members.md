@@ -1,5 +1,7 @@
 <p style="text-align:center"><h1>Meet the Team</h1></p>
 
+[Team Contract](https://docs.google.com/a/cornell.edu/document/d/1CoW08NZTIM5XFL9buUvyedzuWjra59PjsZewyJCq0u4/edit?usp=sharing)
+
 Name | Photo
 :---:|:----:
 Meghan Chen | <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Members/meghan.png?raw=true" height="200" />
