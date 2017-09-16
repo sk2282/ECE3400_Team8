@@ -1,20 +1,26 @@
 # Lab 2: Analog Circuitry and FFTs
 
 ## Objective:
-The objective of this lab was to learn how to use Arduino Uno and Arduino IDE by implementing simple tasks. By the end we had a basic robot that could autonomously move back and forth and spin in place.
+The objective of this lab was to test and familiarize ourselves with the sensors and signal processing needed for our robot to detect the acoustic and optical signals. We split into two subteams, one that worked with a microphone circuit to detect a 660 Hz whistle and another to work with an IR sensor to detect a treasure blinking at different frequencies. Both subteams used the Arduino Open Music Lab FFT library to process the data given by the sensors and create a filter allowing us to analyze the data.
 
 ## Team Division:
-* Meghan Chen, Serena Krech, Alice Song
-* Rohit Krishnakumar, Victoria Tu, Michael Yee
+* Audio: Serena Krech, Alice Song, Victoria Tu
+* Treasure: Meghan Chen, Rohit Krishnakumar, Michael Yee
 
 ## Materials used:
-* 1 Arduino Uno
-* 1 USB A/B cable
-* 1 Continuous rotation servo
-* 1 blue LED (could be any visible color)
-* 1 Potentiometer
-* Several resistors (kΩ range)
-* 1 Solderless breadboard
+#Audio Team:
+* Arduino Uno
+* Electret microphone
+* 1 µF capacitor
+* 300 Ω resistors
+* ~3 kΩ resistor
+#Treasure Team:
+* Arduino Uno
+* IR receiver
+* 300 Ω resistors
+* 2 kΩ resistor
+* Treasure board
+* Solderless breadboard
 
 ## Procedure:
 1. Install the Arduino IDE

@@ -4,6 +4,7 @@
 
 ## Labs
 [Lab 1](https://sk2282.github.io/ECE3400_Team8/lab1)
+[Lab 2](https://sk2282.github.io/ECE3400_Team8/lab2)
 
 ## Meeting Minutes
 [31 August 2017](https://docs.google.com/a/cornell.edu/document/d/1dVXc5hVIiBzm_1vL9nOCoFMn-4mMeLHOMNEJl790Ix4/edit?usp=sharing)  
