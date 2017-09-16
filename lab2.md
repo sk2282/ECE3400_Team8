@@ -31,8 +31,15 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 2. Tested Example Code fft_adc_serial:
 * Initially, we ran the code by using just the function generator and Arduino without the microphone [code snippet]
-* fft_adc_serial saves a total of 256 data points because even though the for loop is  i<512, it increments i by 2 and sets the odd bins to zero. After all the data is taken, it is reordered and processed in the fft 
-* We set the function generator at 660Hz and 1.5Vpp with an offset of 750mV [function generator pic]
+* fft_adc_serial saves a total of 256 data points because even though the for loop is  i<512, it increments i by 2 and sets the odd bins to zero. After all the data is taken, it is reordered and processed in the fft
+* We set the function generator at 660Hz and 1.5Vpp with an offset of 750mV  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/signal_generator.JPG?raw=true" height="300" />
+* We used the oscilloscope to verify our implementation  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/amp4.bmp?raw=true" height="300" />
+* We plotted the data generated from the code in Excel
+* We repeated the process with different frequency values (multiples of 660Hz)  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_frequencyRange.PNG?raw=true" height="300" />
+* The plot illustrates reasonable results, disregarding the first few points
 
 ## Treasure Team:
 ### Materials used:
