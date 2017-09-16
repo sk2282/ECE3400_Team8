@@ -8,13 +8,13 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Treasure: Meghan Chen, Rohit Krishnakumar, Michael Yee
 
 ## Materials used:
-#Audio Team:
+# Audio Team:
 * Arduino Uno
 * Electret microphone
 * 1 µF capacitor
 * 300 Ω resistors
 * ~3 kΩ resistor
-#Treasure Team:
+# Treasure Team:
 * Arduino Uno
 * IR receiver
 * 300 Ω resistors
