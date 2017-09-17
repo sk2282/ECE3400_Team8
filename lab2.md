@@ -90,7 +90,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We used the function generator to create a 7 kHz square wave
 * We connected the output of the function generator to an analog pin on the Arduino
 * We ran the fft code provided on the square wave data and collected the data
-* Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins.<show bad data>  
+* Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins. This data can be seen below.  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/OpticalBadData.PNG?raw=true" height="300" />
 * Instead we had to use the analog-to-digital converter
 * We repeated this for 12 kHz and 17 kHz as well
@@ -98,7 +98,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * This data seemed reasonable and showed us that the fft was working
 
 #### 3. Assemble Circuit with Phototransistor:
-* We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor
+* We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Lab2_Phototransistor.jpg?raw=true" height="300" />
 * The phototransistor is being used to detect the IR LED on the treasure board so we used one that detects around 800 nm light (this is IR).
 * The phototransistor allows current to pass under light so the circuit is completed when an IR light shines upon it
