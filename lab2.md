@@ -28,7 +28,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We used fft_adc_serial as an example to see how the ADC worked as well as fourier transforms
 
 #### 2. Tested Example Code fft_adc_serial:
-* Initially, we ran the code by using just the function generator and Arduino without the microphone [code snippet]
+* Initially, we ran the code by using just the function generator and Arduino without the microphone 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/fft_example.png?raw=true" height="300" />
 * fft_adc_serial saves a total of 256 data points because even though the for loop is  i<512, it increments i by 2 and sets the odd bins to zero. After all the data is taken, it is reordered and processed in the fft
 * We set the function generator at 660Hz and 1.5Vpp with an offset of 750mV  
