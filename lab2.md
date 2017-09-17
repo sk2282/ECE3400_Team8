@@ -25,7 +25,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 1. Read Over FFT Library:
 * We read [documentation](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) about the FFT library
-* We used fft_adc_serial as an example to see how the adc worked as well as fourier transforms
+* We used fft_adc_serial as an example to see how the ADC worked as well as fourier transforms
 
 #### 2. Tested Example Code fft_adc_serial:
 * Initially, we ran the code by using just the function generator and Arduino without the microphone [code snippet]
@@ -38,11 +38,12 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We repeated the process with different frequency values (multiples of 660Hz)  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_frequencyRange.PNG?raw=true" height="300" />
 * The plot illustrates reasonable results, disregarding the first few points
+* The first few points were disregarded since they were the exact same value for all frequency values
 
 #### 3. Testing with Microphone #1:
 * We then built a circuit to connect the microphone to the Arduino
 * We tested the FFT with a single microphone without any amplifying
-* We used a tone generator app (Function Generator) to generate 660Hz for the microphone
+* We used a tone generator app [(Function Generator)](https://itunes.apple.com/us/app/audio-signal-generator-including-sweeps-noise/id768229610?mt=8) to generate 660Hz for the microphone
 * The results shown by the oscilloscope indicate a response, though the waveform amplitude was relatively small  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/oscilloscope.JPG?raw=true" height="300" />
 * We also tested the microphone by clapping to see if the oscilloscope output reflected the change in sound
@@ -50,11 +51,13 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 #### 4. Building Amplifier #1:
 * We first attempted to build a simple non-inverting amplifier for our microphone
 * We used resistance values of 1000Ω and 10kΩ in order to achieve a gain of 10
+* When then tested the output of the amplifier with an oscilloscope
+* Our results were surprising because we did not see a change in the output
 
 #### 5. Using New Microphone:
 * After attempting to build our own amplifier, we tried using [Adafruit’s Electret Microphone Amplifier with Adjustable Gain](https://www.adafruit.com/product/1063). From the [datasheet](https://cdn-shop.adafruit.com/datasheets/MAX4465-MAX4469.pdf) we learned that the board had a small trimmer potentiometer that we could adjust using a screwdriver. The potentiometer could adjust the gain from 25 times the original up to 125 times the original. The circuit that supports the op amp can be seen below.  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2MicAmplifier.PNG?raw=true" height="300" />
-* In the graph below, the dark light blue line represents the output from the function generator at 660 Hz. The green line represents the output from the Adafruit microphone. The peak in bin five is the 660Hz Tone. This measurement was taken when the tone was played very closely to the microphone. When played further away, the dark blue line, the peak in bin five was less obvious, but still there. For this reason, we may attempt building another amplifier or filter for the circuit later on.  
+* In the graph below, the dark light blue line represents the output from the function generator at 660 Hz. The green line represents the output from the Adafruit microphone. The peak in bin five is the 660Hz Tone. This measurement was taken when the tone was played very closely to the microphone. When played further away, the dark blue line, the peak in bin five was less obvious, but still there. For this reason, we may attempt building another amplifier and a low pass filter for the circuit later on. This will help the robot better reconize the starting 660 Hz tone.  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_zomedIn.PNG?raw=true" height="300" />
 
 #### 6. Testing Microphone at Different Distances:
@@ -81,7 +84,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 1. Read Over FFT Library:
 * We read the documentation provided (refer to Audio Team)
-* The provided code used the ADC and because we are using the treasure boards at high frequencies like 17kHz, we left it like this, as the analogRead() would not be fast enough
+* The provided code used the ADC and because we are using the treasure boards at high frequencies like 17kHz, we continued to use the ADC, as the analogRead() function would not be fast enough
 
 #### 2. Tested FFT Output with Square Wave:
 * We used the function generator to create a 7 kHz square wave
