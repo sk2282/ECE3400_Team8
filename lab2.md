@@ -90,7 +90,8 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We used the function generator to create a 7 kHz square wave
 * We connected the output of the function generator to an analog pin on the Arduino
 * We ran the fft code provided on the square wave data and collected the data
-* Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins.<show bad data>
+* Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins.<show bad data>  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/OpticalBadData.PNG?raw=true" height="300" />
 * Instead we had to use the analog-to-digital converter
 * We repeated this for 12 kHz and 17 kHz as well
 * We plotted the data below
