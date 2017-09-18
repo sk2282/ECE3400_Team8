@@ -20,7 +20,7 @@ The goal of this milestone is to implement line following and turning functional
 * When either wide sensor detected black, we detect an intersection
 
 ### Figure-8 Implementation:
-* We then implemented [turning](https://youtu.be/I4GyVfHf1CU)
+* We then implemented [turning](https://youtu.be/I4GyVfHf1CU)  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone1/turn_functions.png?raw=true" height="300" />
 * When the robot detected an intersection, we programmed it to turn until the line/inner sensors detected black again (turn is finished)
 * To implement the figure 8, we programmed the robot to turn left whenever it detects an intersection 3 times, go straight at the next intersection, and turn right when it detects an intersection 3 times. This sequence is in a loop, so the robot continues to navigate a [figure 8](https://youtu.be/NztFPuQvlM0)
