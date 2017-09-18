@@ -18,35 +18,11 @@ int thresh = 800;     // Threshold for black line detection
 
 int intsec = 0;       // Number of intersections detected
 
-int roboStop = 0;     // robot stops moving
-
 int detectCooldown = 0;
 
-void leftTurn(){
-  right.write(87);
-  left.write(87);
-  delay(50);
-  while(analogRead(0)<=thresh || analogRead(1)<=thresh){
-      right.write(87);
-      left.write(87);
-  }
-  left.write(100);
-  right.write(80);
-  //detect = 0;
-}
+int DETECT_COOLDOWN = 50;
 
-void rightTurn(){
-  right.write(103);
-  left.write(103);
-  delay(50);
-  while(analogRead(0)<=thresh || analogRead(1)<=thresh){
-      right.write(93);
-      left.write(93);
-  }
-  left.write(100);
-  right.write(80);
-  //detect = 0;
-}
+int roboStop = 0;     // robot stops moving
 
 void setup() {
   // put your setup code here, to run once:
@@ -67,62 +43,58 @@ void loop() {
       case 0:
         Serial.println("Case0");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
-        leftTurn();
+        goStraight();
       break;
       case 1:
         Serial.println("Case1");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
+        leftTurn();
       break;
       case 2:
         Serial.println("Case2");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
+        leftTurn();
       break;
       case 3:
         Serial.println("Case3");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
-        rightTurn();
+        leftTurn();
       break;
       case 4:
         Serial.println("Case4");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
-        rightTurn();
+        goStraight();
       break;
       case 5:
         Serial.println("Case5");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
         rightTurn();
       break;
       case 6:
         Serial.println("Case6");
         intsec++;
-        detectCooldown = 10;
+        detectCooldown = DETECT_COOLDOWN;
         roboStop = 0;
+        rightTurn();
       break;
       case 7:
         Serial.println("Case7");
-        intsec++;
-        detectCooldown = 10;
-        roboStop = 0;
-        leftTurn();
-      break;
-      case 8:
-        Serial.println("Case8");
-        roboStop = 1;
         intsec = 0;
-        detectCooldown = 10;
-        leftTurn(); 
+        detectCooldown = DETECT_COOLDOWN;
+        roboStop = 0;
+        rightTurn();
       break;
       default:
         Serial.println("Default");
@@ -134,8 +106,6 @@ void loop() {
       detectCooldown--;
       if (detectCooldown < 0) detectCooldown = 0;
     }
-    left.write(100);
-    right.write(80);
   
   if(lRead<=thresh && rRead<=thresh || roboStop){     // stop
     left.write(90);
@@ -156,5 +126,4 @@ void loop() {
     }
   }
 }
-
 
