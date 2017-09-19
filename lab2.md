@@ -58,6 +58,9 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 #### 5. Using New Microphone:
 * After attempting to build our own amplifier, we tried using [Adafruit’s Electret Microphone Amplifier with Adjustable Gain](https://www.adafruit.com/product/1063). From the [datasheet](https://cdn-shop.adafruit.com/datasheets/MAX4465-MAX4469.pdf) we learned that the board had a small trimmer potentiometer that we could adjust using a screwdriver. The potentiometer could adjust the gain from 25 times the original up to 125 times the original. The circuit that supports the op amp can be seen below.  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2MicAmplifier.PNG?raw=true" height="300" />
+* Below are screen-captures from the oscilloscope depicting the amplified waveform.
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Amplifiedwaveform.JPG?raw=true" height="300" />  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Amplifiedfft.JPG?raw=true" height="300" />
 * In the graph below, the dark light blue line represents the output from the function generator at 660 Hz. The green line represents the output from the Adafruit microphone. The peak in bin five is the 660Hz Tone. This measurement was taken when the tone was played very closely to the microphone. When played further away, the dark blue line, the peak in bin five was less obvious, but still there. For this reason, we may attempt building another amplifier and a low pass filter for the circuit later on. This will help the robot better reconize the starting 660 Hz tone.  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_zomedIn.PNG?raw=true" height="300" />
 
