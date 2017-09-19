@@ -249,6 +249,7 @@ pre {
 }
 
 code {
+  color: auto;
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
@@ -258,10 +259,6 @@ code {
 pre code {
   display: block;
   box-shadow: none;
-}
-
-.language-Arduino {
-  color: inherit;
 }
 
 blockquote {
