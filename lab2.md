@@ -132,6 +132,6 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 #### 8. Made Non-Inverting Amplifier Circuit
 * Since the raw phototransistor signal was weak when the treasure board was too far, we had to build an amplifier circuit.
 * We built a simple non-inverting op-amp circuit:
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Op-Amp_Non-Inverting_Amplifier.svg/450px-Op-Amp_Non-Inverting_Amplifier.svg.png" height="300" />
-* We tested the circuit with a gain of 5:
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Op-Amp_Non-Inverting_Amplifier.svg/450px-Op-Amp_Non-Inverting_Amplifier.svg.png" height="150" />
+* We tested the circuit with a gain of R2/R1 = 5:
 <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Lab2/opamp_fn_gen.bmp" height="300" />
