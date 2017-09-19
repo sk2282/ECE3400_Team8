@@ -1,7 +1,7 @@
 # Lab 2: Analog Circuitry and FFTs
 
 ## Objective:
-The objective of this lab was to test and familiarize ourselves with the sensors and signal processing needed for our robot to detect the acoustic and optical signals. We split into two subteams, one that worked with a microphone circuit to detect a 660 Hz whistle and another to work with an IR sensor to detect a treasure blinking at different frequencies. Both subteams used the Arduino Open Music Lab FFT library to process the data given by the sensors and create a filter allowing us to analyze the data.
+The objective of this lab was to test and familiarize ourselves with the sensors and signal processing needed for our robot to detect the acoustic and optical signals. We split into two subteams, one that worked with a microphone circuit to detect a 660 Hz whistle and another to work with an IR phototransistor to detect a treasure blinking at different frequencies. Both subteams used the Arduino Open Music Lab FFT library to process the data given by the sensors and create a filter allowing us to analyze the data.
 
 ## Team Division:
 * Audio: Serena Krech, Alice Song, Victoria Tu
@@ -131,6 +131,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 
 #### 8. Made Non-Inverting Amplifier Circuit
 * Since the raw phototransistor signal was weak when the treasure board was too far, we had to build an amplifier circuit.
-* We built a simple non-inverting op-amp circuit.
+* We built a simple non-inverting op-amp circuit:
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Op-Amp_Non-Inverting_Amplifier.svg/450px-Op-Amp_Non-Inverting_Amplifier.svg.png" height="300" />
 * We tested the circuit with a gain of 5:
 <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Lab2/opamp_fn_gen.bmp" height="300" />
