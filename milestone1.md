@@ -11,7 +11,7 @@ The goal of this milestone is to implement line following and turning functional
  * If right sensor went out of line, speed up right servos
  * Otherwise, servos rotate at same rate
  
- ```c_cpp
+ ```Arduino
  if(lRead<thresh){  // left side is out of line
       left.write(170);
       right.write(86);
@@ -36,7 +36,7 @@ The goal of this milestone is to implement line following and turning functional
 ### Figure-8 Implementation:
 * We then implemented [turning](https://youtu.be/I4GyVfHf1CU)  
 
-```c_cpp
+```Arduino
 void leftTurn(){
   while(analogRead(0)>=thresh || analogRead(1)>=thresh){
       right.write(77);
@@ -77,7 +77,7 @@ void goStraight(){
 
 * The code below shows the first few cases that we loop through while traversing the figure 8.  Notice we used a cooldown to ensure that the robot doesn't detect the same intersection more than once.
 
-```c_cpp
+```Arduino
 int detectCooldown = 0;
 int DETECT_COOLDOWN = 50;
 .
