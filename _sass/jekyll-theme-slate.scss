@@ -42,8 +42,8 @@
         background-color: inherit;
     }
 
-    .container a:hover, .dropdown:hover .dropbtn {
-        background-color: red;
+    .dropdown:hover .dropbtn {
+        background-color: rgba(242,242,242,0.2);
     }
 
     .dropdown-content {
