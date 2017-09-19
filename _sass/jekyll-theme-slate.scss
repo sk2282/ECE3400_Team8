@@ -29,8 +29,13 @@
     }
 
     .dropdown {
-    float: left;
-    overflow: hidden;
+        float: left;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.1);
+        overflow: hidden;
+        border-color: rgba(255,255,255,0.2);
+        border-style: solid;
+        border-width: 1px;
     }
 
     .dropdown .dropbtn {
