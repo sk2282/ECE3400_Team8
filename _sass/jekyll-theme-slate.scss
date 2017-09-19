@@ -230,7 +230,6 @@ p img {
 }
 
 pre, code {
-  color: #222;
   background-color: #fff;
 
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -251,6 +250,7 @@ code {
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-color:#ffff00;
 }
 
 pre code {
