@@ -127,3 +127,9 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We repeated the previous step but set the treasure board IR to 12 kHz and 17 kHz as well
 * We collected the data outputted from the FFT for each frequency and plotted it on the same graph:
 * This data shows discernible peaks for each frequency making us confident that our robot will be able to distinguish between the different treasures
+
+#### 8. Made Non-Inverting Amplifier Circuit
+* Since the raw phototransistor signal was weak when the treasure board was too far, we had to build an amplifier circuit.
+* We built a simple non-inverting op-amp circuit.
+* We tested the circuit with a gain of 5:
+<img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Lab2/opamp_fn_gen.bmp" height="300" />
