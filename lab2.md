@@ -14,6 +14,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * 1 µF capacitor
 * 300 Ω resistors
 * ~3 kΩ resistor
+* LM358AN op-amp integrated circuit
 
 ### Procedure:
 1. Read over FFT library
