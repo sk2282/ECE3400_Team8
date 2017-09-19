@@ -115,7 +115,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 #### 5. Test Phototransistor Circuit Output with Treasure Board IR LED:
 * Using the oscilloscope we set the treasure board LED to 7 kHz
 * We held the treasure board IR near the phototransistor
-* We probed the circuit with the oscilloscope to [view the output](https://youtu.be/5V0mCAM8lDY)
+* We probed the circuit with the oscilloscope to [view the output](https://youtu.be/5V0mCAM8lDY) as we vary the distance between the treasure board and the photoresistor.
 
 #### 6. Connect Circuit to Arduino Pins and Use Given FFT Code:
 * We connected the phototransistor circuit to the Arduino using analog pins
