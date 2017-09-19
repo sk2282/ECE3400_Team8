@@ -137,4 +137,5 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We tested the circuit with a gain of about R2/R1 = 1k/180 = 5.6
 
 <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Lab2/opamp_fn_gen.bmp" height="300" />
+
 The actual gain was 1.24/0.208 = 5.96
