@@ -232,6 +232,7 @@ p img {
 
 pre, code {
   background-color: #fff;
+  color: #222222;
 
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
@@ -242,16 +243,12 @@ pre, code {
 }
 
 pre {
-  color:#222222
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   overflow: auto;
 }
 
-.language-Arduino {}
-
 code {
-  color: black;
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
