@@ -35,7 +35,7 @@
             <a href="https://sk2282.github.io/ECE3400_Team8/index">Home</a>
             <a href="https://sk2282.github.io/ECE3400_Team8/members">Team Members</a>
             <div class="dropdown">
-              <a class="dropbtn">Labs</a>
+              <a onclick="myFunctionL()" class="dropbtn">Labs</a>
               <div class="dropdown-content">
                 <a style="color:rgba(0,0,0,0); background-color:rgba(0,0,0,0);">L</a>
                 <a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a>
@@ -67,7 +67,7 @@
     }
 
     // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
+    document.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
