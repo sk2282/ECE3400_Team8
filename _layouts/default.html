@@ -55,6 +55,7 @@
           </div>
         </header>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
@@ -65,9 +66,14 @@
     function myFunctionM() {
         document.getElementById("myDropdownM").classList.toggle("show");
     }
+    
+    // highlights the current page on the menu bar
+    $(a[href=document.URL]).addClass("current");
+      
+    window.alert("test");
 
     // Close the dropdown if the user clicks outside of it
-    document.onclick = function(e) {
+    window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -79,6 +85,7 @@
         }
       }
     }
+    window.alert("test2");
     </script>
 
     <!-- MAIN CONTENT -->
