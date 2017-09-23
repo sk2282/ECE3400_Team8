@@ -6,11 +6,11 @@ The goal of this milestone is to implement line following and turning functional
 ## Line Following:
 * The first step was to have our robot [follow a line of black tape](https://youtu.be/ZP58UEu52JQ)
 * We used 2 IR sensors to detect the black line by determining a threshold value
-* If a sensor went out of line, the corresponding servo would compensate by speeding up that side of the wheel so that the robot would remain on the line
- * If left sensor went out of line, speed up left servos
- * If right sensor went out of line, speed up right servos
- * Otherwise, servos rotate at same rate
- 
+* If a sensor went out of line, the corresponding servo would compensate by speeding up that side of the wheel so that the robot would remain on the line  
+ * If left sensor went out of line, speed up left servos  
+ * If right sensor went out of line, speed up right servos  
+ * Otherwise, servos rotate at same rate  
+
  ```Arduino
  if(lRead<thresh){  // left side is out of line
       left.write(170);
@@ -24,7 +24,7 @@ The goal of this milestone is to implement line following and turning functional
       left.write(100);
       right.write(80);
 ```
- 
+
 * We tested the robot on a [curved line](https://youtu.be/l7fE-NlZAs8) as well
 
 ## Figure-8:
