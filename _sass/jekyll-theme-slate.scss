@@ -64,7 +64,7 @@
         display: block;
     }
 
-    .dropdown-content a:hover {
+    .dropdown-content a:hover, .current {
         font-weight:bold;
         background-color: rgb(48,48,48);
     }
