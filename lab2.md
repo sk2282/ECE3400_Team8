@@ -32,17 +32,21 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Initially, we ran the code by using just the function generator and Arduino without the microphone  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/fft_example.png?raw=true" height="300" />
+
 * fft_adc_serial saves a total of 256 data points because even though the for loop is  i<512, it increments i by 2 and sets the odd bins to zero. After all the data is taken, it is reordered and processed in the fft
 * We set the function generator at 660Hz and 1.5Vpp with an offset of 750mV   
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/signal_generator.JPG?raw=true" height="300" />
+
 * We used the oscilloscope to verify our implementation  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/amp4.bmp?raw=true" height="300" />
+
 * We plotted the data generated from the code in Excel
 * We repeated the process with different frequency values (multiples of 660Hz)  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_frequencyRange.PNG?raw=true" height="300" />
+
 * The plot illustrates reasonable results, disregarding the first few points
 * The first few points were disregarded since they were the exact same value for all frequency values
 
@@ -53,6 +57,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * The results shown by the oscilloscope indicate a response, though the waveform amplitude was relatively small   
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/oscilloscope.jpg?raw=true" height="300" />
+
 * We also tested the microphone by clapping to see if the oscilloscope output reflected the change in sound
 
 #### 4. Building Amplifier #1:
@@ -65,11 +70,13 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * After attempting to build our own amplifier, we tried using [Adafruit’s Electret Microphone Amplifier with Adjustable Gain](https://www.adafruit.com/product/1063). From the [datasheet](https://cdn-shop.adafruit.com/datasheets/MAX4465-MAX4469.pdf) we learned that the board had a small trimmer potentiometer that we could adjust using a screwdriver. The potentiometer could adjust the gain from 25 times the original up to 125 times the original. The circuit that supports the op amp can be seen below.  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2MicAmplifier.PNG?raw=true" height="300" />
+
 * Below are screen-captures from the oscilloscope depicting the amplified waveform.  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Amplifiedwaveform.JPG?raw=true" height="300" />  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Amplifiedfft.JPG?raw=true" height="300" />
+
 * In the graph below, the dark light blue line represents the output from the function generator at 660 Hz. The green line represents the output from the Adafruit microphone. The peak in bin five is the 660Hz Tone. This measurement was taken when the tone was played very closely to the microphone. When played further away, the dark blue line, the peak in bin five was less obvious, but still there. For this reason, we may attempt building another amplifier and a low pass filter for the circuit later on. This will help the robot better reconize the starting 660 Hz tone.  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/lab2_zomedIn.PNG?raw=true" height="300" />
@@ -107,17 +114,20 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * Note: We tried using analogRead() as well, but this did not read fast enough to give discernible data between different frequency bins. This data can be seen below   
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/OpticalBadData.PNG?raw=true" height="300" />
+
 * Instead we had to use the analog-to-digital converter
 * We repeated this for 12 kHz and 17 kHz as well
 * The ADC data is plotted below   
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/OpticalGoodData.PNG?raw=true" height="300" />
+
 * This data seemed reasonable and showed us that the fft was working
 
 #### 3. Assemble Circuit with Phototransistor:
 * We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor  
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab2/Lab2_Phototransistor.jpg?raw=true" height="300" />
+
 * The phototransistor is being used to detect the IR LED on the treasure board so we used one that detects around 800 nm light (this is IR).
 * The phototransistor allows current to pass under light so the circuit is completed when an IR light shines upon it
 
@@ -146,6 +156,7 @@ The objective of this lab was to test and familiarize ourselves with the sensors
 * We built a simple non-inverting op-amp circuit:  
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Op-Amp_Non-Inverting_Amplifier.svg/450px-Op-Amp_Non-Inverting_Amplifier.svg.png" height="150" style="background-color:#ffffff" />
+
 * We tested the circuit with a gain of about R2/R1 = 1k/180 = 5.6  
 
 <img src="https://raw.githubusercontent.com/sk2282/ECE3400_Team8/master/pictures/Lab2/opamp_fn_gen.bmp" height="300" />
