@@ -10,8 +10,9 @@ The goal of this milestone is to implement treasure detection at three frequenci
     * Short range IR  
     * Regular IR  
     * Long range IR  
+    
     | IR Sensor| Distance | Arduino Reading |
-    | -------- | -------- | --------------- |
+    | -------- | :--------: | :---------------: |
     | Long Range| 2" | 1000+ |
     | Long Range | 6" |500 - 550 |
     | Long Range | 12" |370 - 380 |
