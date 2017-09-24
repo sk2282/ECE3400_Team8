@@ -34,4 +34,4 @@ The goal of this milestone is to implement treasure detection at three frequenci
     * [The robot should follow a straight line until the sensor detects a wall and stop when the wall is detected](https://youtu.be/_vbiJvubCpY)
 
 ## Final Robot of Milestone 2:
-
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.JPG?raw=true" height="300" />
