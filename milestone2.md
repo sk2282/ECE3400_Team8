@@ -10,6 +10,18 @@ The goal of this milestone is to implement treasure detection at three frequenci
     * Short range IR  
     * Regular IR  
     * Long range IR  
+    | IR Sensor| Distance | Arduino Reading |
+    | -------- | -------- | --------------- |
+    | Long Range| 2" | 1000+ |
+    | Long Range | 6" |500 - 550 |
+    | Long Range | 12" |370 - 380 |
+    | Regular | 2" | 620 - 630 |
+    | Regular | 6" | 310 - 330 |
+    | Regular | 12" | 170 - 190 |
+    | Short Range | 2" | 390 - 405 |
+    | Short Range |6" |130 - 170 |
+    | Short Range | 12" | 60 - 90 |
+
 * We then printed readings from the sensors at three different distances from a wall: 2, 6, and 12 inches  
     * We determined which IR sensors would work best for our robot, prioritizing the best range for the distances that our robot would interact with  
     * We decided to use two short range sensors on the sides and one regular sensor on the front  
