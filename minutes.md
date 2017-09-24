@@ -6,3 +6,5 @@
 [15 September 2017](https://docs.google.com/a/cornell.edu/document/d/1OeqtQIshS4gdi_WunxyUrcH27CYjRShQJg4Ecw0eNZ8/edit?usp=sharing)   
 [16 September 2017](https://docs.google.com/document/d/19gCUT5O-TwJ66vKWknkjVq6p_PORUAW8sYWhHZy82BU/edit?usp=sharing)   
 [18 September 2017](https://docs.google.com/document/d/1kIWIBmAdaLB9Nr3_8VhhWK_OknhrdcQKYoMpmKMa0pM/edit?usp=sharing)
+[22 September 2017](https://docs.google.com/a/cornell.edu/document/d/1eQ3Cl3-xMsV-1E5ckTSpjEgFfk9PYuPqYlijXSiSAlw/edit?usp=sharing)
+[23 September 2017](https://docs.google.com/document/d/14jsQFXDUww3ztQDiJklo58GNrOQrAAuZo_BPBRdKKbg/edit?usp=sharing)
