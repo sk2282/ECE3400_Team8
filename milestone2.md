@@ -8,6 +8,8 @@ The goal of this milestone is to implement treasure detection at three frequenci
 * We first tested the amplifier with the function generator. The results can be seen below  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" />  
 
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/FFTOutput.png?raw=true" height="300" /> 
+
 #### 7kHz From 1.5" Away:
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/7kHz_15inAway.bmp?raw=true" height="300" />  
 
