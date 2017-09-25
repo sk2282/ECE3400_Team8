@@ -8,8 +8,10 @@ The goal of this milestone is to implement treasure detection at three frequenci
 * To do this we used a [LM-358AN Op Amp IC](http://www.ti.com/lit/ds/symlink/lm158-n.pdf)
 * The schematic for this circuit is pictured below  
  <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram.png?raw=true" height="300" />  
+
 * We first tested the amplifier with the function generator. The results can be seen below  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" />  
+
 * When we first tested the circuit using the phototransistor we forgot to include the pull down resistor so it did not work properly  
 * Once we added the resistor, we were able to amplify the signal
 * The FFT data for this is pictured below
