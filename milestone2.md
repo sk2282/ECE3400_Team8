@@ -5,9 +5,9 @@ The goal of this milestone is to implement treasure detection at three frequenci
 
 ## Treasure Detection:
 * To implement treasure detection, we first built a non-inverting amplifier for the phototransistor. 
-* To do this we used a LM-358AN Op Amp IC
+* To do this we used a [LM-358AN Op Amp IC](http://www.ti.com/lit/ds/symlink/lm158-n.pdf)
 * The schematic for this circuit is pictured below  
- <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram.PNG?raw=true" height="300" />  
+ <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram.png?raw=true" height="300" />  
 * We first tested the amplifier with the function generator. The results can be seen below  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" />  
 * When we first tested the circuit using the phototransistor we forgot to include the pull down resistor so it did not work properly  
@@ -25,6 +25,52 @@ The goal of this milestone is to implement treasure detection at three frequenci
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/17kHz_2inAway.bmp?raw=true" height="300" />   
 
 * The amplifier gave us a gain of about 4  
+* Below is the code we used to identify the frequencies  
+* We checked the bins and compared their averages so if there was a maximum, the program would identify the frequency  
+
+```Arduino
+ while(1) {     // reduces jitter
+    cli();        // UDRE interrupt slows this way down on arduino1.0
+    for (int i = 0 ; i < 512 ; i += 2) {      // save 256 samples
+      while(!(ADCSRA & 0x10)); // wait for adc to be ready
+      ADCSRA = 0xf5;        // restart adc
+      byte m = ADCL;        // fetch adc data
+      byte j = ADCH;
+      int k = (j << 8) | m; // form into an int
+      k -= 0x0200;          // form into a signed int
+      k <<= 6;              // form into a 16b signed int
+      fft_input[i] = k;     // put real data into even bins
+      fft_input[i+1] = 0;   // set odd bins to 0
+    }
+    fft_window();           // window the data for better frequency response
+    fft_reorder();          // reorder the data before doing the fft
+    fft_run();              // process the data in the fft
+    fft_mag_log();          // take the output of the fft
+    sei();
+    /*
+    7kHz: [44,49]
+    12kHz: [78,82]
+    17kHz: [112,116]
+    */
+    int max_7k = max_in_range(44,49);
+    int max_12k = max_in_range(78,82);
+    int max_17k = max_in_range(112,116);
+    int RATIO_THRESH = 2.5;
+
+    if (max_7k/30 > RATIO_THRESH) {
+      Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
+    }
+    else if (max_12k/30 > RATIO_THRESH) {
+      Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
+    }
+    else if (max_17k/30 > RATIO_THRESH) {
+      Serial.println("17k     17k     17k     17k     17k     17k     17k");
+    }
+    else {
+      Serial.println("No Signal");
+    }   
+  }
+```
 
 [The final circuit with amplifier was able to detect each frequency from around 2 inches away](https://youtu.be/L_e-veB9L3M)
 
