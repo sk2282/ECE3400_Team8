@@ -18,6 +18,7 @@ The goal of this milestone is to implement treasure detection at three frequenci
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/17kHz_2inAway.bmp?raw=true" height="300" />   
 
 * The amplifier gave us a gain of about 4  
+
 [The final circuit with amplifier was able to detect each frequency from around 2 inches away](https://youtu.be/L_e-veB9L3M)
 
 
