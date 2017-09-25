@@ -79,9 +79,9 @@ The goal of this milestone is to implement treasure detection at three frequenci
 
 ## Wall Detection:
 * We first tested three IR sensors:  
-    * Short range IR  
-    * Regular IR  
-    * Long range IR  
+    * [Short range IR](http://www.sharp-world.com/products/device/lineup/data/pdf/datasheet/gp2y0a41sk_e.pdf)  
+    * [Regular IR](https://www.sparkfun.com/datasheets/Components/GP2Y0A21YK.pdf)  
+    * [Long range IR](https://www.sparkfun.com/datasheets/Sensors/Infrared/gp2y0a02yk_e.pdf)  
 * We connected the IR sensors to an anolog pin on the Arduino and used analogRead() to obtain the data from the sensors
 * We then printed readings from the sensors at three different distances from a wall: 2, 6, and 12 inches  
 	* The results from this test is displayed in a table below
