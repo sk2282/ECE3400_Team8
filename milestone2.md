@@ -14,7 +14,7 @@ The goal of this milestone is to implement treasure detection at three frequenci
 
 * When we first tested the circuit using the phototransistor we forgot to include the pull down resistor so it did not work properly  
 * Once we added the resistor, we were able to amplify the signal
-* The FFT data for this is pictured below
+* The FFT data for this is pictured below  
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/FFTOutput.PNG?raw=true" height="300" /> 
 
 #### 7kHz From 1.5" Away:
