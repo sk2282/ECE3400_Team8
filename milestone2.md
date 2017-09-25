@@ -1,10 +1,15 @@
 # Milestone 2: Treasure and Wall Detection
 
 ## Objective:
-The goal of this milestone is to implement treasure detection at three frequencies (7kHz, 12kHz, 17kHz) and wall detection to our robot.
+The goal of this milestone is to implement treasure detection at three frequencies (7kHz, 12kHz, 17kHz) and add wall detection to our robot by using IR sensors.
 
 ## Treasure Detection:
+* To implement treasure detection, we first built a non-inverting amplifier for the phototransistor  
+* We first tested the amplifier with the function generator. The results can be seen below  
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" />  
+* The amplifier gave us a gain of about 4  
 [The final circuit with amplifier was able to detect each frequency from around 2 inches away](https://youtu.be/L_e-veB9L3M)
+
 
 ## Wall Detection:
 * We first tested three IR sensors:  
@@ -34,4 +39,4 @@ The goal of this milestone is to implement treasure detection at three frequenci
     * [The robot should follow a straight line until the sensor detects a wall and stop when the wall is detected](https://youtu.be/_vbiJvubCpY)
 
 ## Final Robot of Milestone 2:
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.JPG?raw=true" height="300" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.jpg?raw=true" height="300" />
