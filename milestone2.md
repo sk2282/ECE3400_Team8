@@ -30,7 +30,7 @@ The goal of this milestone is to implement treasure detection at three frequenci
 * Below is the code we used to identify the frequencies  
 * We checked the bins and compared their averages so if there was a maximum, the program would identify the frequency  
 
-```Arduino
+```c
  while(1) {     // reduces jitter
     cli();        // UDRE interrupt slows this way down on arduino1.0
     for (int i = 0 ; i < 512 ; i += 2) {      // save 256 samples
