@@ -31,11 +31,6 @@ void setup() {
 }
 
 void loop() {
-//  int readLeft = analogRead(wallLeftSide);
-//  int readFront = analogRead(wallFront);
-
-  //Serial.println("Wall 1 sensor:");
-  //Serial.println(readLeft); // test wall sensors
   
   // go straight when threshold has not been reached
   while (analogRead(wallRightSide) <= threshSide) {
@@ -43,14 +38,7 @@ void loop() {
     int rRead = analogRead(rightLine);
     int lwRead = analogRead(leftWide);
     int rwRead = analogRead(rightWide);
-    Serial.println("left line sensor:");
-    Serial.println(lRead);
-    Serial.println("right line sensor:");
-    Serial.println(rRead);
-    Serial.println("left wide:");
-    Serial.println(lwRead);
-    Serial.println("right wide:");
-    Serial.println(rwRead);
+    
     if(lRead<=thresh && rRead<=thresh){     // stop
       left.write(90);
       right.write(90);
@@ -58,10 +46,10 @@ void loop() {
     else{
       if(lRead<thresh){  // left side is out of line
         left.write(170);
-        right.write(86);
+        right.write(89);
       }
       else if(rRead<thresh){   // right side is out of line
-        left.write(94);
+        left.write(91);
         right.write(10);
       }
       else{     // go straight
