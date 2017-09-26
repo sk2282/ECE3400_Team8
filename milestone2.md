@@ -104,5 +104,43 @@ The goal of this milestone is to implement treasure detection at three frequenci
     * To test the implementation, we mounted one short range sensor on the robot's right side  
     * [The robot should follow a straight line until the sensor detects a wall and stop when the wall is detected](https://youtu.be/_vbiJvubCpY)
 
+```c
+
+void loop() {
+  
+  // go straight when threshold has not been reached
+  while (analogRead(wallRightSide) <= threshSide) {
+    int lRead = analogRead(leftLine);
+    int rRead = analogRead(rightLine);
+    int lwRead = analogRead(leftWide);
+    int rwRead = analogRead(rightWide);
+    
+    if(lRead<=thresh && rRead<=thresh){     // stop
+      left.write(90);
+      right.write(90);
+    }
+    else{
+      if(lRead<thresh){  // left side is out of line
+        left.write(170);
+        right.write(89);
+      }
+      else if(rRead<thresh){   // right side is out of line
+        left.write(91);
+        right.write(10);
+      }
+      else{     // go straight
+        left.write(100);
+        right.write(80);
+      }
+    }
+  }
+  
+//   else stop when wall is detected
+  left.write(90);
+  right.write(90);
+  
+}
+```
+
 ## Final Robot of Milestone 2:
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.jpg?raw=true" height="300" />
