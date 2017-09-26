@@ -4,18 +4,21 @@
 The goal of this milestone is to implement treasure detection at three frequencies (7kHz, 12kHz, 17kHz) and add wall detection to our robot by using IR sensors.
 
 ## Treasure Detection:
-* To implement treasure detection, we first built a non-inverting amplifier for the phototransistor. 
+* To implement treasure detection, we first built a non-inverting amplifier for the phototransistor.
 * To do this we used a [LM-358AN Op Amp IC](http://www.ti.com/lit/ds/symlink/lm158-n.pdf)
 * The schematic for this circuit is pictured below  
+
  <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram.png?raw=true" height="300" />  
 
 * We first tested the amplifier with the function generator. The results can be seen below  
+
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" />  
 
 * When we first tested the circuit using the phototransistor we forgot to include the pull down resistor so it did not work properly  
 * Once we added the resistor, we were able to amplify the signal
 * The FFT data for this is pictured below  
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/FFTOutput.PNG?raw=true" height="300" /> 
+
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/FFTOutput.PNG?raw=true" height="300" />
 
 #### 7kHz From 1.5" Away:
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/7kHz_15inAway.bmp?raw=true" height="300" />  
@@ -99,7 +102,7 @@ The goal of this milestone is to implement treasure detection at three frequenci
     | Short Range | 2" | 390 - 405 |
     | Short Range |6" |130 - 170 |
     | Short Range | 12" | 60 - 90 |
-  
+
 * We wrote some code to test wall detection  
     * To test the implementation, we mounted one short range sensor on the robot's right side  
     * [The robot should follow a straight line until the sensor detects a wall and stop when the wall is detected](https://youtu.be/_vbiJvubCpY)
@@ -107,14 +110,14 @@ The goal of this milestone is to implement treasure detection at three frequenci
 ```c
 
 void loop() {
-  
+
   // go straight when threshold has not been reached
   while (analogRead(wallRightSide) <= threshSide) {
     int lRead = analogRead(leftLine);
     int rRead = analogRead(rightLine);
     int lwRead = analogRead(leftWide);
     int rwRead = analogRead(rightWide);
-    
+
     if(lRead<=thresh && rRead<=thresh){     // stop
       left.write(90);
       right.write(90);
@@ -134,11 +137,11 @@ void loop() {
       }
     }
   }
-  
+
 //   else stop when wall is detected
   left.write(90);
   right.write(90);
-  
+
 }
 ```
 
