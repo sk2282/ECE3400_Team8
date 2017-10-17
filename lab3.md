@@ -39,16 +39,16 @@ The objective of this lab is to work with an FPGA to begin the monitor display f
 * Set PIXEL_COLOR to the corresponding color in grid_array depending on what grid_coord_x and grid_coord_y are (00, 01, 10, 11) 
 
 ```v
-	 	//2-by-2 array of bits
-		reg [7:0] grid_array [1:0][1:0]; //[rows][columns]
-		reg [1:0] grid_coord_x; //Index x into the array
-		reg [1:0] grid_coord_y; //Index y into the array
-		// current highlighted square
-		 wire highlighted_x;
-		 wire highlighted_y;	 
-		//Switch input through GPIO pins
-		 assign highlighted_x = GPIO_0_D[33];
-		 assign highlighted_y = GPIO_0_D[31];
+//2-by-2 array of bits
+reg [7:0] grid_array [1:0][1:0]; //[rows][columns]
+reg [1:0] grid_coord_x; //Index x into the array
+reg [1:0] grid_coord_y; //Index y into the array
+// current highlighted square
+wire highlighted_x;
+wire highlighted_y;	 
+//Switch input through GPIO pins
+assign highlighted_x = GPIO_0_D[33];
+assign highlighted_y = GPIO_0_D[31];
 ```
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/BothGrids.png?raw=true" height="300" />
@@ -60,26 +60,26 @@ The objective of this lab is to work with an FPGA to begin the monitor display f
 * Use highlighted_x and highlighted_y to modify the colors in grid_array
 
 ```v
-		always @ (*) begin
-			if (highlighted_x==0 && highlighted_y==0) begin
-				grid_array[0][0]<=8'b111_000_00;
-				grid_array[0][1]<=8'b000_111_00;
-				grid_array[1][0]<=8'b000_111_00;
-				grid_array[1][1]<=8'b000_111_00;
-			end
-			if (highlighted_x==0 && highlighted_y==1) begin
-				grid_array[0][0]<=8'b000_111_00;
-				grid_array[0][1]<=8'b111_000_00;
-				grid_array[1][0]<=8'b000_111_00;
-				grid_array[1][1]<=8'b000_111_00;
-			end
-			if (highlighted_x==1 && highlighted_y==0) begin
-				// etc... not shown for sake of briefness
-			end
-			if (highlighted_x==1 && highlighted_y==1) begin
-				// etc
-			end
-		end
+always @ (*) begin
+	if (highlighted_x==0 && highlighted_y==0) begin
+		grid_array[0][0]<=8'b111_000_00;
+		grid_array[0][1]<=8'b000_111_00;
+		grid_array[1][0]<=8'b000_111_00;
+		grid_array[1][1]<=8'b000_111_00;
+	end
+	if (highlighted_x==0 && highlighted_y==1) begin
+		grid_array[0][0]<=8'b000_111_00;
+		grid_array[0][1]<=8'b111_000_00;
+		grid_array[1][0]<=8'b000_111_00;
+		grid_array[1][1]<=8'b000_111_00;
+	end
+	if (highlighted_x==1 && highlighted_y==0) begin
+		// etc... not shown for sake of briefness
+	end
+	if (highlighted_x==1 && highlighted_y==1) begin
+		// etc
+	end
+end
 ```
 
 * First tested this by manually changing values of highlighted_x and highlighted_y
@@ -173,42 +173,95 @@ For a more complicated waveform, we chose to make a 1kHz  triangle wave. To do t
 
 ```verilog
 // 1000 Hz square wave
-    localparam CLKDIVIDER_1k = 25000000/1000;
-
-    reg square_1k;
-	 reg [7:0] signal;
-	 assign GPIO_0_D[7:0] = signal;
-	 reg [15:0] counter;
-	 
-	 always @(posedge CLOCK_25) begin
-		if (counter == 0)
-			begin
-			counter <= CLKDIVIDER_1k - 1;
-			signal <= signal + 1;
-			end
-		else if (counter <= CLKDIVIDER_1k / 2)
-			begin
-			counter <= counter - 1;
-			signal <= signal - 1;
-			end
-		else
-			begin
-			counter <= counter - 1;
-			signal <= signal + 1;
-			end
-    end
+localparam CLKDIVIDER_1k = 25000000/1000;
+reg square_1k;
+reg [7:0] signal;
+assign GPIO_0_D[7:0] = signal;
+reg [15:0] counter;
+ 
+always @(posedge CLOCK_25) begin
+	if (counter == 0)
+	begin
+		counter <= CLKDIVIDER_1k - 1;
+		signal <= signal + 1;
+	end
+	else if (counter <= CLKDIVIDER_1k / 2)
+	begin
+		counter <= counter - 1;
+		signal <= signal - 1;
+	end
+	else
+	begin
+		counter <= counter - 1;
+		signal <= signal + 1;
+	end
+   end
 ```
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_triangle_wave.bmp?raw=true" height="300" />
 
+In the waveform, we noticed that the oscilloscope wasn't reading 1kHz. We were able to tell though that it was fine by looking at the time division on the bottom of the screen and seeing the length per period of the wave. We also noticed that we were getting a lot of noise in the waveform, and were not able to determine why.  
+
 The Digital to Analog Converter (DAC) we used has 8 inputs. Each of these correspond to a bit. The DAC takes these bits and creates an 8 bit analog signal, which is then output through one pin as a varying voltage.
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/DAC.jpg?raw=true" height="300" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/dac.jpg?raw=true" height="300" />
 
 This voltage is connected to the input to the audio jack, which  in turn makes the speakers play.
 
 #### 3. Turn on/off your sound with an enable signal
 
+The FPGA reads in the signal from the Arduino in the input pin GPIO_0_IN[0], polling every second.  If GPIO_0_IN[0] is HIGH, the start tone arpeggio plays.  
 
+To [test this functionality](https://youtu.be/X0OTrH7R2Bw), we repeatedly sent two-second signal pulses from digital pin 2, set apart by 5 seconds.  
+
+Below is the code we used to output the signal from the Arduino to the FPGA.
+
+```c
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(2, OUTPUT);
+  Serial.begin(9600);
+  digitalWrite(2,LOW);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  delay(5000);
+  Serial.println("done");
+  digitalWrite(2, HIGH);
+  delay(2000);
+  digitalWrite(2, LOW);
+  Serial.println("done signal off");
+}
+```
+
+Below is the section of the code for the FPGA that we needed to edit in order for the sound to play when it received the done signal.
+
+```verilog
+always @(posedge CLK_1s) begin
+	if (GPIO_0_IN[0] || (soundCount > 3'b0 && soundCount <= 3'd3)) begin
+		if (soundCount <= 3'd3) begin
+			soundCount <= soundCount + 1;
+		end
+		else begin
+			soundCount <= soundCount;
+		end
+	end	
+	else begin
+		soundCount <= 3'b0;
+	end
+ end
+```
 #### 4. Make a tune with at least three frequencies that plays when you receive a done signal from the Arduino
 
+We made an arpeggio by generating a sine wave in matlab and sampling it at different rates with different clock cycles (1000, 1250, and 1500 Hz) and [played each tone for one second each](https://youtu.be/WXv8SHkbqRc).  
+
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_sin_wave.bmp?raw=true" height="300" />
+
+The above wave form shows an inconsitency in the waveform that occurs in the same location in each cycle. Due to this the tone was not as clear. Since this problem was so consistent, we turned to our sine table to look for a possible cause. We then realized that while out sine table only had 8-bit values, it was ranged between 0 and 256. This meant that every time it went out of bounds, we were going to get a deiscrepancy. Once we fixed the few balues that were out of bounds we were able to play a clear sine wave and move on to generating multiple frequencies.  
+
+To generate the tones, we used a counter for each respective sampling frequency to traverse the sine table and produce the signal to the output.  
+
+We used another counter to keep track of the signal that was currently playing. This counter increments every second to change the sampling frequency and change the tone playing as a result. Once the counter reaches 4, we stop playing the tone.  
+
+The tones only begin playing when the board receives a signal from the Arduino.  
