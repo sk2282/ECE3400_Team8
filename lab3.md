@@ -166,7 +166,7 @@ end
 
 Above is the code we used to create the square wave. Every time a change was detected in the 1kHz clock, the output would be toggled so a square wave would be generated. Pictured below is our waveform. 
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_square_wave.BMP?raw=true" height="300" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_square_wave.bmp?raw=true" height="300" />
 
 #### 2. Generate a more complicated waveform and play sound using the 8-bit DAC
 For a more complicated waveform, we chose to make a 1kHz  triangle wave. To do this we set up an 8 bit output signal and started at 0. Then when we reached a peak, we decremented back to zero and started again. The code and waveform for this is pictured below. 
@@ -199,11 +199,11 @@ For a more complicated waveform, we chose to make a 1kHz  triangle wave. To do t
     end
 ```
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_triangle_wave.BMP?raw=true" height="300" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/1kHz_triangle_wave.bmp?raw=true" height="300" />
 
 The Digital to Analog Converter (DAC) we used has 8 inputs. Each of these correspond to a bit. The DAC takes these bits and creates an 8 bit analog signal, which is then output through one pin as a varying voltage.
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/DAC.JPG?raw=true" height="300" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab3/DAC.jpg?raw=true" height="300" />
 
 This voltage is connected to the input to the audio jack, which  in turn makes the speakers play.
 
