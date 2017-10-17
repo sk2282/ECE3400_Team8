@@ -552,14 +552,17 @@ module DE0_NANO(
 //	 end
 	 
 	 always @(posedge CLK_1s) begin
-		if (reset) begin
-			soundCount <= 3'b0;
+		if (GPIO_0_IN[0] || (soundCount > 3'b0 && soundCount <= 3'd3)) begin
+			if (soundCount <= 3'd3) begin
+				soundCount <= soundCount + 1;
+			end
+			else begin
+				soundCount <= soundCount;
+			end
 		end
-		else if (soundCount <= 3'd3) begin
-			soundCount <= soundCount + 1;
-		end
+		
 		else begin
-			soundCount <= soundCount;
+			soundCount <= 3'b0;
 		end
 	 end
 	 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO
-Mon Oct 16 20:08:00 2017
+Mon Oct 16 21:25:55 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 16 20:08:00 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 16 21:25:55 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DE0_NANO                                    ;
 ; Top-level Entity Name              ; DE0_NANO                                    ;
@@ -184,9 +184,9 @@ agreement for further details.
 ;                                             ;            ;
 ; Total combinational functions               ; 628        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 486        ;
-;     -- 3 input functions                    ; 54         ;
-;     -- <=2 input functions                  ; 88         ;
+;     -- 4 input functions                    ; 488        ;
+;     -- 3 input functions                    ; 53         ;
+;     -- <=2 input functions                  ; 87         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
 ;     -- normal mode                          ; 562        ;
@@ -202,7 +202,7 @@ agreement for further details.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; counter[1] ;
 ; Maximum fan-out                             ; 85         ;
-; Total fan-out                               ; 2685       ;
+; Total fan-out                               ; 2688       ;
 ; Average fan-out                             ; 2.76       ;
 +---------------------------------------------+------------+
 
@@ -222,8 +222,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+---------------------------+
 ; Register name                         ; Reason for Removal        ;
 +---------------------------------------+---------------------------+
-; counter_1250[0]                       ; Merged with counter_1s[0] ;
 ; counter_1k[0]                         ; Merged with counter_1s[0] ;
+; counter_1250[0]                       ; Merged with counter_1s[0] ;
 ; Total Number of Removed Registers = 2 ;                           ;
 +---------------------------------------+---------------------------+
 
@@ -290,9 +290,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     normal            ; 563                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 486                         ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 53                          ;
+;         4 data inputs ; 488                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
 ; Average LUT depth     ; 3.81                        ;
@@ -314,7 +314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Oct 16 20:07:47 2017
+    Info: Processing started: Mon Oct 16 21:25:43 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO -c DE0_NANO
 Warning (125092): Tcl Script File DE_NANO_SOPC.qip not found
     Info (125063): set_global_assignment -name QIP_FILE DE_NANO_SOPC.qip
@@ -326,6 +326,7 @@ Warning (10238): Verilog Module Declaration warning at DE0_NANO.v(32): ignored a
 Info (12021): Found 1 design units, including 1 entities, in source file de0_nano.v
     Info (12023): Found entity 1: DE0_NANO File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 11
 Info (12127): Elaborating entity "DE0_NANO" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO.v(68): object "reset" assigned a value but never read File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 68
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO.v(72): object "PIXEL_COLOR" assigned a value but never read File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 72
 Warning (10858): Verilog HDL warning at DE0_NANO.v(75): object led_state used but never assigned File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 75
 Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(118): truncated value with size 32 to match size of target (8) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 118
@@ -343,7 +344,7 @@ Warning (10855): Verilog HDL warning at DE0_NANO.v(170): initial value for varia
 Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(439): truncated value with size 32 to match size of target (8) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 439
 Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(459): truncated value with size 32 to match size of target (8) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 459
 Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(479): truncated value with size 32 to match size of target (8) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 479
-Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(559): truncated value with size 32 to match size of target (3) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 559
+Warning (10230): Verilog HDL assignment warning at DE0_NANO.v(557): truncated value with size 32 to match size of target (3) File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 557
 Warning (10030): Net "led_state" at DE0_NANO.v(75) has no driver or initial value, using a default initial value '0' File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 75
 Warning (10034): Output port "LED[7..1]" at DE0_NANO.v(48) has no driver File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 48
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
@@ -438,12 +439,12 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 51
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 51
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 54
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 54
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 54
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 54
-    Warning (15610): No output dependent on input pin "GPIO_0_IN[0]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 58
     Warning (15610): No output dependent on input pin "GPIO_0_IN[1]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 58
     Warning (15610): No output dependent on input pin "GPIO_1_IN[0]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 62
     Warning (15610): No output dependent on input pin "GPIO_1_IN[1]" File: C:/Users/labuser/Downloads/Lab3_template/DE0_NANO.v Line: 62
@@ -452,10 +453,10 @@ Info (21057): Implemented 715 device resources after synthesis - the final resou
     Info (21059): Implemented 8 output pins
     Info (21060): Implemented 68 bidirectional pins
     Info (21061): Implemented 628 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 121 warnings
-    Info: Peak virtual memory: 654 megabytes
-    Info: Processing ended: Mon Oct 16 20:08:00 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 122 warnings
+    Info: Peak virtual memory: 656 megabytes
+    Info: Processing ended: Mon Oct 16 21:25:55 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 
