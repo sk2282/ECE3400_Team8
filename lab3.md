@@ -73,10 +73,10 @@
 				grid_array[1][1]<=8'b000_111_00;
 			end
 			if (highlighted_x==1 && highlighted_y==0) begin
-				//etc
+				// etc... not shown for sake of briefness
 			end
 			if (highlighted_x==1 && highlighted_y==1) begin
-				//etc
+				// etc
 			end
 		end
 ```
