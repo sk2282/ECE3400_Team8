@@ -1,6 +1,7 @@
 # Lab 3: FPGA
 
 ## Objective:
+The objective of this lab is to work with an FPGA to begin the monitor display for the final robot as well as having the robot generate a "tune" using at least 3 tones.
 
 ## Team Division:
 * Graphics: Rohit Krishnakumar, Alice Song, Victoria Tu
