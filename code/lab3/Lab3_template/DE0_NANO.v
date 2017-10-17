@@ -159,15 +159,17 @@ module DE0_NANO(
 	 assign GPIO_0_D[7:0] = out;
 	 reg complete;
 	 
-	 always @(soundCount || ~soundCount) begin
-		if (soundCount == 2'b0) out = signal;
-		else if (soundCount == 2'd1) out = signal2;
-		else if (soundCount == 2'd2) out = signal3;
+	 always @(soundCount) begin
+		if (soundCount == 3'b1) out = signal;
+		else if (soundCount == 3'd2) out = signal2;
+		else if (soundCount == 3'd3) out = signal3;
 		else out = 8'b0;
 	 end
 	 
 	 initial
 	 begin
+		soundCount <= 3'b0;
+		out <= signal;
 		counter <= 8'd255;
 		sin[0]<=8'd128;
 		sin[1]<=8'd134;
@@ -430,7 +432,7 @@ module DE0_NANO(
 	 	 
 	 always @(posedge CLK_1k)
 	 begin
-	   if (soundCount == 2'd0) begin
+	   if (soundCount == 3'd1) begin
 			if (counter > 0)
 			begin
 				signal <= sin[counter];
@@ -450,7 +452,7 @@ module DE0_NANO(
 	 
 	 always @(posedge CLK_1250)
 	 begin
-	   if (soundCount == 2'd1) begin
+	   if (soundCount == 3'd2) begin
 			if (counter2 > 0)
 			begin
 				signal2 <= sin[counter2];
@@ -470,7 +472,7 @@ module DE0_NANO(
 	 
 	 always @(posedge CLK_1500)
 	 begin
-	   if (soundCount == 2'd2) begin
+	   if (soundCount == 3'd3) begin
 			if (counter3 > 0)
 			begin
 				signal3 <= sin[counter3];
@@ -530,7 +532,7 @@ module DE0_NANO(
 	 
 	 reg [9:0] oneSec;
 	 reg CLK_1s;
-	 reg [1:0] soundCount;
+	 reg [2:0] soundCount;
 	 
 	 // Sets the counds for each sound to play for one second
 //	 always @(posedge CLK_1k)
@@ -551,16 +553,15 @@ module DE0_NANO(
 	 
 	 always @(posedge CLK_1s) begin
 		if (reset) begin
-			soundCount <= 2'b0;
+			soundCount <= 3'b0;
 		end
-		else if (soundCount < 2'd3) begin
+		else if (soundCount <= 3'd3) begin
 			soundCount <= soundCount + 1;
 		end
 		else begin
-		soundCount <= soundCount;
+			soundCount <= soundCount;
 		end
 	 end
-	 
 	 
 	 // 1000 Hz square wave
 //    localparam CLKDIVIDER_1k = 25000000/1000;
