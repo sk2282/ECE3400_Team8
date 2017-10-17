@@ -121,6 +121,6 @@ void loop() {
 
 * Before testing the code, we first tested the voltage divider and two switches with a multimeter to verify our circuit. We chose these resistor values in order to create the voltage divider between 5V and 3.3V, which we just verified.
 * The switch tells the Arduino what to output which is then sent through the voltage divider and connected to the FPGA to set the highlighted_x and highlighted_y values. 
-* Initially we didn’t ground everything properly, so our display was a bit strange, but once we fixed that our [screen](https://youtu.be/8U0nGZCbZIM) showed the highlighted square changing grids when the switches were toggled.
+* [Initially we didn’t ground everything properly, so our display was a bit strange, but once we fixed that our screen showed the highlighted square changing grids when the switches were toggled.](https://youtu.be/8U0nGZCbZIM)
 
 
