@@ -12,3 +12,4 @@
 [25 September 2017](https://docs.google.com/document/d/12xjy71pxQk41sa3XGKxHc3YcSL7JBOi5fqxk5IpjOd0/edit?usp=sharing)  
 [29 September 2017](https://docs.google.com/a/cornell.edu/document/d/15rDKSE2WFMk-ZKou2i40M6zkAOD6iVYjyoAf3U3xzs8/edit?usp=sharing)  
 [13 October 2017](https://docs.google.com/document/d/1L0FCSqawf3SBA3HpldV9yh2gRiSBxYoKKBoJbt71vl0/edit?usp=sharing)  
+[20 October 2017](https://docs.google.com/document/d/1RtJzLBMA_dWL9lNCaGAMpJ-TwWYHp_UadeJhXUKmBec/edit?usp=sharing)  
