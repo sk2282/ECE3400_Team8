@@ -89,11 +89,11 @@
 
 Transmit: 
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/TransmitWholeMaze.png" height="100" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/TransmitWholeMaze.png?raw=true" height="100" />
 
 Receive:
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/ReceiveWholeMaze.png" height="100" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/ReceiveWholeMaze.png?raw=true" height="100" />
 
 * The RFK library has an Auto-ACK feature
 
