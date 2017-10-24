@@ -161,7 +161,7 @@ Receive:
 * 1 VGA Switch
 * Resistors  
 
-###Procedure:
+### Procedure:
 
 #### 1. Make grid from lab 3 bigger
 For this step we needed to scale up what was previously written in Lab 3. To do so, we extended the size of our color-storing grid_array to be 4 by 5 bits.  We also used for loops to assign data to each of the squares in the grid, since the previous lab’s implementation individually assigned data to grid squares and was non-scalable.
@@ -169,4 +169,4 @@ For this step we needed to scale up what was previously written in Lab 3. To do 
 #### 2. Receive packets from the Arduino
 The Radio team received packets in 7 bits. We chose to use parallel communication for this lab for simplicity. In the future, we hope to switch to SPI. This option will reduce the number of connections needed between the arduino and the FPGA. We sent connected 7 output pins from the Arduino to GPIO pins on the FPGA. Within the code we set the inputs to the corresponding location x and y coordinates and data (if treasure was found, location visited, etc). The connections between the Arduino and FPGA are shown below.
 
-<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/fpga_arduino.JPG?raw=true" height="100" />
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/fpga_arduino.jpg?raw=true" height="100" />
