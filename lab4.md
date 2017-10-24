@@ -201,7 +201,7 @@ localparam secDiv = 25000000/2;
 reg [24:0] counter_1s;
 	 
 always @(posedge CLOCK_25) begin
-	if(counter_1s == 0) begin
+    if(counter_1s == 0) begin
         counter_1s <= secDiv-1;
         CLK_1s <= ~CLK_1s;
     end
@@ -218,8 +218,6 @@ We created an array that stored whether or not we had already visited the coordi
 ```c
 void setup() {
   // put your setup code here, to run once:
-  pinMode(1, OUTPUT); // data lsb
-  pinMode(2, OUTPUT); // data msb
   pinMode(3, OUTPUT); // y lsb
   pinMode(4, OUTPUT); // y 
   pinMode(5, OUTPUT); // y msb
@@ -237,8 +235,6 @@ void loop() {
   digitalWrite(5, LOW);//y msb
   digitalWrite(4, LOW);//y
   digitalWrite(3, LOW);//y lsb
-  digitalWrite(2, LOW);//d
-  digitalWrite(1, HIGH);//d   -> visited
   // 0,0
   delay(1000);
 
@@ -247,8 +243,6 @@ void loop() {
   digitalWrite(5, LOW);//y msb
   digitalWrite(4, LOW);//y
   digitalWrite(3, HIGH);//y lsb
-  digitalWrite(2, HIGH);//d
-  digitalWrite(1, HIGH);//d   -> treasure  
   //0,1
   delay(1000);
   
