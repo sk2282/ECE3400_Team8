@@ -170,3 +170,6 @@ For this step we needed to scale up what was previously written in Lab 3. To do 
 The Radio team received packets in 7 bits. We chose to use parallel communication for this lab for simplicity. In the future, we hope to switch to SPI. This option will reduce the number of connections needed between the arduino and the FPGA. We sent connected 7 output pins from the Arduino to GPIO pins on the FPGA. Within the code we set the inputs to the corresponding location x and y coordinates and data (if treasure was found, location visited, etc). The connections between the Arduino and FPGA are shown below.
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/fpga_arduino.jpg?raw=true" height="300" />
+
+#### 3. Highlight the robots current location based on packet information
+In order to implement this, we used two for loops to check every square of the array. The output from the arduino was sent to GPIO pins that stored the current x and y coordinates. In our for loop, if we were on the current coordinates, the grid_array value would be given red. The rest of the grid within our grid size would be black, and all of the other coordinates would be given blue.
