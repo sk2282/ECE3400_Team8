@@ -172,4 +172,86 @@ The Radio team received packets in 7 bits. We chose to use parallel communicatio
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/fpga_arduino.jpg?raw=true" height="300" />
 
 #### 3. Highlight the robots current location based on packet information
-In order to implement this, we used two for loops to check every square of the array. The output from the arduino was sent to GPIO pins that stored the current x and y coordinates. In our for loop, if we were on the current coordinates, the grid_array value would be given red. The rest of the grid within our grid size would be black, and all of the other coordinates would be given blue.
+In order to implement this, we used two for loops to check every square of the array. The output from the Arduino was sent to GPIO pins that stored the current x and y coordinates. In our for loop, if we were on the current coordinates, the grid_array value would be given red. The rest of the grid within our grid size would be black, and all of the other coordinates would be given blue.
+```c
+always @ (posedge CLK_1s) begin
+    for (x=3'b0; x<=3'd3; x=x+3'b1) begin
+	    for (y=3'b0; y <= 3'd4; y=y+3'b1) begin
+            if (x == highlighted_x && y == highlighted_y) begin
+			    grid_array[x][y] <= RED;
+				visited[x][y] <= 1'b0;
+			end
+            else if (visited[x][y] == 1'b0) begin
+                grid_array[x][y] <= GREEN;
+                visited[x][y] <= visited[x][y];
+            end
+            else begin
+                grid_array[x][y] <= BLACK;
+                visited[x][y] <= visited[x][y];
+            end
+        end
+    end
+end
+```
+
+Initially, we had the above always block execute whenever highlighted_x or highlighted_y changed, but we changed that to every second because whenever highlighted_x or highlighted_y changed, the always block would execute multiple times.  Having the block occur every second effectively debounced the changing signal from the Arduino.
+
+```c
+localparam secDiv = 25000000/2;
+reg [24:0] counter_1s;
+	 
+always @(posedge CLOCK_25) begin
+	if(counter_1s == 0) begin
+        counter_1s <= secDiv-1;
+        CLK_1s <= ~CLK_1s;
+    end
+    else begin
+        counter_1s <= counter_1s - 1;
+        CLK_1s <= CLK_1s;
+    end
+ end
+```
+
+### 4. Mark explored territory
+We created an array that stored whether or not we had already visited the coordinates corresponding to the coordinates in the grid_array, initializing all values to 0. visited[x][y] updates to 1 once coordinates (x,y) are visited by our current location. In drawing the grid using our for loop, if the current x and y of interest is marked as visited, we set it to green.  [Here is a video of the grid updating as the robot's position changes.](https://www.youtube.com/watch?v=LuAxHNnCtWo)  Here is the code we used to simulate the robot moving through the maze:
+
+```Arduino
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(1, OUTPUT); // data lsb
+  pinMode(2, OUTPUT); // data msb
+  pinMode(3, OUTPUT); // y lsb
+  pinMode(4, OUTPUT); // y 
+  pinMode(5, OUTPUT); // y msb
+  pinMode(6, OUTPUT); // x lsb
+  pinMode(7, OUTPUT); // x msb
+  pinMode(8, INPUT);
+}
+
+void loop() {
+
+  while(!digitalRead(8));
+  
+  digitalWrite(7, LOW);//x msb
+  digitalWrite(6, LOW);//x lsb
+  digitalWrite(5, LOW);//y msb
+  digitalWrite(4, LOW);//y
+  digitalWrite(3, LOW);//y lsb
+  digitalWrite(2, LOW);//d
+  digitalWrite(1, HIGH);//d   -> visited
+  // 0,0
+  delay(1000);
+
+  digitalWrite(7, LOW);//x msb
+  digitalWrite(6, LOW);//x lsb
+  digitalWrite(5, LOW);//y msb
+  digitalWrite(4, LOW);//y
+  digitalWrite(3, HIGH);//y lsb
+  digitalWrite(2, HIGH);//d
+  digitalWrite(1, HIGH);//d   -> treasure  
+  //0,1
+  delay(1000);
+  
+  ... etc
+```
+
