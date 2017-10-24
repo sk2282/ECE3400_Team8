@@ -215,7 +215,7 @@ always @(posedge CLOCK_25) begin
 ### 4. Mark explored territory
 We created an array that stored whether or not we had already visited the coordinates corresponding to the coordinates in the grid_array, initializing all values to 0. visited[x][y] updates to 1 once coordinates (x,y) are visited by our current location. In drawing the grid using our for loop, if the current x and y of interest is marked as visited, we set it to green.  [Here is a video of the grid updating as the robot's position changes.](https://www.youtube.com/watch?v=LuAxHNnCtWo)  Here is the code we used to simulate the robot moving through the maze:
 
-```Arduino
+```c
 void setup() {
   // put your setup code here, to run once:
   pinMode(1, OUTPUT); // data lsb
