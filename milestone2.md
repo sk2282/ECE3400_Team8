@@ -147,3 +147,10 @@ void loop() {
 
 ## Final Robot of Milestone 2:
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.jpg?raw=true" height="300" />
+
+## Update 10/28/17
+We added a capacitor to the treasure detection circuit to remove DC bias from the signal.  This way, we could increase the gain and thereby increase the range of the treasure sensor.
+
+<img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram_NEW.png?raw=true" height="300" />
+
+Now, the gain is about 22, and [the circuit can detect the treasure up to 9 inches away](https://www.youtube.com/watch?v=mYrdaRs9rtg).
