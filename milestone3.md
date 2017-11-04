@@ -31,7 +31,7 @@ elseif (c>1 && wall_bin(4) ~= 1 && curr_loc(r,c-1) ~= 0.5) % WEST wall
 ```
 
 * [The first simulation displays the whole maze and the robot maps it.](https://youtu.be/MxFL3VIOMlE)
-* Below is a diagram showing a coordinate system and how we index the squares in our maze from 0 to 19.
+* Below is a diagram showing a coordinate system and how we index the squares in our maze from 0 to 19. (ADD)
 
 
 ### Version 2 
@@ -39,8 +39,31 @@ elseif (c>1 && wall_bin(4) ~= 1 && curr_loc(r,c-1) ~= 0.5) % WEST wall
 * To do this, we created a separate 5x4 array that keeps track of the walls as the robot sees it.  
 * Whenever the robot moves to a new square, this array gets updated.  
 * If there exists a visited square that is adjacent to an unvisited square, and there is no wall between these squares, the robot will continue to search the maze.  Otherwise, it has visited all visitable squares and stops navigating.
-* video
-* isDone code
+
+``` Matlab
+function notDone = notDone(visited, wall_loc)
+% Returns true if the robot is done navigating, false otherwise
+    notDone = false;
+    for r = 1:5
+        for c = 1:4
+            wall_bin = de2bi(wall_loc(r,c), 4, 'right-msb');
+            if (visited(r,c) == 1)
+                if ((wall_bin(1) == 0 && r > 1 && visited(r-1,c) == 0.5) || ...
+                     (wall_bin(2) == 0 && r < 5 && visited(r+1,c) == 0.5) || ...
+                     (wall_bin(3) == 0 && c < 4 && visited(r,c+1) == 0.5) || ...
+                     (wall_bin(4) == 0 && c > 1 && visited(r,c-1) == 0.5))
+                    notDone = true;
+                end
+            end
+        end
+    end
+end
+
+* VIDEO
+
+
+
+```
 
 
 ### Final Version of Simulation
