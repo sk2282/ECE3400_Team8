@@ -58,12 +58,10 @@ function notDone = notDone(visited, wall_loc)
         end
     end
 end
+```
 
 * VIDEO
 
-
-
-```
 
 
 ### Final Version of Simulation
