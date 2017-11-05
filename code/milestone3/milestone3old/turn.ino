@@ -47,7 +47,7 @@ void faceRobot(int dir) {
   else if (dir - direction == 1) {
     rightTurn();
   }
-  else {
+  else {//direction - dir == 1
     leftTurn();
   }
 }
