@@ -1,0 +1,30 @@
+function [new] = detectWalls( r, c, detected_wall_loc, wall_loc, visited )
+% Updates walls as seen by the robot
+    new = detected_wall_loc;
+    wall_bin_real = de2bi(wall_loc(r,c), 4, 'right-msb');
+    wall_bin_detected = de2bi(detected_wall_loc(r,c), 4, 'right-msb');
+    disp(wall_bin_real)
+    
+    if (r > 1 && wall_bin_real(1) == 1 && wall_bin_detected(1) == 0 && visited(r-1,c) == 1)
+        new(r,c) = new(r,c) + 1;
+        new(r-1,c) = new(r-1,c) + 2;
+    end
+    
+    if (r < 5 && wall_bin_real(2) == 0 && wall_bin_detected(2) == 0 && visited(r+1,c) == 1)
+        new(r,c) = new(r,c) + 2;
+        new(r+1,c) = new(r+1,c) + 1;
+    end
+    
+    if (c < 4 && wall_bin_real(3) == 0 && wall_bin_detected(1) == 0 && visited(r,c+1) == 1)
+        new(r,c) = new(r,c) + 4;
+        new(r,c+1) = new(r,c+1) + 8;
+    end
+    
+    if (c > 1 && wall_bin_real(4) == 0 && visited(r,c-1) == 1)
+        new(r,c) = new(r,c) + 8;
+        new(r,c-1) = new(r,c-1) + 4;
+    end
+
+
+end
+
