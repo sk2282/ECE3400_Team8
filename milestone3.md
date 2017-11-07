@@ -62,7 +62,7 @@ function notDone = notDone(visited, wall_loc)
 end
 ```
 
-* VIDEO
+* [We show the simulation in this video.](https://youtu.be/MUISAKUdXKQ)
 
 
 
