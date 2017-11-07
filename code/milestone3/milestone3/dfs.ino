@@ -100,57 +100,57 @@ void detectWalls() {
   int dirR = (direction + 1) % 4;
   int dirL = (direction - 1) % 4;
   if (dirF == NORTH) {
-    if (digitalRead(wallSensorF) == HIGH) {
-      detected_wall_loc[r][c][NORTH] = 1;
+    if (digitalRead(wallSensorF) == LOW) {  // the Schmitt trigger reversed the outputs
+      detected_wall_loc[r][c][NORTH] = 1;   // for now HIGH is changed to LOW to take this into consideration
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = 1;
     }
-    if (digitalRead(wallSensorR) == HIGH) {
+    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][EAST] = 1;
       if (c < 3) detected_wall_loc[r][c+1][WEST] = 1;
     }
-    if (digitalRead(wallSensorL) == HIGH) {
+    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][WEST] = 1;
       if (c > 0) detected_wall_loc[r][c-1][EAST] = 1;
     }
   }
   else if (dirF == EAST) {
-    if (digitalRead(wallSensorL) == HIGH) {
+    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][NORTH] = 1;
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = 1;
     }
-    if (digitalRead(wallSensorF) == HIGH) {
+    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][EAST] = 1;
       if (c < 3) detected_wall_loc[r][c+1][WEST] = 1;
     }
-    if (digitalRead(wallSensorR) == HIGH) {
+    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][SOUTH] = 1;
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = 1;
     }
   }
   else if (dirF == SOUTH) {
-    if (digitalRead(wallSensorF) == HIGH) {
+    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][SOUTH] = 1;
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = 1;
     }
-    if (digitalRead(wallSensorR) == HIGH) {
+    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][WEST] = 1;
       if (c > 0) detected_wall_loc[r][c-1][EAST] = 1;
     }
-    if (digitalRead(wallSensorL) == HIGH) {
+    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][EAST] = 1;
       if (c < 3) detected_wall_loc[r][c+1][WEST] = 1;
     }
   }
   else if (dirF == WEST) {
-    if (digitalRead(wallSensorF) == HIGH) {
+    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][WEST] = 1;
       if (c > 0) detected_wall_loc[r][c-1][EAST] = 1;
     }
-    if (digitalRead(wallSensorR) == HIGH) {
+    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][NORTH] = 1;
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = 1;
     }
-    if (digitalRead(wallSensorL) == HIGH) {
+    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][SOUTH] = 1;
       if (r < 4) detected_wall_loc[r+1][c][WEST] = 1;
     }
