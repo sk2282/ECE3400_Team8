@@ -76,7 +76,7 @@ end
 ## Real-time Maze Mapping
 * After finishing our simulation, we began working on our algorithm for real-time maze mapping. Our algorithm remained the same, but we just added code to integrate the robot.
 * We used code from before for line-following and turning, as well as for wall and treasure detection.
-* Now, our robot maps the maze in real-time and prints "DONE" in the serial monitor when finished.  
+* Now, our robot should map the maze in real-time and print "DONE" in the serial monitor when finished.  
 * However, after rebuilding the robot and testing the code, the robot follows a line until an intersection and does not continue moving after detecting the walls on its sides.
 
 
