@@ -36,7 +36,7 @@ elseif (c>1 && wall_bin(4) ~= 1 && curr_loc(r,c-1) ~= 0.5) % WEST wall
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone3/Milestone3Coord.png?raw=true" height="300" />
 
 
-### Version 2 
+### Version 2
 * Next, we tried to make it so the robot doesn’t have to go back to the start to know when it’s traversed all navigable area in the maze.  
 * To do this, we created a separate 5x4 array that keeps track of the walls as the robot sees it.  
 * Whenever the robot moves to a new square, this array gets updated.  
@@ -74,7 +74,12 @@ end
 
 
 ## Real-time Maze Mapping
-* After finishing our simulation, we began working on our algorithm for real-time maze mapping. Our algorithm remained the same, but we just added code to integrate the robot. 
+* After finishing our simulation, we began working on our algorithm for real-time maze mapping. Our algorithm remained the same, but we just added code to integrate the robot.
 * We used code from before for line-following and turning, as well as for wall and treasure detection.
-* Now, our robot maps the maze in real-time and prints "DONE" in the serial monitor when finished.
+* Now, our robot maps the maze in real-time and prints "DONE" in the serial monitor when finished.  
+* However, after rebuilding the robot and testing the code, the robot follows a line until an intersection and does not continue moving after detecting the walls on its sides.
 
+
+## Fixes for the Future
+* Since we may have complicated our code by checking for all of the walls while exploring the maze, we want to make sure that the robot can move forward until it detects a wall in front of it and act accordingly (turning left or right).
+* We originally built Schmitt triggers a few weeks ago, however due to lack of documentation, we rebuilt them. This time we built the inverting Schmitt trigger since there was an easy tutorial. This means that when a wall is detected, it will output low, and when it does not detect a wall it will output high. In the future, we would like to go back to the non-inverting Schmitt triggers.
