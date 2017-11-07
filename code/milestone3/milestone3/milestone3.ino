@@ -33,6 +33,8 @@ void setup() {
 void loop() {
   lwRead = analogRead(leftWide);
   rwRead = analogRead(rightWide);
+  lRead = analogRead(leftLine);
+  rRead = analogRead(rightLine);
   // INTERSECTION DETECTION
   if((lwRead >= thresh || rwRead >= thresh) && detectCooldown == 0){
     if (dfs()) {
@@ -54,8 +56,6 @@ void halt() {
 }
 
 void followLine(){
-  lRead = analogRead(leftLine);
-  rRead = analogRead(rightLine);
   if(lRead<thresh){  // left side is out of line
     left.write(170);
     right.write(86);

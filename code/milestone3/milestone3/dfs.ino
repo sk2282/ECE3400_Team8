@@ -14,14 +14,13 @@ int direction = NORTH;
 /* Initialize current location maze array
 *  1 means unvisited
 *  0.5 means visited
-*  0 is the robot's current location
 */
-int visited[5][4] = {
+double visited[5][4] = {
   {1,1,1,1},
   {1,1,1,1},
   {1,1,1,1},
   {1,1,1,1},
-  {1,1,1,1}};
+  {1,1,1,0.5}};
   
 /* Set maze walls
 *  For each grid space, wall locations are represented with a string of 4 binary digits:
@@ -45,6 +44,7 @@ char detected_wall_loc[5][4][5] = {
  * Uses a DFS search algorithm to find the next direction the robot needs to go and rotates the robot to that direction
  */
 boolean dfs() {
+  Serial.println("start");
   // update robot position and squares visited
   if (direction == NORTH) {
     r -= 1;
@@ -62,12 +62,12 @@ boolean dfs() {
     c -= 1;
     visited[r][c+1] = 0.5;
   }
-
+  Serial.println("detect walls");
   // detect new walls for current square
   detectWalls();
-
+  Serial.println("decide on direction");
   // decide on next direction to go
-  if (!stack.isEmpty() && notDone()) {
+  if (notDone()) {
     if (r > 0 && detected_wall_loc[r][c][NORTH] == 0 && visited[r-1][c] != 0.5) {
       faceRobot(NORTH);
       stack.push(direction);
@@ -101,6 +101,7 @@ void detectWalls() {
   int dirL = (direction - 1) % 4;
   if (dirF == NORTH) {
     if (digitalRead(wallSensorF) == LOW) {  // the Schmitt trigger reversed the outputs
+      Serial.println("wall");
       detected_wall_loc[r][c][NORTH] = 1;   // for now HIGH is changed to LOW to take this into consideration
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = 1;
     }
