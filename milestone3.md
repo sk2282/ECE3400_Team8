@@ -30,7 +30,7 @@ elseif (c>1 && wall_bin(4) ~= 1 && curr_loc(r,c-1) ~= 0.5) % WEST wall
 	% ...
 ```
 
-* [The first simulation displays the whole maze and the robot maps it.](https://youtu.be/MxFL3VIOMlE)
+* [The first simulation displays the whole maze, and the robot maps it and ends where it started.](https://youtu.be/MxFL3VIOMlE)
 * Below is a diagram showing a coordinate system and how we index the squares in our maze from 0 to 19.
 
 <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone3/Milestone3Coord.png?raw=true" height="300" />
@@ -62,7 +62,7 @@ function notDone = notDone(visited, wall_loc)
 end
 ```
 
-* [We show the simulation in this video.](https://youtu.be/MUISAKUdXKQ)
+* [This version of the simulation has the robot stop once it's finished mapping all explorable area.](https://youtu.be/MUISAKUdXKQ)
 
 
 
