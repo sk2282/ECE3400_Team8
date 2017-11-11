@@ -2,7 +2,6 @@
 
 Servo left;
 Servo right;
-int roboStop = 0;     // robot stops moving
 int leftLine = 0;     // Pin for left line detector
 int rightLine = 1;    // Pin for right line detector
 int leftWide = 2;     // Pin for left intersection detector
@@ -27,11 +26,9 @@ void setup() {
   pinMode(wallSensorF, INPUT);
   left.attach(5);
   right.attach(6);
-  
 }
 
 void loop() {
-  Serial.println(digitalRead(wallSensorF));
   lwRead = analogRead(leftWide);
   rwRead = analogRead(rightWide);
   lRead = analogRead(leftLine);
@@ -53,9 +50,11 @@ void loop() {
   }
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
-  if(lRead<=thresh && rRead<=thresh || roboStop){     // stop
+  if(lRead<=thresh && rRead<=thresh){     // stop
+    Serial.println("stop");
     left.write(90);
     right.write(90);
+    while(true){}
   }
   else if(lRead<thresh){  // left side is out of line
     left.write(170);

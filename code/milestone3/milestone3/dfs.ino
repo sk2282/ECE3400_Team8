@@ -1,7 +1,6 @@
 #include <StackArray.h>
 
 StackArray<int> stack;
-stack.push(19);
 int r = 4;
 int c = 3;
 
@@ -10,7 +9,7 @@ int NORTH = 0;
 int EAST = 1;
 int SOUTH = 2;
 int WEST = 3;
-int direction = NORTH;
+int dir = NORTH;
 
 /* Initialize current location maze array
 *  0 means unvisited
@@ -42,50 +41,52 @@ char detected_wall_loc[5][4][5] = {
 
 /**
  * Returns true if the entire maze has been navigated, false otherwise.
- * Uses a DFS search algorithm to find the next direction the robot needs to go and rotates the robot to that direction
+ * Uses a DFS search algorithm to find the next dir the robot needs to go and rotates the robot to that dir
  */
 boolean dfs() {
   Serial.println(r); 
   Serial.println(c);
   // detect new walls for current square
   detectWalls();
-  Serial.println("decide on direction");
-  // decide on next direction to go
-<<<<<<< HEAD
-  if (!stack.isEmpty() && notDone()) {
+
+  Serial.println("stack empty?");
+  Serial.println(stack.isEmpty());
+  Serial.println("decide on dir");
+  // decide on next dir to go
+  if (notDone()) {
       // update robot position and squares visited
-    if (direction == NORTH) {
+    if (dir == NORTH) {
       r -= 1;
       visited[r+1][c] = 1;
     }
-    else if (direction == SOUTH) {
+    else if (dir == SOUTH) {
       r += 1;
       visited[r-1][c] = 1;
     }
-    else if (direction == EAST) {
+    else if (dir == EAST) {
       c += 1;
       visited[r][c-1] = 1;
     }
-    else if (direction == WEST) {
+    else if (dir == WEST) {
       c -= 1;
       visited[r][c+1] = 1;
     }
   
     if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
       faceRobot(NORTH);
-      stack.push(direction);
+      stack.push(dir);
     }
     else if (c < 3 && detected_wall_loc[r][c][EAST] == '0' && visited[r][c+1] != 1) {
       faceRobot(EAST);
-      stack.push(direction);
+      stack.push(dir);
     }
     else if (r < 4 && detected_wall_loc[r][c][SOUTH] == '0' && visited[r+1][c] != 1) {
       faceRobot(SOUTH);
-      stack.push(direction);
+      stack.push(dir);
     }
     else if (c > 0 && detected_wall_loc[r][c][WEST] == '0' && visited[r][c-1] != 1) {
       faceRobot(WEST);
-      stack.push(direction);
+      stack.push(dir);
     }
     else {
       int newDir = (stack.pop() + 2) % 4;
@@ -99,11 +100,10 @@ boolean dfs() {
 }
 
 void detectWalls() {
-  int dirF = direction;
-  int dirR = (direction + 1) % 4;
-  int dirL = (direction - 1) % 4;
+  int dirF = dir;
+  int dirR = (dir + 1) % 4;
+  int dirL = (dir - 1) % 4;
   if (dirF == NORTH) {
-<<<<<<< HEAD
     if (digitalRead(wallSensorF) == LOW) {
       Serial.println("see wall");
       Serial.println(detected_wall_loc[r][c]);

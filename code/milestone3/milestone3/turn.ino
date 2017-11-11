@@ -9,7 +9,7 @@ void leftTurn() {
   }
   right.write(90);
   left.write(90);
-  direction = (direction-1) % 4;
+  dir = (dir-1) % 4;
 }
 
 void rightTurn(){
@@ -23,7 +23,7 @@ void rightTurn(){
   }
   right.write(90);
   left.write(90);
-  direction = (direction+1) % 4;
+  dir = (dir+1) % 4;
 }
 
 void UTurn() {
@@ -39,16 +39,16 @@ void skipIntersection(){
   }
 }
 
-void faceRobot(int dir) {
+void faceRobot(int dir0) {
   Serial.println("face new");
-  if (dir == direction) {
+  if (dir0 == dir) {
     return;
   }
-  else if (abs(direction-dir) == 2) {
+  else if (abs(dir-dir0) == 2) {
     rightTurn();
     rightTurn();
   }
-  else if (dir - direction == 1) {
+  else if (dir0 - dir == 1) {
     rightTurn();
   }
   else {
