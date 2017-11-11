@@ -1,4 +1,5 @@
 void leftTurn() {
+  Serial.println("left turn");
   while(analogRead(0)>=thresh || analogRead(1)>=thresh){
       right.write(77);
       left.write(77);
@@ -12,6 +13,7 @@ void leftTurn() {
 }
 
 void rightTurn(){
+  Serial.println("right turn");
   while(analogRead(0)>=thresh || analogRead(1)>=thresh){
       right.write(103);
       left.write(103);
@@ -25,6 +27,7 @@ void rightTurn(){
 }
 
 void UTurn() {
+  Serial.println("U turn");
   rightTurn();
   rightTurn();
 }
@@ -37,6 +40,7 @@ void skipIntersection(){
 }
 
 void faceRobot(int dir) {
+  Serial.println("face new");
   if (dir == direction) {
     return;
   }

@@ -9,7 +9,7 @@ int leftWide = 2;     // Pin for left intersection detector
 int rightWide = 3;    // Pin for right intersection detector
 int thresh   = 800;     // Threshold for black line detection
 int detectCooldown = 0;
-int DETECT_COOLDOWN = 50;
+int DETECT_COOLDOWN = 200;
 
 int wallSensorF = 11;
 int wallSensorR = 12;
@@ -31,32 +31,31 @@ void setup() {
 }
 
 void loop() {
+  Serial.println(digitalRead(wallSensorF));
   lwRead = analogRead(leftWide);
   rwRead = analogRead(rightWide);
   // INTERSECTION DETECTION
-  if((lwRead >= thresh || rwRead >= thresh) && detectCooldown == 0){
+  if((lwRead >= thresh || rwRead >= thresh) && detectCooldown <= 0){
+    detectCooldown = DETECT_COOLDOWN;
     if (dfs()) {
-      halt();
-      return;
+      left.write(90);
+      right.write(90);
+      while(true){
+        Serial.println("done");  
+      }
     }
   }
   else{
     detectCooldown--;
     if (detectCooldown < 0) detectCooldown = 0;
   }
-  followLine();
-}
-
-void halt() {
-  Serial.println("DONE");
-  left.write(90);
-  right.write(90);
-}
-
-void followLine(){
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
-  if(lRead<thresh){  // left side is out of line
+  if(lRead<=thresh && rRead<=thresh || roboStop){     // stop
+    left.write(90);
+    right.write(90);
+  }
+  else if(lRead<thresh){  // left side is out of line
     left.write(170);
     right.write(86);
   }
@@ -65,8 +64,8 @@ void followLine(){
     right.write(10);
   }
   else{     // go straight
-    left.write(100);
-    right.write(80);
+    left.write(94);
+    right.write(86);
   }
 }
 
