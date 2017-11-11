@@ -34,6 +34,8 @@ void loop() {
   Serial.println(digitalRead(wallSensorF));
   lwRead = analogRead(leftWide);
   rwRead = analogRead(rightWide);
+  lRead = analogRead(leftLine);
+  rRead = analogRead(rightLine);
   // INTERSECTION DETECTION
   if((lwRead >= thresh || rwRead >= thresh) && detectCooldown <= 0){
     detectCooldown = DETECT_COOLDOWN;

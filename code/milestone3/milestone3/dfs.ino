@@ -49,8 +49,9 @@ boolean dfs() {
   Serial.println(c);
   // detect new walls for current square
   detectWalls();
-
+  Serial.println("decide on direction");
   // decide on next direction to go
+<<<<<<< HEAD
   if (!stack.isEmpty() && notDone()) {
       // update robot position and squares visited
     if (direction == NORTH) {
@@ -102,6 +103,7 @@ void detectWalls() {
   int dirR = (direction + 1) % 4;
   int dirL = (direction - 1) % 4;
   if (dirF == NORTH) {
+<<<<<<< HEAD
     if (digitalRead(wallSensorF) == LOW) {
       Serial.println("see wall");
       Serial.println(detected_wall_loc[r][c]);
