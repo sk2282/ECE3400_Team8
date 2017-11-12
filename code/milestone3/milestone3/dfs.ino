@@ -1,6 +1,5 @@
 #include <StackArray.h>
 
-StackArray<int> stack;
 int r = 4;
 int c = 3;
 
@@ -44,57 +43,57 @@ char detected_wall_loc[5][4][5] = {
  * Uses a DFS search algorithm to find the next dir the robot needs to go and rotates the robot to that dir
  */
 boolean dfs() {
-  Serial.println(r); 
+  Serial.print("coordinate: ");
+  Serial.print(r);
+  Serial.print(","); 
   Serial.println(c);
   // detect new walls for current square
   detectWalls();
 
-  Serial.println("stack empty?");
-  Serial.println(stack.isEmpty());
-  Serial.println("decide on dir");
+  if(stack.isEmpty()) {
+    Serial.println("stack empty");
+  }
+  else {
+    Serial.print("stack entry ");
+    Serial.println(stack.peek());
+  }
   // decide on next dir to go
   if (notDone()) {
-      // update robot position and squares visited
-    if (dir == NORTH) {
-      r -= 1;
-      visited[r+1][c] = 1;
-    }
-    else if (dir == SOUTH) {
-      r += 1;
-      visited[r-1][c] = 1;
-    }
-    else if (dir == EAST) {
-      c += 1;
-      visited[r][c-1] = 1;
-    }
-    else if (dir == WEST) {
-      c -= 1;
-      visited[r][c+1] = 1;
-    }
-  
     if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
+      Serial.println("go north");
+      Serial.println(detected_wall_loc[r][c]);
+      Serial.print(detected_wall_loc[r][c][NORTH]);
+      Serial.print(detected_wall_loc[r][c][EAST]);
+      Serial.print(detected_wall_loc[r][c][SOUTH]);
+      Serial.println(detected_wall_loc[r][c][WEST]);
       faceRobot(NORTH);
       stack.push(dir);
     }
     else if (c < 3 && detected_wall_loc[r][c][EAST] == '0' && visited[r][c+1] != 1) {
+      Serial.println("go east");
       faceRobot(EAST);
       stack.push(dir);
     }
     else if (r < 4 && detected_wall_loc[r][c][SOUTH] == '0' && visited[r+1][c] != 1) {
+      Serial.println("go south");
       faceRobot(SOUTH);
       stack.push(dir);
     }
     else if (c > 0 && detected_wall_loc[r][c][WEST] == '0' && visited[r][c-1] != 1) {
+      Serial.println("go west");
       faceRobot(WEST);
       stack.push(dir);
     }
     else {
+      Serial.println("turn around");
       int newDir = (stack.pop() + 2) % 4;
       faceRobot(newDir);
     }
+    updatePosition();
     return true;
   }
   else {
+    Serial.println(stack.peek());
     return false;
   }
 }
@@ -102,7 +101,7 @@ boolean dfs() {
 void detectWalls() {
   int dirF = dir;
   int dirR = (dir + 1) % 4;
-  int dirL = (dir - 1) % 4;
+  int dirL = (dir + 3) % 4;
   if (dirF == NORTH) {
     if (digitalRead(wallSensorF) == LOW) {
       Serial.println("see wall");
@@ -183,5 +182,29 @@ boolean notDone() {
   }
   Serial.println("FALSE");
   return false;
+}
+
+void updatePosition() {
+    // update robot position and squares visited
+    if (dir == NORTH) {
+      r -= 1;
+      visited[r+1][c] = 1;
+    }
+    else if (dir == SOUTH) {
+      r += 1;
+      visited[r-1][c] = 1;
+    }
+    else if (dir == EAST) {
+      c += 1;
+      visited[r][c-1] = 1;
+    }
+    else if (dir == WEST) {
+      c -= 1;
+      visited[r][c+1] = 1;
+    }
+    Serial.print("update pos:");
+    Serial.print(r);
+    Serial.print(",");
+    Serial.println(c);
 }
 
