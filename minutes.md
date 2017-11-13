@@ -15,4 +15,5 @@
 [20 October 2017](https://docs.google.com/document/d/1RtJzLBMA_dWL9lNCaGAMpJ-TwWYHp_UadeJhXUKmBec/edit?usp=sharing)  
 [26 October 2017](https://docs.google.com/document/d/17PEkTi5sUvCAwdCBt3bdMVzWM3nJG1DwNGU2q3sPa8A/edit?usp=sharing)  
 [3 November 2017](https://docs.google.com/document/d/1c8UE7Z0Oq0xp5nR5Xf1Uos_uNsP7wRhOzybtT2yL1YI/edit?usp=sharing)   
-[10 November 2017](https://docs.google.com/document/d/1Q4dxydQsXWhqxsBNvucQduFroslpq1IuBVRkWbzZAEE/edit?usp=sharing)  
+[10 November 2017](https://docs.google.com/document/d/1Q4dxydQsXWhqxsBNvucQduFroslpq1IuBVRkWbzZAEE/edit?usp=sharing)
+[13 November 2017](https://docs.google.com/a/cornell.edu/document/d/1pV-zQDAcFRtTGhghiPE03gBkxMY7FenGvDc1KvgwYtU/edit?usp=sharing)
