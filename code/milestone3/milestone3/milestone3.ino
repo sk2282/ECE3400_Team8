@@ -55,7 +55,7 @@ void loop() {
   rRead = analogRead(rightLine);
   */
   // INTERSECTION DETECTION
-  if ((digitalRead(12) == LOW && digitalRead(13) == LOW) && detectCooldown <= 0) {
+  if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
 //  if ((lwRead >= thresh && rwRead >= thresh) && detectCooldown <= 0) {
     detectCooldown = DETECT_COOLDOWN;
         if (!dfs()) {
@@ -76,17 +76,17 @@ void loop() {
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
   */
-  if (digitalRead(10) == HIGH && digitalRead(11) == HIGH || roboStop) { // stop
+  if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH || roboStop) { // stop
 //  if (lRead <= thresh && rRead <= thresh || roboStop) { // stop
     left.write(90);
     right.write(90);
     }
-  else if (digitalRead(10) == HIGH) { // left side is out of line
+  else if (digitalRead(leftLine) == HIGH) { // left side is out of line
 //  else if (lRead < thresh) { // left side is out of line
     left.write(170);
     right.write(87);
   }
-  else if (digitalRead(11) == HIGH) { // right side is out of line
+  else if (digitalRead(rightLine) == HIGH) { // right side is out of line
 //  else if (rRead < thresh) { // right side is out of line
     left.write(93);
     right.write(10);
