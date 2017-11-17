@@ -59,13 +59,9 @@ boolean dfs() {
   }
   // decide on next dir to go
   if (notDone()) {
-    if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
-      Serial.println("go north");
       Serial.println(detected_wall_loc[r][c]);
-      Serial.print(detected_wall_loc[r][c][NORTH]);
-      Serial.print(detected_wall_loc[r][c][EAST]);
-      Serial.print(detected_wall_loc[r][c][SOUTH]);
-      Serial.println(detected_wall_loc[r][c][WEST]);
+      if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
+      Serial.println("go north");
       faceRobot(NORTH);
       stack.push(dir);
     }
@@ -102,60 +98,73 @@ void detectWalls() {
   int dirF = dir;
   int dirR = (dir + 1) % 4;
   int dirL = (dir + 3) % 4;
+  
   if (dirF == NORTH) {
-    if (digitalRead(wallSensorF) == LOW) {
+    if (analogRead(wallSensorF) >= frontThresh) {
+//    if (digitalRead(wallSensorF) == LOW) {
       Serial.println("see wall");
       Serial.println(detected_wall_loc[r][c]);
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
-    if (digitalRead(wallSensorR) == LOW) {
+    if (analogRead(wallSensorR) >= sideThresh) {
+//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][EAST] = '1';
       if (c < 3) detected_wall_loc[r][c+1][WEST] = '1';
     }
-    if (digitalRead(wallSensorL) == LOW) {
+    if (analogRead(wallSensorL) >= sideThresh) {
+//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][WEST] = '1';
       if (c > 0) detected_wall_loc[r][c-1][EAST] = '1';
     }
   }
   else if (dirF == EAST) {
-    if (digitalRead(wallSensorL) == LOW) {
+    if (analogRead(wallSensorL) >= sideThresh) {
+//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
-    if (digitalRead(wallSensorF) == LOW) {
+    if (analogRead(wallSensorF) >= frontThresh) {
+//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][EAST] = '1';
       if (c < 3) detected_wall_loc[r][c+1][WEST] = '1';
     }
-    if (digitalRead(wallSensorR) == LOW) {
+    if (analogRead(wallSensorR) >= sideThresh) {
+//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = '1';
     }
   }
   else if (dirF == SOUTH) {
-    if (digitalRead(wallSensorF) == LOW) {
+    if (analogRead(wallSensorF) >= frontThresh) {
+//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = '1';
     }
-    if (digitalRead(wallSensorR) == LOW) {
+    if (analogRead(wallSensorR) >= sideThresh) {
+//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][WEST] = '1';
       if (c > 0) detected_wall_loc[r][c-1][EAST] = '1';
     }
-    if (digitalRead(wallSensorL) == LOW) {
+    if (analogRead(wallSensorL) >= sideThresh) {
+//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][EAST] = '1';
       if (c < 3) detected_wall_loc[r][c+1][WEST] = '1';
     }
   }
   else if (dirF == WEST) {
-    if (digitalRead(wallSensorF) == LOW) {
+    if (analogRead(wallSensorF) >= frontThresh) {
+//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][WEST] = '1';
       if (c > 0) detected_wall_loc[r][c-1][EAST] = '1';
     }
-    if (digitalRead(wallSensorR) == LOW) {
+    if (analogRead(wallSensorR) >= sideThresh) {
+//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
-    if (digitalRead(wallSensorL) == LOW) {
+    if (analogRead(wallSensorL) >= sideThresh) {
+//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][WEST] = '1';
     }
