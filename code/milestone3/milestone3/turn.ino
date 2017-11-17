@@ -1,9 +1,12 @@
 void leftTurn() {
   Serial.println("left turn");
-  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
+  while (digitalRead(leftLine) == LOW || digitalRead(rightLine == LOW) {
+//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(77);
       left.write(77);
-  }while(analogRead(leftLine)<=thresh){
+  }
+  while (digitalRead(leftLine) == HIGH) {
+//  while(analogRead(leftLine)<=thresh){
       right.write(77);
       left.write(77);
   }
@@ -14,16 +17,20 @@ void leftTurn() {
 
 void rightTurn(){
   Serial.println("right turn");
-  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
+  while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
+//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(103);
       left.write(103);
-  }while(analogRead(rightLine)<=thresh){
+  }
+  while (digitalRead(rightLine) == HIGH) {
+//  while(analogRead(rightLine)<=thresh){
       right.write(103);
       left.write(103);
   }
   right.write(90);
   left.write(90);
-  while(analogRead(leftLine)<=thresh){
+  while (digitalRead(leftLine) == HIGH) {
+//  while(analogRead(leftLine)<=thresh){
       right.write(103);
       left.write(103);
   }
@@ -34,17 +41,23 @@ void rightTurn(){
 
 void UTurn() {
   Serial.println("U turn");
-  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(103);
-      left.write(103);
-  }while(analogRead(rightLine)<=thresh){
+  while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
+//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(103);
       left.write(103);
   }
-  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
+  while (digitalRead(rightLine) == HIGH) {
+//  while(analogRead(rightLine)<=thresh){
       right.write(103);
       left.write(103);
-  }while(analogRead(rightLine)<=thresh){
+  }
+  while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
+//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
+      right.write(103);
+      left.write(103);
+  }
+  while (digitalRead(rightLine) == HIGH) {
+//  while(analogRead(rightLine)<=thresh){
       right.write(103);
       left.write(103);
   }
@@ -54,7 +67,8 @@ void UTurn() {
 }
 
 void skipIntersection(){
-  while(analogRead(2)>=thresh || analogRead(3)>=thresh){
+  while (digitalRead(leftWide) == LOW || digitalRead(rightWide) == LOW) {
+//  while(analogRead(2)>=thresh || analogRead(3)>=thresh){
     left.write(100);
     right.write(80);  
   }
