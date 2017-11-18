@@ -29,13 +29,13 @@ void rightTurn(){
   }
   right.write(90);
   left.write(90);
-  while (digitalRead(leftLine) == HIGH) {
-//  while(analogRead(leftLine)<=thresh){
-      right.write(103);
-      left.write(103);
-  }
-  right.write(90);
-  left.write(90);
+//  while (digitalRead(leftLine) == HIGH) {
+////  while(analogRead(leftLine)<=thresh){
+//      right.write(103);
+//      left.write(103);
+//  }
+//  right.write(90);
+//  left.write(90);
   dir = (dir+1) % 4;
 }
 
