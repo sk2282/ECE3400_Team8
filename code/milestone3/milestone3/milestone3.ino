@@ -11,7 +11,7 @@ int leftWide = 12; //2;     // Pin for left intersection detector
 int rightWide = 13; //3;    // Pin for right intersection detector
 //int thresh   = 500;     // Threshold for black line detection
 int detectCooldown = 0;
-int DETECT_COOLDOWN = 200;
+int DETECT_COOLDOWN = 300;
 
 int wallSensorF = 0; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
