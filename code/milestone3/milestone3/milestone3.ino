@@ -4,7 +4,6 @@
 StackArray<int> stack;
 Servo left;
 Servo right;
-int roboStop = 0;
 int leftLine = 10; //0;     // Pin for left line detector
 int rightLine = 11; //1;    // Pin for right line detector
 int leftWide = 12; //2;     // Pin for left intersection detector
@@ -17,7 +16,7 @@ int wallSensorF = 0; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
 int wallSensorL = 2; //13; // left wall sensor
 int frontThresh = 500; // threshold value for front wall sensor 
-int sideThresh = 325; // threshold value for side wall sensor threshold
+int sideThresh = 375; // threshold value for side wall sensor threshold
 
 /*
 int lRead;
@@ -58,14 +57,13 @@ void loop() {
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
 //  if ((lwRead >= thresh && rwRead >= thresh) && detectCooldown <= 0) {
     detectCooldown = DETECT_COOLDOWN;
-        if (!dfs()) {
+        if (!notDone()) {
           left.write(90);
           right.write(90);
-//          Serial.println("done");
           while(true){}
         }
         else {
-//          Serial.println();
+          dfs();
         }
   }
   else {
@@ -76,9 +74,9 @@ void loop() {
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
   */
-  if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH || roboStop) { // stop
+  if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH) { // stop
 //  if (lRead <= thresh && rRead <= thresh || roboStop) { // stop
-    left.write(90);
+    left.write(94);
     right.write(90);
     }
   else if (digitalRead(leftLine) == HIGH) { // left side is out of line
