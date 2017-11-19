@@ -43,45 +43,45 @@ char detected_wall_loc[5][4][5] = {
  * Uses a DFS search algorithm to find the next dir the robot needs to go and rotates the robot to that dir
  */
 boolean dfs() {
-  Serial.print("coordinate: ");
-  Serial.print(r);
-  Serial.print(","); 
-  Serial.println(c);
+//  Serial.print("coordinate: ");
+//  Serial.print(r);
+//  Serial.print(","); 
+//  Serial.println(c);
   // detect new walls for current square
   detectWalls();
 
   if(stack.isEmpty()) {
-    Serial.println("stack empty");
+//    Serial.println("stack empty");
   }
   else {
-    Serial.print("stack entry ");
-    Serial.println(stack.peek());
+//    Serial.print("stack entry ");
+//    Serial.println(stack.peek());
   }
   // decide on next dir to go
   if (notDone()) {
-      Serial.println(detected_wall_loc[r][c]);
+//      Serial.println(detected_wall_loc[r][c]);
       if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
-      Serial.println("go north");
-      faceRobot(NORTH);
+//      Serial.println("go north");
+      faceRobot(NORTH);                                                                                              
       stack.push(dir);
     }
     else if (c < 3 && detected_wall_loc[r][c][EAST] == '0' && visited[r][c+1] != 1) {
-      Serial.println("go east");
+//      Serial.println("go east");
       faceRobot(EAST);
       stack.push(dir);
     }
     else if (r < 4 && detected_wall_loc[r][c][SOUTH] == '0' && visited[r+1][c] != 1) {
-      Serial.println("go south");
+//      Serial.println("go south");
       faceRobot(SOUTH);
       stack.push(dir);
     }
     else if (c > 0 && detected_wall_loc[r][c][WEST] == '0' && visited[r][c-1] != 1) {
-      Serial.println("go west");
+//      Serial.println("go west");
       faceRobot(WEST);
       stack.push(dir);
     }
     else {
-      Serial.println("turn around");
+//      Serial.println("turn around");
       int newDir = (stack.pop() + 2) % 4;
       faceRobot(newDir);
     }
@@ -89,7 +89,7 @@ boolean dfs() {
     return true;
   }
   else {
-    Serial.println(stack.peek());
+//    Serial.println(stack.peek());
     return false;
   }
 }
@@ -101,43 +101,36 @@ void detectWalls() {
   
   if (dirF == NORTH) {
     if (analogRead(wallSensorF) >= frontThresh) {
-//    if (digitalRead(wallSensorF) == LOW) {
-      Serial.println("see wall");
-      Serial.println(detected_wall_loc[r][c]);
+//      Serial.println("see wall");
+//      Serial.println(detected_wall_loc[r][c]);
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
     if (analogRead(wallSensorR) >= sideThresh) {
-//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][EAST] = '1';
       if (c < 3) detected_wall_loc[r][c+1][WEST] = '1';
     }
     if (analogRead(wallSensorL) >= sideThresh) {
-//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][WEST] = '1';
       if (c > 0) detected_wall_loc[r][c-1][EAST] = '1';
     }
   }
   else if (dirF == EAST) {
     if (analogRead(wallSensorL) >= sideThresh) {
-//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
     if (analogRead(wallSensorF) >= frontThresh) {
-//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][EAST] = '1';
       if (c < 3) detected_wall_loc[r][c+1][WEST] = '1';
     }
     if (analogRead(wallSensorR) >= sideThresh) {
-//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = '1';
     }
   }
   else if (dirF == SOUTH) {
     if (analogRead(wallSensorF) >= frontThresh) {
-//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][NORTH] = '1';
     }
@@ -154,23 +147,20 @@ void detectWalls() {
   }
   else if (dirF == WEST) {
     if (analogRead(wallSensorF) >= frontThresh) {
-//    if (digitalRead(wallSensorF) == LOW) {
       detected_wall_loc[r][c][WEST] = '1';
       if (c > 0) detected_wall_loc[r][c-1][EAST] = '1';
     }
     if (analogRead(wallSensorR) >= sideThresh) {
-//    if (digitalRead(wallSensorR) == LOW) {
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
     if (analogRead(wallSensorL) >= sideThresh) {
-//    if (digitalRead(wallSensorL) == LOW) {
       detected_wall_loc[r][c][SOUTH] = '1';
       if (r < 4) detected_wall_loc[r+1][c][WEST] = '1';
     }
   }
-  Serial.println("final");
-  Serial.println(detected_wall_loc[r][c]);
+//  Serial.println("final");
+//  Serial.println(detected_wall_loc[r][c]);
 }
 
 /**
@@ -184,12 +174,12 @@ boolean notDone() {
          (detected_wall_loc[R][C][EAST] == '0' && C < 3 && visited[R][C+1] == 1) || 
          (detected_wall_loc[R][C][SOUTH] == '0' && R < 4 && visited[R+1][C] == 1) || 
          (detected_wall_loc[R][C][WEST] == '0' && C > 0 && visited[R][C-1] == 1)))  {
-        Serial.println("TRUE");
+//        Serial.println("TRUE");
         return true;
       }
     }
   }
-  Serial.println("FALSE");
+//  Serial.println("FALSE");
   return false;
 }
 
@@ -211,9 +201,9 @@ void updatePosition() {
       c -= 1;
       visited[r][c+1] = 1;
     }
-    Serial.print("update pos:");
-    Serial.print(r);
-    Serial.print(",");
-    Serial.println(c);
+//    Serial.print("update pos:");
+//    Serial.print(r);
+//    Serial.print(",");
+//    Serial.println(c);
 }
 

@@ -1,7 +1,7 @@
 #include <Servo.h>
-#include <StackArray.h>
 
-StackArray<int> stack;
+
+
 Servo left;
 Servo right;
 int roboStop = 0;
@@ -44,7 +44,7 @@ void setup() {
   pinMode(rightWide, INPUT);
   left.attach(5);
   right.attach(6);
-  stack.push(19);
+
 }
 
 void loop() {
@@ -54,24 +54,6 @@ void loop() {
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
   */
-  // INTERSECTION DETECTION
-  if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
-//  if ((lwRead >= thresh && rwRead >= thresh) && detectCooldown <= 0) {
-    detectCooldown = DETECT_COOLDOWN;
-        if (!dfs()) {
-          left.write(90);
-          right.write(90);
-//          Serial.println("done");
-          while(true){}
-        }
-        else {
-//          Serial.println();
-        }
-  }
-  else {
-    detectCooldown--;
-    if (detectCooldown < 0) detectCooldown = 0;
-  }
   /*
   lRead = analogRead(leftLine);
   rRead = analogRead(rightLine);
@@ -84,11 +66,11 @@ void loop() {
   else if (digitalRead(leftLine) == HIGH) { // left side is out of line
 //  else if (lRead < thresh) { // left side is out of line
     left.write(170);
-    right.write(85);
+    right.write(83);
   }
   else if (digitalRead(rightLine) == HIGH) { // right side is out of line
 //  else if (rRead < thresh) { // right side is out of line
-    left.write(95);
+    left.write(97);
     right.write(10);
   }
   else {    // go straight

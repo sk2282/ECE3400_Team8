@@ -1,5 +1,5 @@
 void leftTurn() {
-  Serial.println("left turn");
+//  Serial.println("left turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(77);
@@ -16,7 +16,7 @@ void leftTurn() {
 }
 
 void rightTurn(){
-  Serial.println("right turn");
+//  Serial.println("right turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(103);
@@ -40,26 +40,25 @@ void rightTurn(){
 }
 
 void UTurn() {
-  Serial.println("U turn");
+//  Serial.println("U turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(103);
-      left.write(103);
+
+      right.write(73);
+      left.write(73);
   }
   while (digitalRead(rightLine) == HIGH) {
-//  while(analogRead(rightLine)<=thresh){
-      right.write(103);
-      left.write(103);
+
+      right.write(73);
+      left.write(73);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-//  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(103);
-      left.write(103);
+      right.write(73);
+      left.write(73);
   }
   while (digitalRead(rightLine) == HIGH) {
-//  while(analogRead(rightLine)<=thresh){
-      right.write(103);
-      left.write(103);
+
+      right.write(73);
+      left.write(73);
   }
   right.write(90);
   left.write(90);
@@ -75,7 +74,7 @@ void skipIntersection(){
 }
 
 void faceRobot(int dir0) {
-  Serial.println("face new");
+//  Serial.println("face new");
   if (dir0 == dir) {
     skipIntersection();
   }
