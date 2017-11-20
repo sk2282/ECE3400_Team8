@@ -113,12 +113,12 @@ void loop(void) {
     {
       // Dump the payloads until we've gotten everything
       // RECEIVER SIDE
-      unsigned char got_data;
+      unsigned int got_data;
       bool done = false;
       while (!done)
       {
         // Fetch the payload, and see if this was the last one.
-        done = radio.read(&got_data, sizeof(unsigned char) );
+        done = radio.read(&got_data, sizeof(int) );
 
         // Spew it
         printf("Got payload %d...",got_data); // display decimal
@@ -133,7 +133,7 @@ void loop(void) {
       radio.stopListening();
 
       // Send the final one back.
-      radio.write(&got_data, sizeof(unsigned char) );
+      radio.write(&got_data, sizeof(int) );
       printf("Sent response.\n\r");
 
       // Now, resume listening so we catch the next packets.
