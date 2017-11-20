@@ -4,25 +4,31 @@
 
 ### Background
 
+### Stake Holders
+* The elderly who struggle to take care of themselves
+* Relatives 
+
 ### Utilitarian Test
+We have chosen to apply the utilitarian test. This test considers all current and future stakeholders. In this case, this is extremely important since the elderly population is growing so the outcome of this test will only affect more people as time goes on. This test also takes happiness into consideration. This is an important factor to consider because so many people will be affected. The solution that creates the most happiness will be the most desired outcome since it will affect the most people. It will cater to the common case instead of outliers.  
 
 ### Applying the Test
 
 #### Possible Alternative Actions 
-	Instead of a personal caregiver one could stay in a hospital or retirement home. 
-	The elderly could live with their children/Family, however this is not always an available option for them.
-	Robot Caregivers
-#### Stake Holders
-The elderly who struggle to take care of themselves will be affected. Especially those that cannot afford personal care
-3. For each of the most promising alternatives, determine the benefits and costs to all stake holders. 
-	Forcing People to be caregivers
-#### Possible Outcomes
+* Instead of a personal caregiver one could stay in a hospital or retirement home
+* The elderly could live with their children/Family, however this is not always an available option for them.
+* Robot Caregivers  
+* Requiring people to be caregivers
+
+#### For each of the most promising alternatives, determine the benefits and costs to all stake holders.	
+##### Requiring People to Become Caregivers
+###### Possible Outcomes
 People who are unhappy in their jobs do not perform as well and can experience personal consequences (https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)
 Due to this, the elderly won’t receive the quality of care they might need.
-2. Should include both short-term and long-term consequences 
+
+###### Short-term and Long-term Consequences 
 List some things from the forbes article above.
-3. Should consider the relative value of an outcome to different stake
- Holders
+
+###### Should consider the relative value of an outcome to different stakeHolders
 The outcome of this option hella sucks. No one is happy.
 
 Living with Family
