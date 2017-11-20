@@ -50,7 +50,7 @@ typedef enum { role_ping_out = 1, role_pong_back } role_e;
 const char* role_friendly_name[] = { "invalid", "Ping out", "Pong back"};
 
 // The role of the current running sketch
-role_e role = role_pong_back;
+role_e role = role_ping_out;
 
 void setup(void)
 {
@@ -131,7 +131,7 @@ void loop(void)
 
     // SENDER SIDE
     // Define maze
-    unsigned char new_data;
+    unsigned int new_data;
     // pack bits as follows:
     // x-coor | y-coor | data
     // 3 bits | 2 bits | 7 bits
@@ -143,20 +143,20 @@ void loop(void)
     // test
     unsigned char x = 4;
     unsigned char y = 3;
-    unsigned char d = B1011001;
+    unsigned char d = B1011000;
 
     // shift bits in order to pack bits, then or them together
 //    new_data = x << 4 | y << 2 | d;
     new_data = x << 9 | y << 7 | d;
-    // (4, 3, 1011001) should give 100111011001 or 2521 in decimal
+    // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
     //  x  ||  y || visited | treasure | wall
-    // 100 || 11 ||    1    |    01    | 1001
-    // 100111011001 
+    // 100 || 11 ||    1    |    01    | 1000
+    // 100111011000 
     // (4, 3, 3) should give 1001111 or 79 in decimal
 
     // Send maze in single payload
     printf("Now sending new map data!\n");
-    bool ok = radio.write(&new_data, sizeof(unsigned char) );
+    bool ok = radio.write(&new_data, sizeof(int) ); //sizeof(unsigned char)
 
     if (ok)
       printf("ok...");
@@ -182,7 +182,7 @@ void loop(void)
     {
       // Grab the response, compare, and send to debugging spew
       unsigned long got_time;
-      radio.read( &got_time, sizeof(unsigned long) );
+      radio.read( &got_time, sizeof(int) ); //sizeof(unsigned long)
 
       // Spew it
       printf("Got response %lu, round-trip delay: %lu\n\r",got_time,millis()-got_time);
