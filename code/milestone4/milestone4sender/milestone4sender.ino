@@ -146,7 +146,6 @@ void loop(void)
     unsigned char d = B1011000;
 
     // shift bits in order to pack bits, then or them together
-//    new_data = x << 4 | y << 2 | d;
     new_data = x << 9 | y << 7 | d;
     // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
     //  x  ||  y ||   done  | treasure | wall
