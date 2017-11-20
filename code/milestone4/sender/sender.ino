@@ -151,6 +151,7 @@ void loop(void)
     // (4, 3, 1011001) should give 
     //  x  ||  y || visited | treasure | wall
     // 100 || 11 ||    1    |    01    | 1001
+    // 100111011001
     // (4, 3, 3) should give 1001111 or 79 in decimal
 
     // Send maze in single payload

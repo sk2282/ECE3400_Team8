@@ -4,10 +4,10 @@
 StackArray<int> stack;
 Servo left;
 Servo right;
-int leftLine = 10; //0;     // Pin for left line detector
-int rightLine = 11; //1;    // Pin for right line detector
-int leftWide = 12; //2;     // Pin for left intersection detector
-int rightWide = 13; //3;    // Pin for right intersection detector
+int leftLine = 2; //10; //0;     // Pin for left line detector
+int rightLine = 3; //11; //1;    // Pin for right line detector
+int leftWide = 4; //12; //2;     // Pin for left intersection detector
+int rightWide = 7; //13; //3;    // Pin for right intersection detector
 //int thresh   = 500;     // Threshold for black line detection
 int detectCooldown = 0;
 int DETECT_COOLDOWN = 300;
