@@ -149,7 +149,7 @@ void loop(void)
 //    new_data = x << 4 | y << 2 | d;
     new_data = x << 9 | y << 7 | d;
     // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
-    //  x  ||  y || visited | treasure | wall
+    //  x  ||  y ||   done  | treasure | wall
     // 100 || 11 ||    1    |    01    | 1000
     // 100111011000 
     // (4, 3, 3) should give 1001111 or 79 in decimal
