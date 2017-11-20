@@ -8,12 +8,12 @@ port at 115.2kb.
 */
 
 #define LOG_OUT 1 // use the log output function
-#define FFT_N 256 // set to 256 point fft
+#define FFT_N 128 // set to 128 point fft
 
 #include <FFT.h> // include the library
 
 void setup() {
-  Serial.begin(115200); // use the serial port
+  Serial.begin(9600); // use the serial port
   TIMSK0 = 0; // turn off timer0 for lower jitter
   ADCSRA = 0xe5; // set the adc to free running mode
   ADMUX = 0x40; // use adc0
@@ -23,7 +23,7 @@ void setup() {
 void loop() {
   while(1) {     // reduces jitter
     cli();        // UDRE interrupt slows this way down on arduino1.0
-    for (int i = 0 ; i < 512 ; i += 2) {      // save 256 samples
+    for (int i = 0 ; i < FFT_N*2 ; i += 2) {      // save 256 samples
       while(!(ADCSRA & 0x10)); // wait for adc to be ready
       ADCSRA = 0xf5;        // restart adc
       byte m = ADCL;        // fetch adc data
@@ -39,15 +39,20 @@ void loop() {
     fft_run();              // process the data in the fft
     fft_mag_log();          // take the output of the fft
     sei();
+
+//    Serial.println("");
+    for (int i=0; i < FFT_N; i++) {
+//      Serial.println(fft_log_out[i]);
+    }
     /*
     7kHz: [44,49]
     12kHz: [78,82]
     17kHz: [112,116]
     */
-    int max_7k = max_in_range(44,49);
-    int max_12k = max_in_range(78,82);
-    int max_17k = max_in_range(112,116);
-    int RATIO_THRESH = 2.5;
+    int max_7k = max_in_range(44/2,48/2);
+    int max_12k = max_in_range(78/2,82/2);
+    int max_17k = max_in_range(112/2,116/2);
+    int RATIO_THRESH = 2.6;
 
     if (max_7k/30 > RATIO_THRESH) {
       Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
