@@ -1,6 +1,6 @@
 # Milestone 4: Maze-mapping Robot
 
-## Objective: 
+## Objective:
 * The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
 
 ### 1. Treasure Detection Integration
@@ -54,10 +54,10 @@ unsigned char treasureRead() {
 
 ```c
 // shift bits in order to pack bits, then or them together
-new_data = x << 9 | y << 7 | d;
+new_data = x << 7 | y << 9 | d;
 // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
-//  x  ||  y ||   done  | treasure | wall
-// 100 || 11 ||    1    |    01    | 1000
+//  x ||  y  ||   done  | treasure | wall
+// 10 || 011 ||    1    |    01    | 1000
 
 ```
 
@@ -71,7 +71,7 @@ bool ok = radio.write(&new_data, sizeof(int) );
 radio.read( &got_time, sizeof(int) );
 ```
 
-* We then checked the new code on the 2 Arduinos with the following values: x = 4, y = 3, data = B1011000. The serial monitor confirmed our answer, as the receiver printed that it received payload 2520, which is 100111011000 in decimal. 
+* We then checked the new code on the 2 Arduinos with the following values: x = 4, y = 3, data = B1011000. The serial monitor confirmed our answer, as the receiver printed that it received payload 2520, which is 100111011000 in decimal.
 
 #### Integrating Radio Communication with Maze-Mapping Code
 * We added the necessary header files and set-up code to our maze-mapping code from milestone 3
@@ -123,5 +123,10 @@ void dfs() {
 * We were able to compile our code and believe our logic is correct. However, so far we haven't been able to test it with the robot yet because we had trouble with the treasure detection circuitry.
 
 #### FPGA
-* Now we will connect the base-station Arduino with the FPGA.
+* Now we will connect the base-station Arduino with the FPGA. We decided against implementing SPI for the communication and used digital and analog pins to send the data.  
+* The Verilog code was also able to compile, but we were unable to test it because our robot has had trouble with the treasure detection circuitry.  
+* Additionally, we did not have access to an FPGA until it was very close to the Milestone 4 deadline. We were then unable to connect it to our base station in the time that our robot circuitry allowed it to move.  
 
+### Moving Forward
+Unfortunately, the errors we've made and the lack of our materials in the last few weeks didn't allow us to completely satisfy this milestone.  
+For the upcoming week, we plan on making sure the treasure detection works as intended and then testing it with the FPGA display. In retrospect, it would have been better to guarantee treasure detection on a separate breadboard before adding it to the robot, as well as concurrently setting up the FPGA code.

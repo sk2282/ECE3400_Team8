@@ -36,6 +36,16 @@ role_e role = role_pong_back;
 
 void setup(void)
 {
+  // setup pins
+  pinMode(8, OUTPUT); // x1
+  pinMode(7, OUTPUT); // x2
+  pinMode(6, OUTPUT); // x3
+  pinMode(5, OUTPUT); // y1
+  pinMode(4, OUTPUT); // y2
+  pinMode(3, OUTPUT); // treasure 1
+
+  
+  
   //
   // Print preamble
   //
@@ -119,6 +129,23 @@ void loop(void) {
       {
         // Fetch the payload, and see if this was the last one.
         done = radio.read(&got_data, sizeof(int) );
+
+        // Send to FPGA
+        String x = String(got_data, BIN);
+        digitalWrite(8, x[0]); // x1
+        digitalWrite(7, x[1]); // x2
+        digitalWrite(6, x[2]); // y1
+        digitalWrite(5, x[3]); // y2
+        digitalWrite(4, x[4]); // y3
+//        digitalWrite(3, x[5]); // t1
+//        digitalWrite(2, x[6]); // t2
+        digitalWrite(3, LOW);
+        digitalWrite(2, LOW);
+        analogWrite(0, 255*x[7]); // w1
+        analogWrite(1, 255*x[8]); // w2
+        analogWrite(2, 255*x[9]); // w3
+        analogWrite(3, 255*x[10]); // w4
+        analogWrite(4, 255*x[11]); // done
 
         // Spew it
         printf("Got payload %d...",got_data); // display decimal

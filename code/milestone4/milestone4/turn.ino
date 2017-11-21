@@ -1,4 +1,5 @@
-void followLine(){if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH) { // stop
+void followLine(){
+  if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH) { // stop
 //  if (lRead <= thresh && rRead <= thresh || roboStop) { // stop
     left.write(94);
     right.write(90);
@@ -22,6 +23,7 @@ void followLine(){if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) ==
 void halt() {
   left.write(90);
   right.write(90);
+  while (true) {}
 }
 
 void leftTurn() {

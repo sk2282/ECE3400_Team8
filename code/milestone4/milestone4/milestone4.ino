@@ -20,7 +20,7 @@ int DETECT_COOLDOWN = 300;
 int wallSensorF = 0; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
 int wallSensorL = 2; //13; // left wall sensor
-int frontThresh = 500; // threshold value for front wall sensor 
+int frontThresh = 375; // threshold value for front wall sensor 
 int sideThresh = 375; // threshold value for side wall sensor threshold
 
 int frontRead; // for wall sensors
@@ -158,8 +158,9 @@ void loop() {
   }
 
   // Read for treasures
-  treasureRead();
+  // treasureRead();
   
   followLine();
+  
 }
 
