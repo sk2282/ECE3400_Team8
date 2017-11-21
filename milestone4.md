@@ -3,9 +3,9 @@
 ## Objective: 
 * The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
 
-### Treasure Detection Integration
+### 1. Treasure Detection Integration
 
-### VGA Display
+### 2. VGA Display
 #### Sending Data
 * We based our code on the radio communication code used in Lab 4. In lab 4, the code included both sender and receiver functionality.
 * For this milestone, we divided the code up so that one Arduino (robot) has the sender code while the other Arduino (base station) has the receiver code
