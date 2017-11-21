@@ -1,6 +1,6 @@
 void packData()
 
-void radioSend(unsigned char x, unsigned char y, unsigned char d) {
+void radioSend() {
   //
   // Ping out role.  Repeatedly send the current time
   //
@@ -14,7 +14,7 @@ void radioSend(unsigned char x, unsigned char y, unsigned char d) {
     // Define maze
     unsigned int new_data;
     // pack bits as follows:
-    // x-coor | y-coor | data
+    //  row   | column | data
     // 3 bits | 2 bits | 7 bits
 
     // data example:
@@ -22,14 +22,14 @@ void radioSend(unsigned char x, unsigned char y, unsigned char d) {
     //    1       01       1001
 
     // test
-//    unsigned char x = 4;
-//    unsigned char y = 3;
-//    unsigned char d = B1011000;
+    unsigned char row = r;
+    unsigned char col = c;
+    unsigned char d = !notDone() << 6 | treasureRead() << 4 | detected_wall_loc[r][c];
 
     // shift bits in order to pack bits, then or them together
-    new_data = x << 9 | y << 7 | d;
-    // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
-    //  x  ||  y ||   done  | treasure | wall
+    new_data = row << 9 | col << 7 | d;
+    // (4, 3, 1011000) should give 100111011000 or 2520 in decimal
+    //  r  ||  c ||   done  | treasure | wall
     // 100 || 11 ||    1    |    01    | 1000
 
     // Send maze in single payload

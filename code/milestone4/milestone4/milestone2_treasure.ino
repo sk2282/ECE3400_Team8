@@ -12,7 +12,7 @@ port at 115.2kb.
 
 #include <FFT.h> // include the library
 
-void treasureRead() {
+unsigned char treasureRead() {
   cli();        // UDRE interrupt slows this way down on arduino1.0
   for (int i = 0 ; i < FFT_N*2 ; i += 2) {      // save 256 samples
     while(!(ADCSRA & 0x10)); // wait for adc to be ready
@@ -46,16 +46,20 @@ void treasureRead() {
   int RATIO_THRESH = 2.6;
 
   if (max_7k/30 > RATIO_THRESH) {
-    Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
+//    Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
+    return 1;
   }
   else if (max_12k/30 > RATIO_THRESH) {
-    Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
+//    Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
+    return 2;
   }
   else if (max_17k/30 > RATIO_THRESH) {
-    Serial.println("17k     17k     17k     17k     17k     17k     17k");
+//    Serial.println("17k     17k     17k     17k     17k     17k     17k");
+    return 3;
   }
   else {
-    Serial.println("No Signal");
+//    Serial.println("No Signal");
+    return 0;
   }   
 }
 

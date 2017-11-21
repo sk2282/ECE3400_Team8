@@ -31,6 +31,7 @@ void dfs() {
       faceRobot(newDir);
     }
     updatePosition();
+    radioSend();
   }
 }
 
