@@ -85,7 +85,7 @@ void radioSend() {
 }
 ```
 
-* Each time our robot reads new information about the maze, it will update its row and column coordinates as well as “data,” which contains information about the progress of the robot, the treasures, and the walls.  
+* Each time our robot reads new information about the maze, it should update its row and column coordinates as well as “data,” which contains information about the progress of the robot, the treasures, and the walls.  
 
 ```c
 void dfs() {
@@ -119,6 +119,8 @@ void dfs() {
   }
 }
 ```
+
+* We were able to compile our code and believe our logic is correct. However, so far we haven't been able to test it with the robot yet because we had trouble with the treasure detection circuitry.
 
 #### FPGA
 * Now we will connect the base-station Arduino with the FPGA.
