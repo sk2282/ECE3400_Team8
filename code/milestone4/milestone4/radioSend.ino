@@ -1,5 +1,3 @@
-void packData()
-
 void radioSend() {
   //
   // Ping out role.  Repeatedly send the current time
