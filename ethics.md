@@ -3,6 +3,8 @@
 ## Elderly Care Robots
 
 ### Background
+Countries are trying to cope with the growing elderly population. In the United States, approximately 13% of the population is 65 years or older, but that percentage is expected to nearly double by the year 2050. This problem is not unique to the United States as 20% of the population in Japan is 65 years or older. Additionally by the year 2025, Japan expects to have a shortage of 1 million caregivers. Thus there is a growing need to find a way to adequately provide care to the elderly who need it. To confront the issue, there are numerous possibilities that supplement personal caregivers. Alternatives include the elderly living with family, forcing an increase individuals to become personal caregivers, and the utilization of personal care robots to help care for the elderly. 
+[Source](http://www.businessinsider.com/japan-developing-carebots-for-elderly-care-2015-11)  
 
 ### Stake Holders
 * The elderly who struggle to take care of themselves
@@ -27,12 +29,13 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Possible Outcomes*
 * People who are unhappy in their jobs do not perform as well and can experience personal consequences [Source](https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)  
 * Due to this, the elderly won’t receive the quality of care they might need.
-
 ###### *Short-term and Long-term Consequences*
-* List some things from the forbes article above.
+* Health problems for the caregivers who are unhappy with their job
+* Inadequate care and negative impact on the elderly because caregivers are unqualified/don’t care
 
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * The outcome of this option hella sucks. No one is happy.
+
 
 ##### Living with Family
 ###### *Possible Outcomes*
@@ -40,13 +43,14 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Short-term and Long-term Consequences*
 * Distance created between family members
 * Added stress
-##### *Should consider the relative value of an outcome to different stakeHolders*
+* Family members take on more than a financial burden because they have to sacrifice significant time to provide care
+###### *Should consider the relative value of an outcome to different stakeHolders*
 * People might start happier in this situation but final result would not be good
-
-
+* The elderly might be happier in this situation compared to alternatives where they would scarcely see their family but it would be harder on the other family members who have to provide constant care
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
 ##### First example often turns into a standard. 
+
 #### 5. Draw a conclusion 
 ##### If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 ##### If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
