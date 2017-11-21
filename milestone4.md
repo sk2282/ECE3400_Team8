@@ -1,6 +1,7 @@
 # Milestone 4: Maze-mapping Robot
 
-## Objective: The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
+## Objective: 
+* The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
 
 ### Treasure Detection Integration
 
