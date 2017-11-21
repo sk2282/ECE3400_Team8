@@ -19,10 +19,10 @@ We have chosen to apply the utilitarian test. This test considers all current an
 * Robot Caregivers  
 * Requiring people to be caregivers
 
-#### For each of the most promising alternatives, determine the benefits and costs to all stake holders.	
+#### Benefits and Costs to Stake Holders	
 ##### Requiring People to Become Caregivers
 ###### Possible Outcomes
-People who are unhappy in their jobs do not perform as well and can experience personal consequences (https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)
+People who are unhappy in their jobs do not perform as well and can experience personal consequences [Source](https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)  
 Due to this, the elderly won’t receive the quality of care they might need.
 
 ###### Short-term and Long-term Consequences 
@@ -31,14 +31,13 @@ List some things from the forbes article above.
 ###### Should consider the relative value of an outcome to different stakeHolders
 The outcome of this option hella sucks. No one is happy.
 
-Living with Family
-1. Predict probable outcomes based on facts and experience 
+##### Living with Family
+###### Possible Outcomes
 The family might not know how exactly to handle the needs of the elderly or how to care properly for them. 
-2. Should include both short-term and long-term consequences 
+###### Short-term and Long-term Consequences 
 Distance created between family members
 Added stress
-3. Should consider the relative value of an outcome to different stake
- Holders
+3. Should consider the relative value of an outcome to different stakeHolders
 People might start happier in this situation but final result would not be good
 
 
