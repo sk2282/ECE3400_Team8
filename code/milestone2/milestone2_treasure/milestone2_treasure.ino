@@ -16,7 +16,7 @@ void setup() {
   Serial.begin(9600); // use the serial port
   TIMSK0 = 0; // turn off timer0 for lower jitter
   ADCSRA = 0xe5; // set the adc to free running mode
-  ADMUX = 0x40; // use adc0
+  ADMUX = B01000101; // use adc5
   DIDR0 = 0x01; // turn off the digital input for adc0
 }
 
@@ -52,15 +52,19 @@ void loop() {
     int max_7k = max_in_range(44/2,48/2);
     int max_12k = max_in_range(78/2,82/2);
     int max_17k = max_in_range(112/2,116/2);
-    int RATIO_THRESH = 2.6;
+    
+    double RATIO_THRESH = 3;
+    double ratio7k = max_7k/30;
+    double ratio12k = max_12k/30;
+    double ratio17k = max_17k/30;
 
-    if (max_7k/30 > RATIO_THRESH) {
+    if (ratio7k > RATIO_THRESH && ratio7k > ratio12k && ratio7k > ratio17k) {
       Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
     }
-    else if (max_12k/30 > RATIO_THRESH) {
+    else if (max_12k/30 > RATIO_THRESH && ratio12k > ratio7k && ratio12k > ratio17k) {
       Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
     }
-    else if (max_17k/30 > RATIO_THRESH) {
+    else if (max_17k/30 > RATIO_THRESH && ratio17k > ratio7k && ratio17k > ratio12k) {
       Serial.println("17k     17k     17k     17k     17k     17k     17k");
     }
     else {
