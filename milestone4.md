@@ -4,7 +4,12 @@
 * The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
 
 ### 1. Treasure Detection Integration
-* Changed FFT to 128 to reduce memory use
+* Changed FFT to 128 point to reduce memory use. Before, we were using 256 point.
+
+```c
+#define FFT_N 128 // set to 128 point fft
+```
+
 * This is the treasure read function:
 
 ```c
