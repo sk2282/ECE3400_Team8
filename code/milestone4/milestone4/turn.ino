@@ -30,13 +30,13 @@ void leftTurn() {
 //  Serial.println("left turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(77);
-      left.write(77);
+      right.write(74);
+      left.write(81);
   }
   while (digitalRead(leftLine) == HIGH) {
 //  while(analogRead(leftLine)<=thresh){
-      right.write(77);
-      left.write(77);
+      right.write(74);
+      left.write(81);
   }
   right.write(90);
   left.write(90);
@@ -47,13 +47,13 @@ void rightTurn(){
 //  Serial.println("right turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH) {
 //  while(analogRead(rightLine)<=thresh){
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   right.write(90);
   left.write(90);
@@ -61,22 +61,21 @@ void rightTurn(){
 }
 
 void UTurn() {
-Serial.println("U turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   right.write(90);
   left.write(90);
@@ -92,8 +91,6 @@ void skipIntersection(){
 }
 
 void faceRobot(int dir0) {
-  Serial.print("face");
-  Serial.println(dir0);
   if (dir0 == dir) {
     skipIntersection();
   }

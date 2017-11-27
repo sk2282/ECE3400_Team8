@@ -3,15 +3,15 @@ void leftTurn() {
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(77);
-      left.write(77);
+      left.write(81);
   }
   while (digitalRead(leftLine) == HIGH) {
 //  while(analogRead(leftLine)<=thresh){
       right.write(77);
-      left.write(77);
+      left.write(81);
   }
   right.write(90);
-  left.write(90);
+  left.write(94);
   dir = (dir+3) % 4;
 }
 
@@ -20,38 +20,38 @@ void rightTurn(){
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(103);
-      left.write(103);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH) {
 //  while(analogRead(rightLine)<=thresh){
       right.write(103);
-      left.write(103);
+      left.write(107);
   }
   right.write(90);
-  left.write(90);
+  left.write(94);
   dir = (dir+1) % 4;
 }
 
 void UTurn() {
-Serial.println("U turn");
+
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(103);
-      left.write(103);
+      right.write(100);
+      left.write(107);
   }
   right.write(90);
-  left.write(90);
+  left.write(94);
   dir = (dir+2) % 4;
 }
 

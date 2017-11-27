@@ -31,11 +31,12 @@ void dfs() {
       faceRobot(newDir);
     }
     updatePosition();
-    radioSend();
+    //radioSend();
   }
 }
 
 void detectWalls() {
+  Serial.println("detecting walls");
   int dirF = dir;
   int dirR = (dir + 1) % 4;
   int dirL = (dir + 3) % 4;
