@@ -45,10 +45,10 @@ void radioSend() {
     // Wait here until we get a response, or timeout (250ms)
     unsigned long started_waiting_at = millis();
     bool timeout = false;
-    while ( ! radio.available() && ! timeout )
+    while ( ! radio.available() && ! timeout ) {
       if (millis() - started_waiting_at > 200 )
         timeout = true;
-
+    }
     // Describe the results
     if ( timeout )
     {

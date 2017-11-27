@@ -136,13 +136,15 @@ void setup() {
   pinMode(rightLine, INPUT);
   pinMode(leftWide, INPUT);
   pinMode(rightWide, INPUT);
-  Serial.begin(115200); // use the serial port
-  TIMSK0 = 0; // turn off timer0 for lower jitter
-  ADCSRA = 0xe5; // set the adc to free running mode
-  ADMUX = 0x40; // use adc0
-  DIDR0 = 0x01; // turn off the digital input for adc0
+  //Serial.begin(115200); // use the serial port
+//  TIMSK0 = 0; // turn off timer0 for lower jitter
+//  ADCSRA = 0xe5; // set the adc to free running mode
+//  ADMUX = 0x40; // use adc0
+//  DIDR0 = 0x01; // turn off the digital input for adc0
   left.attach(5);
   right.attach(6);
+  left.write(90);
+  right.write(90);
   stack.push(19);
 }
 
@@ -160,7 +162,7 @@ void loop() {
 
   // Read for treasures
   // treasureRead();
-
+  Serial.println("looping");
   followLine();
   
 }
