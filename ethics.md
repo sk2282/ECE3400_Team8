@@ -18,8 +18,8 @@ We have chosen to apply the utilitarian test. This test considers all current an
 #### 1. Possible Alternative Actions 
 * Instead of a personal caregiver one could stay in a hospital or retirement home
 * The elderly could live with their children/Family, however this is not always an available option for them.
-* Robot Caregivers  
 * Requiring people to be caregivers
+* Robot Caregivers  
 
 #### 2. Identify the stakeholders who will be affected by these actions 
 The elderly who struggle to take care of themselves will be affected. Especially those that cannot afford personal care
@@ -27,15 +27,20 @@ The elderly who struggle to take care of themselves will be affected. Especially
 #### 3. Benefits and Costs to Stake Holders	
 
 ##### Forcing Elderly into a hospital or retirement home
-###### *Predict probable outcomes based on facts and experience*
-* An increase in those who need to use assisted living and facilities being closer to capacity will increase the prices of care to make it unobtainable to some who need it??? IDK OKAY 
+###### *Possible Outcome*
+* An increase in those who need to use hospital/retirement homes/etc. will make assisted living facilities filled closer and closer to capacity
+* Increase in individuals using assisted living facilities will increase the price of care and make it unobtainable to some who need it
 ###### *Short-term and Long-term Consequences*
+* An increase to those using a given facility may decrease the quality of care within it
+* Represents the same problem with personal caregiver: An increase in the amount of elderly using facilities would lead to an increase the amount of caregivers required within the assisted living facility which may lead to a shortage of staff
 * Financial burden placed on those who pay for the person’s care
-* Harder for family members and friends to visit 
-* Represents the same problem with personal caregiver - A need to increase the amount of caregivers within the assisted living facility may lead to a shortage of staff
+* Harder for family members and friends to visit, but they do not have to personally provide care to the individual 
 * Possibly easier to meet other people and be social with other individuals in assisted living but that ranges from place to place. One extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
 ###### *Should consider the relative value of an outcome to different stakeHolders*
-*Happiness ranges depending on the quality of the facility and opportunities to meet other people. Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a  feeling of isolation (depends on degree of ability to meet other people in place)
+* Some elderly do not want to utilize assisted living/prefer to stay more independent and would therefore will be unhappy despite quality of care within the place
+* Happiness ranges greatly depending on the quality of the facility care and opportunities to meet other people
+* Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a feeling of isolation (depends on degree of ability to meet other people in place)
+* Long-term financial expenses may represent a burden to either the person requiring care and/or their family members
 
 ##### Requiring People to Become Caregivers
 ###### *Possible Outcomes*
@@ -44,34 +49,50 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Short-term and Long-term Consequences*
 * Health problems for the caregivers who are unhappy with their job
 * Inadequate care and negative impact on the elderly because caregivers are unqualified/don’t care
-
 ###### *Should consider the relative value of an outcome to different stakeHolders*
-* The outcome of this option hella sucks. No one is happy.
-
-
+* Both the person seeking care and the person providing care has a great potential to be unhappy in this situation
+* Family members impacted negatively if care is inadequate 
 
 ##### Living with Family
 ###### *Possible Outcomes*
-* The family might not know how exactly to handle the needs of the elderly or how to care properly for them. 
+* The family might not know how exactly to handle the needs of the elderly or how to care properly for them
 ###### *Short-term and Long-term Consequences*
-* Distance created between family members
+* Distance/tension created between family members
 * Added stress
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * People might start happier in this situation but final result would not be good
-* The elderly might be happier in this situation compared to alternatives where they would scarcely see their family but it would be harder on the other family members who have to provide constant care
+* The elderly might be happier in this situation compared to alternatives where they would scarcely see their family but there is also the potential that they feel like a burden or feel guilty for the need of constant care
+* It would be harder on the other family members who have to provide constant care
 
 ##### Robot Caregivers
 ###### *Possible Outcomes* 
-* Robot caregivers will increase with popularity to help supplement the shortage of personal caregivers
+* Robot caregivers will increase in popularity to help supplement the shortage of personal caregivers
 ###### *Short-term and Long-term consequences*
-* Adequate but also consist care that may not be provided by a human 
+* Helps to solve the caregiver employment shortage 
+* Adapt to meet the needs of care for the elderly over time
+* Adequate but also consist care that may not be provided by a human
 ###### *Should consider the relative value of an outcome to different stakeHolders*
-* The most people end up happy in this situation 
+* Happiness for individuals will be approximately the same as if there was a personal caregiver
+* The most people end up happy in this situation
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
-##### First example often turns into a standard. 
+##### First example often turns into a standard. So consider what would happen immediately if these actions were to be implemented
+##### Forcing Elderly into a hospital or retirement home
+* Inadequate care may be provided because so many individuals would be using hospitals/retirement homes/etc.
+* The elderly may not be happy if they were forced and did not want to use an assisted living facility
+##### Requiring People to Become Caregivers
+* Unhappy caregivers give inaequate care which can lead to health problems for the elderly
+##### Living with Family
+* This ranges greatly depending on family unit
+* Worst case is that there is a lot of tension and disputes between famliy members. Adequate care is not provided because family members are not trained professionals. Leads to a negative impact on the elderly and loved ones.
+##### Robot Caregivers
+* Notoriety will increase over time as there are new innovations 
+* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers will increase in popularity and be considered a new viable option to personal caregivers
 
 #### 5. Draw a conclusion 
-##### If the same action is selected in Steps 3 & 4, then this is the ethical action. 
-##### If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
+##### Options to Drawing a Conclusion
+###### 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
+###### 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
+##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consist care. Of the options considered, it represents the option mitigates unqualified and inadequate care while leading to the greatest number of people being happy. 
+
