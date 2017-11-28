@@ -50,27 +50,28 @@ The elderly who struggle to take care of themselves will be affected, especially
 
 ##### Requiring People to Become Caregivers
 ###### *Possible Outcomes*
-* People who are unhappy in their jobs do not perform as well and can experience personal consequences [Source](https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)  
-* Due to this, the elderly won’t receive the quality of care they might need.
+* People who are unhappy in their jobs do not perform as well and can experience personal consequences.  This could decrease the quality of care to the elderly [Source](https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)  
+* Employment of many caregivers will increase the cost of using a retirement home, potentially making quality care unaffordable for some families
 ###### *Short-term and Long-term Consequences*
 * Health problems for the caregivers who are unhappy with their job
-* Inadequate care and negative impact on the elderly because caregivers are unqualified/don’t care
+* Inadequate care and negative impact on the elderly
 ###### *Should consider the relative value of an outcome to different stake holders*
-* Both the person seeking care and the person providing care has a great potential to be unhappy in this situation
-* Family members impacted negatively if care is inadequate 
+* The person seeking care may lose feeling of independence
+* Person providing care has the potential to be unhappy in this situation
+* Family members impacted negatively if care is inadequate
 
 ##### Living with Family
 ###### *Possible Outcomes*
-* The family might not know how exactly to handle the needs of the elderly or how to care properly for them which can lead to inadequate care. A report shows that almost three quarters of family caregivers did not go to the doctor as often as they were suppose to. 
+* The family might not know how exactly to handle the needs of the elderly or how to care properly for them which can lead to inadequate care. A report shows that almost three quarters of family caregivers did not go to the doctor as often as they were supposed to. 
 * Stress on the family member providing care can have a negative impact on their own health and lead to a greater potential of illness. A study shows that 23% of family caregivers caring for loved ones for 5 years or more report their own health as either fair or poor. Additionally, stress of caregiving for a person with dementia can affect a person's immune system for up to three years after caregiving ends. [Source](http://caregiveraction.org/resources/caregiver-statistics#Impact%20on%20Family%20Caregiver's%20Health)
 ###### *Short-term and Long-term Consequences*
 * Distance/tension created between family members
 * Added stress  
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
 ###### *Should consider the relative value of an outcome to different stake holders*
-* People might start happier in this situation but the quality of care is likely to be inadequate compared to other options
+* People might start happier in this situation, but the quality of care is likely to be inadequate compared to other options
 * The elderly might be happier in this situation compared to alternatives where they would scarcely see their family, but there is also the potential that they feel like a burden or feel guilty for the need of constant care
-* Decreased monetary cost, but increased emotional cost for family members who have to provide constant care
+* Decreased monetary cost compared to using retirement homes / caregivers, but increased emotional cost for family members who have to provide constant care
 
 ##### Robot Caregivers
 ###### *Possible Outcomes* 
@@ -78,29 +79,35 @@ The elderly who struggle to take care of themselves will be affected, especially
 ###### *Short-term and Long-term consequences*
 * Helps to solve the caregiver employment shortage 
 * Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.
-* Adequate but also consistent care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
-* Elderly can feel more independent, knowing they're using a machine instead of human caregivers to increase their quality of life.
+* Adequate and consistent care can be provided 24/7. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
 ###### *Should consider the relative value of an outcome to different stake holders*
-* The most people end up happy in this situation because the elderly has the time to socialize with family and friends while also getting quality care
+* Elderly can spend more time with their family and get quality care
+* Elderly can feel more independent, knowing they're using a machine instead of human caregivers to increase their quality of life.
+* Affordability for the family depends on what the market price is
+* The robot would alleviate much of the emotional cost imposed on the family that would come with caring for or being away from their loved one
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
 ##### First example often turns into a standard. So consider what would happen immediately if these actions were to be implemented
 ##### Forcing Elderly into a hospital or retirement home
-* Inadequate care may be provided because so many individuals would be using hospitals/retirement homes/etc.
+* Shortage of workers and high demand for care may compromise the quality of care
 * The elderly may not be happy if they were forced and did not want to use an assisted living facility
+* Increase in number of retirement home jobs.
+* Increase in demand for care could create opportunities for retirement home owners.
 ##### Requiring People to Become Caregivers
-* Unhappy caregivers give inadequate care, which can lead to health problems for the elderly
+* The quality of care would differ on an individual basis.  In theory, the quality of care should be high, but there is the potential for human error.
+* It would be expensive to incentivize unmotivated people to become caregivers
+* Increase in number of caregiver jobs
 ##### Living with Family
-* This ranges greatly depending on family unit
-* Worst case is that there is a lot of tension and disputes between famliy members. Adequate care is not provided because family members are not trained professionals. Leads to a negative impact on the elderly and loved ones.
+* On average, elderly people wouldn't receive the quality of care they need
+* Very inexpensive policy option
 ##### Robot Caregivers
-* Notoriety will increase over time as there are new innovations
-* A policy might receive some backlash from people who trust a human more than a robot, regardless of the quality of care the robots give
-* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable option to personal caregivers
+* Delivers consistent and good quality care for an increasing elderly population.  On average, the quality of care from the robots would be higher than the quality of care by humans.  If the market price goes low enough, this could become an economically feasible option for the general population
+* Use of robot caregivers would stimulate growth in the tech industry
+* A policy might receive some political backlash from people whose jobs feel threatened by the utilization of robot caregivers, or by those who trust a human more than a robot, regardless of the quality of care given by the robots.  It is likely that malfunctions or mishaps by the robots will be more heavily scrutinized by the general public than mistakes, neglect, or abuse by humans.
+* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable option to personal caregivers.  However, it will take a lot of time and money to do enough testing for people to feel safe using the robots.  Government regulations on the robots (similar to regulations on car safety) would have to be debated on and implemented.
 
 #### 5. Draw a conclusion 
 ##### Options to Drawing a Conclusion
 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
-##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consistent care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy. 
-
+##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consistent care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy.
