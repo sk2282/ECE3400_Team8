@@ -91,20 +91,20 @@ The elderly who struggle to take care of themselves will be affected, especially
 ##### Forcing Elderly into a hospital or retirement home
 * Shortage of workers and high demand for care may compromise the quality of care
 * The elderly may not be happy if they were forced and did not want to use an assisted living facility
-* Increase in number of retirement home jobs.
+* Increase in number of retirement home / hospital caregiver jobs.
 * Increase in demand for care could create opportunities for retirement home owners.
 ##### Requiring People to Become Caregivers
 * The quality of care would differ on an individual basis.  In theory, the quality of care should be high, but there is the potential for human error (e.g. a lack of interest can negatively impact quality of care).
 * It would be expensive to incentivize unmotivated people to become caregivers and nearly impossible to recruit enough caregivers to account for the increasing elderly population.
 * Increase in number of caregiver jobs
 ##### Living with Family
-* On average, elderly people wouldn't receive the quality of care they need, but blame for inadequate care can be placed on families instead of robots, caregivers, or retirement homes.
-* Very inexpensive policy option.  Easy to implement, but doesn't really address the problem
+* On average, elderly people wouldn't receive the quality of care they need, but blame for inadequate care can be placed on families instead of robots, caregivers, or retirement homes.  Families able to afford higher quality care will be able to give their loved ones high quality care.  Families unable to afford high quality care will have to shoulder the emotional costs of caring for their loved ones themselves.
+* Very inexpensive policy option.  Easy to implement, but doesn't really address the problem.
 ##### Robot Caregivers
-* Delivers consistent and good quality care for an increasing elderly population.  On average, the quality of care from the robots would be higher than the quality of care by humans.  If the market price goes low enough, this could become an economically feasible option for the general population
+* Delivers consistent and good quality care for an increasing elderly population.  On average, the quality of care from the robots would be higher than the quality of care by humans.  If the market price goes low enough, this could become an economically feasible option for the general population.
 * Use of robot caregivers would stimulate growth in the tech industry
 * A policy might receive some political backlash from people whose jobs feel threatened by the utilization of robot caregivers, or by those who trust a human more than a robot, regardless of the quality of care given by the robots.  It is likely that malfunctions or mishaps by the robots will be more heavily scrutinized by the general public than mistakes, neglect, or abuse by humans.
-* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable option to personal caregivers.  However, it will take a lot of time and money to do enough testing for people to feel safe using the robots.  Government regulations on the robots (similar to regulations on car safety) would have to be debated on and implemented.
+* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable alternative to personal caregivers.  However, it will take a lot of time and money to do enough testing for people to feel safe using the robots.
 
 #### 5. Draw a conclusion 
 ##### Options to Drawing a Conclusion
