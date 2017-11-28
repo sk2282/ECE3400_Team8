@@ -25,6 +25,18 @@ We have chosen to apply the utilitarian test. This test considers all current an
 The elderly who struggle to take care of themselves will be affected. Especially those that cannot afford personal care
 
 #### 3. Benefits and Costs to Stake Holders	
+
+##### Forcing Elderly into a hospital or retirement home
+###### *Predict probable outcomes based on facts and experience*
+* An increase in those who need to use assisted living and facilities being closer to capacity will increase the prices of care to make it unobtainable to some who need it??? IDK OKAY 
+###### *Short-term and Long-term Consequences*
+* Financial burden placed on those who pay for the person’s care
+* Harder for family members and friends to visit 
+* Represents the same problem with personal caregiver - A need to increase the amount of caregivers within the assisted living facility may lead to a shortage of staff
+* Possibly easier to meet other people and be social with other individuals in assisted living but that ranges from place to place. One extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
+###### *Should consider the relative value of an outcome to different stakeHolders*
+*Happiness ranges depending on the quality of the facility and opportunities to meet other people. Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a  feeling of isolation (depends on degree of ability to meet other people in place)
+
 ##### Requiring People to Become Caregivers
 ###### *Possible Outcomes*
 * People who are unhappy in their jobs do not perform as well and can experience personal consequences [Source](https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630)  
@@ -37,6 +49,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * The outcome of this option hella sucks. No one is happy.
 
 
+
 ##### Living with Family
 ###### *Possible Outcomes*
 * The family might not know how exactly to handle the needs of the elderly or how to care properly for them. 
@@ -47,6 +60,14 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * People might start happier in this situation but final result would not be good
 * The elderly might be happier in this situation compared to alternatives where they would scarcely see their family but it would be harder on the other family members who have to provide constant care
+
+##### Robot Caregivers
+###### *Possible Outcomes* 
+* Robot caregivers will increase with popularity to help supplement the shortage of personal caregivers
+###### *Short-term and Long-term consequences*
+* Adequate but also consist care that may not be provided by a human 
+###### *Should consider the relative value of an outcome to different stakeHolders*
+* The most people end up happy in this situation 
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
 ##### First example often turns into a standard. 
