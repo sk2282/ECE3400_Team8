@@ -28,14 +28,15 @@ The elderly who struggle to take care of themselves will be affected. Especially
 
 ##### Forcing Elderly into a hospital or retirement home
 ###### *Possible Outcome*
-* An increase in those who need to use hospital/retirement homes/etc. will make assisted living facilities filled closer and closer to capacity
-* Increase in individuals using assisted living facilities will increase the price of care and make it unobtainable to some who need it
+* Some elderly do not want to join an assisted living facility and have trouble adjusting. A study shows that some seniors have had sleep disturbances which lead to a greater need for assistance and/or depression. [Source](https://www.everydayhealth.com/senior-health/are-seniors-unhappy-in-assisted-living-facilities.aspx)  
+* An increase in those who need to use hospital/retirement homes/etc. will make assisted living facilities filled closer and closer to capacity. Increase in individuals using assisted living facilities will increase the price of care and make it unobtainable to some who need it 
 ###### *Short-term and Long-term Consequences*
 * An increase to those using a given facility may decrease the quality of care within it
 * Represents the same problem with personal caregiver: An increase in the amount of elderly using facilities would lead to an increase the amount of caregivers required within the assisted living facility which may lead to a shortage of staff
 * Financial burden placed on those who pay for the person’s care
 * Harder for family members and friends to visit, but they do not have to personally provide care to the individual 
-* Possibly easier to meet other people and be social with other individuals in assisted living but that ranges from place to place. One extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
+* The quality of an assisted living facility can range greatly from place to place but some potential benefits are intellectual stimulation, nutritious meals, physical fitness, and social activity. [Source](https://www.aplaceformom.com/blog/4-22-16-assisted-living-better-health-and-happiness/)  
+* Possibly easier to be social with other individuals in assisted living but that ranges depending on the facility. The negative extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * Some elderly do not want to utilize assisted living/prefer to stay more independent and would therefore will be unhappy despite quality of care within the place
 * Happiness ranges greatly depending on the quality of the facility care and opportunities to meet other people
@@ -55,10 +56,11 @@ The elderly who struggle to take care of themselves will be affected. Especially
 
 ##### Living with Family
 ###### *Possible Outcomes*
-* The family might not know how exactly to handle the needs of the elderly or how to care properly for them
+* The family might not know how exactly to handle the needs of the elderly or how to care properly for them which can lead to inadequate care. A report shows that almost three quarters of family caregivers did not go to the doctor as often as they were suppose to. 
+* Stress on the family member providing care can have a negative impact on their own health and lead to a greater potential of illness. A study shows that 23% of family caregivers caring for loved ones for 5 years or more report their own health as either fair or poor. Additionally, stress of caregiving for a person with dementia can affect a person's immune system for up to three years after caregiving ends. [Source](http://caregiveraction.org/resources/caregiver-statistics#Impact%20on%20Family%20Caregiver's%20Health)
 ###### *Short-term and Long-term Consequences*
 * Distance/tension created between family members
-* Added stress
+* Added stress  
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * People might start happier in this situation but final result would not be good
@@ -71,7 +73,8 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Short-term and Long-term consequences*
 * Helps to solve the caregiver employment shortage 
 * Adapt to meet the needs of care for the elderly over time
-* Adequate but also consist care that may not be provided by a human
+* Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.
+* Adequate but also consist care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * Happiness for individuals will be approximately the same as if there was a personal caregiver
 * The most people end up happy in this situation
@@ -92,7 +95,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 
 #### 5. Draw a conclusion 
 ##### Options to Drawing a Conclusion
-###### 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
-###### 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
+1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
+2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
 ##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consist care. Of the options considered, it represents the option mitigates unqualified and inadequate care while leading to the greatest number of people being happy. 
 
