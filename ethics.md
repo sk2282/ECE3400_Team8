@@ -32,14 +32,14 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * An increase in those who need to use hospital/retirement homes/etc. will make assisted living facilities filled closer and closer to capacity. Increase in individuals using assisted living facilities will increase the price of care and make it unobtainable to some who need it 
 ###### *Short-term and Long-term Consequences*
 * An increase to those using a given facility may decrease the quality of care within it
-* Represents the same problem with personal caregiver: An increase in the amount of elderly using facilities would lead to an increase the amount of caregivers required within the assisted living facility which may lead to a shortage of staff
+* Represents the same problem with personal caregiver: An increase in the amount of elderly using facilities would lead to an increase in the amount of caregivers required within the assisted living facility which may lead to a shortage of staff
 * Financial burden placed on those who pay for the person’s care
 * Harder for family members and friends to visit, but they do not have to personally provide care to the individual 
 * The quality of an assisted living facility can range greatly from place to place but some potential benefits are intellectual stimulation, nutritious meals, physical fitness, and social activity. [Source](https://www.aplaceformom.com/blog/4-22-16-assisted-living-better-health-and-happiness/)  
 * Possibly easier to be social with other individuals in assisted living but that ranges depending on the facility. The negative extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * Some elderly do not want to utilize assisted living/prefer to stay more independent and would therefore will be unhappy despite quality of care within the place
-* Happiness ranges greatly depending on the quality of the facility care and opportunities to meet other people
+* Happiness ranges greatly depending on the quality of the facility care and opportunity to meet other people
 * Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a feeling of isolation (depends on degree of ability to meet other people in place)
 * Long-term financial expenses may represent a burden to either the person requiring care and/or their family members
 
@@ -64,7 +64,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
 ###### *Should consider the relative value of an outcome to different stakeHolders*
 * People might start happier in this situation but final result would not be good
-* The elderly might be happier in this situation compared to alternatives where they would scarcely see their family but there is also the potential that they feel like a burden or feel guilty for the need of constant care
+* The elderly might be happier in this situation compared to alternatives where they would scarcely see their family, but there is also the potential that they feel like a burden or feel guilty for the need of constant care
 * It would be harder on the other family members who have to provide constant care
 
 ##### Robot Caregivers
@@ -72,12 +72,10 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Robot caregivers will increase in popularity to help supplement the shortage of personal caregivers
 ###### *Short-term and Long-term consequences*
 * Helps to solve the caregiver employment shortage 
-* Adapt to meet the needs of care for the elderly over time
 * Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.
-* Adequate but also consist care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
+* Adequate but also consistent care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
 ###### *Should consider the relative value of an outcome to different stakeHolders*
-* Happiness for individuals will be approximately the same as if there was a personal caregiver
-* The most people end up happy in this situation
+* The most people end up happy in this situation because the elderly has the time to social with family and friends while also getting quality care
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
 ##### First example often turns into a standard. So consider what would happen immediately if these actions were to be implemented
@@ -97,5 +95,5 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ##### Options to Drawing a Conclusion
 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
-##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consist care. Of the options considered, it represents the option mitigates unqualified and inadequate care while leading to the greatest number of people being happy. 
+##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consist care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy. 
 
