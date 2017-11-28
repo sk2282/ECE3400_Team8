@@ -37,6 +37,7 @@ int SOUTH = 2;
 int WEST = 3;
 int dir = NORTH;
 
+unsigned char treas;
 /* Initialize current location maze array
    0 means unvisited
    1 means visited
@@ -82,6 +83,7 @@ boolean notDone() {
       }
     }
   }
+  digitalWrite(8, HIGH);  
   return false;
 }
 
@@ -131,7 +133,7 @@ void setup() {
   }
 
   radio.startListening(); // start listening
-  
+  pinMode(8, OUTPUT);
   pinMode(leftLine, INPUT);
   pinMode(rightLine, INPUT);
   pinMode(leftWide, INPUT);
@@ -146,23 +148,38 @@ void setup() {
   left.write(90);
   right.write(90);
   stack.push(19);
+  digitalWrite(8, LOW);
+ // analogWrite(A5, 0);
 }
 
 void loop() {
   // INTERSECTION DETECTION
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
+   // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;
     if (!notDone()) halt();
-    else dfs();
+    else {
+      left.write(90);
+      right.write(90);
+      dfs();
+//      radioSend();
+      left.write(100);
+      right.write(80);
+      //
+    }
   }
   else {
+    
     detectCooldown--;
-    if (detectCooldown < 0) detectCooldown = 0;
+    if (detectCooldown < 0) {
+      detectCooldown = 0;
+   //   analogWrite(A5, 0);
+    }
   }
 
   // Read for treasures
-  // treasureRead();
-  Serial.println("looping");
+   treas = treasureRead();
+ // Serial.println("looping");
   followLine();
   
 }

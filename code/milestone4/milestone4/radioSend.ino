@@ -2,7 +2,7 @@ void radioSend() {
   //
   // Ping out role.  Repeatedly send the current time
   //
-
+ // Serial.println(F("radio send"));
   if (role == role_ping_out)
   {
     // First, stop listening so we can talk.
@@ -22,7 +22,7 @@ void radioSend() {
     // test
     unsigned char row = r;
     unsigned char col = c;
-    unsigned char d = !notDone() << 6 | 00 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+    unsigned char d = !notDone() << 6 | treas << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
 
     // shift bits in order to pack bits, then or them together
     new_data = col << 7 | row << 9 | d;
@@ -65,7 +65,7 @@ void radioSend() {
     }
 
     // Try again 1s later
-    delay(1000);
+    //delay(1000);
   }
 }
 
