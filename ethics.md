@@ -37,7 +37,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Harder for family members and friends to visit, but they do not have to personally provide care to the individual 
 * The quality of an assisted living facility can range greatly from place to place but some potential benefits are intellectual stimulation, nutritious meals, physical fitness, and social activity. [Source](https://www.aplaceformom.com/blog/4-22-16-assisted-living-better-health-and-happiness/)  
 * Possibly easier to be social with other individuals in assisted living but that ranges depending on the facility. The negative extreme is a feeling of isolation if the person does not have an opportunity to really socialize. 
-###### *Should consider the relative value of an outcome to different stakeHolders*
+###### *Should consider the relative value of an outcome to different stake holders*
 * Some elderly do not want to utilize assisted living/prefer to stay more independent and would therefore will be unhappy despite quality of care within the place
 * Happiness ranges greatly depending on the quality of the facility care and opportunity to meet other people
 * Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a feeling of isolation (depends on degree of ability to meet other people in place)
@@ -50,7 +50,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 ###### *Short-term and Long-term Consequences*
 * Health problems for the caregivers who are unhappy with their job
 * Inadequate care and negative impact on the elderly because caregivers are unqualified/don’t care
-###### *Should consider the relative value of an outcome to different stakeHolders*
+###### *Should consider the relative value of an outcome to different stake holders*
 * Both the person seeking care and the person providing care has a great potential to be unhappy in this situation
 * Family members impacted negatively if care is inadequate 
 
@@ -62,7 +62,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Distance/tension created between family members
 * Added stress  
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
-###### *Should consider the relative value of an outcome to different stakeHolders*
+###### *Should consider the relative value of an outcome to different stake holders*
 * People might start happier in this situation but final result would not be good
 * The elderly might be happier in this situation compared to alternatives where they would scarcely see their family, but there is also the potential that they feel like a burden or feel guilty for the need of constant care
 * It would be harder on the other family members who have to provide constant care
@@ -74,7 +74,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Helps to solve the caregiver employment shortage 
 * Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.
 * Adequate but also consistent care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
-###### *Should consider the relative value of an outcome to different stakeHolders*
+###### *Should consider the relative value of an outcome to different stake holders*
 * The most people end up happy in this situation because the elderly has the time to social with family and friends while also getting quality care
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
