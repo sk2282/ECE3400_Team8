@@ -110,4 +110,4 @@ The elderly who struggle to take care of themselves will be affected, especially
 ##### Options to Drawing a Conclusion
 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
-##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consistent care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy.
+##### The conclusion is that robot caregivers are the best option to combat the problem of caring for an increasing elderly population.  Of the options listed above, they do the best job at dispensing good quality and consistent care to the elderly.
