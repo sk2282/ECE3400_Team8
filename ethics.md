@@ -94,12 +94,12 @@ The elderly who struggle to take care of themselves will be affected, especially
 * Increase in number of retirement home jobs.
 * Increase in demand for care could create opportunities for retirement home owners.
 ##### Requiring People to Become Caregivers
-* The quality of care would differ on an individual basis.  In theory, the quality of care should be high, but there is the potential for human error.
-* It would be expensive to incentivize unmotivated people to become caregivers
+* The quality of care would differ on an individual basis.  In theory, the quality of care should be high, but there is the potential for human error (e.g. a lack of interest can negatively impact quality of care).
+* It would be expensive to incentivize unmotivated people to become caregivers and nearly impossible to recruit enough caregivers to account for the increasing elderly population.
 * Increase in number of caregiver jobs
 ##### Living with Family
-* On average, elderly people wouldn't receive the quality of care they need
-* Very inexpensive policy option
+* On average, elderly people wouldn't receive the quality of care they need, but blame for inadequate care can be placed on families instead of robots, caregivers, or retirement homes.
+* Very inexpensive policy option.  Easy to implement, but doesn't really address the problem
 ##### Robot Caregivers
 * Delivers consistent and good quality care for an increasing elderly population.  On average, the quality of care from the robots would be higher than the quality of care by humans.  If the market price goes low enough, this could become an economically feasible option for the general population
 * Use of robot caregivers would stimulate growth in the tech industry
@@ -110,4 +110,4 @@ The elderly who struggle to take care of themselves will be affected, especially
 ##### Options to Drawing a Conclusion
 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
-##### The conclusion is that robot caregivers are the best option to combat the problem of caring for an increasing elderly population.  Of the options listed above, they do the best job at dispensing good quality and consistent care to the elderly.
+##### Of the options listed above, they do the best job at dispensing good quality and consistent care to the elderly.  It can be argued that for Step 4, the "Living with Family" option is favorable compared to the "Robot Caregivers" option due to the ease of implementation, low cost, and ability to make caring for the elderly a "moral problem" instead of an "economic problem".  However, the "Robot Caregivers" option does a better job at addressing and solving the problem and would result in better overall care, with some added costs.  For this reason, the conclusion is that robot caregivers are the best option to combat the problem of caring for an increasing elderly population.
