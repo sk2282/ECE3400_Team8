@@ -3,7 +3,11 @@
 ## Elderly Care Robots
 
 ### Background
-Countries are trying to cope with the growing elderly population. In the United States, approximately 13% of the population is 65 years or older, but that percentage is expected to nearly double by the year 2050. This problem is not unique to the United States as 20% of the population in Japan is 65 years or older. Additionally by the year 2025, Japan expects to have a shortage of 1 million caregivers. Thus there is a growing need to find a way to adequately provide care to the elderly who need it. To confront the issue, there are numerous possibilities that supplement personal caregivers. Alternatives include the elderly living with family, forcing an increase individuals to become personal caregivers, and the utilization of personal care robots to help care for the elderly. 
+Countries are trying to cope with the growing elderly population. In the United States, approximately 13% of the population is 65 years or older, but that percentage is expected to nearly double by the year 2050.  The projected increase in the elderly population will bring with it a growing need to find a way to adequately provide care to the elderly who need it.
+
+This problem is not unique to the United States; In Japan, 20% of the population in 65 years or older, and by the year 2025, Japan expects to have a shortage of 1 million caregivers.
+
+To confront the issue, there are numerous possibilities that supplement personal caregivers. Alternatives include the elderly living with family, forcing an increase individuals to become personal caregivers, and the utilization of personal care robots to help care for the elderly. 
 [Source](http://www.businessinsider.com/japan-developing-carebots-for-elderly-care-2015-11)  
 
 ### Stake Holders
@@ -11,7 +15,7 @@ Countries are trying to cope with the growing elderly population. In the United 
 * Relatives 
 
 ### Utilitarian Test
-We have chosen to apply the utilitarian test. This test considers all current and future stakeholders. In this case, this is extremely important since the elderly population is growing so the outcome of this test will only affect more people as time goes on. This test also takes happiness into consideration. This is an important factor to consider because so many people will be affected. The solution that creates the most happiness will be the most desired outcome since it will affect the most people. It will cater to the common case instead of outliers.  
+We have chosen to apply the utilitarian ethics test. This test considers all current and future stakeholders. In this case, this is extremely important since the elderly population is growing so the outcome of this test will only affect more people as time goes on. This test also takes happiness into consideration. This is an important factor to consider because so many people will be affected. The solution that creates the most happiness will be the most desired outcome since it will affect the most people. It will cater to the common case instead of outliers.  
 
 ### Applying the Test
 
@@ -22,7 +26,7 @@ We have chosen to apply the utilitarian test. This test considers all current an
 * Robot Caregivers  
 
 #### 2. Identify the stakeholders who will be affected by these actions 
-The elderly who struggle to take care of themselves will be affected. Especially those that cannot afford personal care
+The elderly who struggle to take care of themselves will be affected, especially those that cannot afford personal care.  Close relatives and friends of the elderly are also affected.
 
 #### 3. Benefits and Costs to Stake Holders	
 
@@ -42,6 +46,7 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Happiness ranges greatly depending on the quality of the facility care and opportunity to meet other people
 * Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a feeling of isolation (depends on degree of ability to meet other people in place)
 * Long-term financial expenses may represent a burden to either the person requiring care and/or their family members
+* Can be much more expensive than other options
 
 ##### Requiring People to Become Caregivers
 ###### *Possible Outcomes*
@@ -63,9 +68,9 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Added stress  
 * Family members take on more than a financial burden because they have to sacrifice significant time to provide care
 ###### *Should consider the relative value of an outcome to different stake holders*
-* People might start happier in this situation but final result would not be good
+* People might start happier in this situation but the quality of care is likely to be inadequate compared to other options
 * The elderly might be happier in this situation compared to alternatives where they would scarcely see their family, but there is also the potential that they feel like a burden or feel guilty for the need of constant care
-* It would be harder on the other family members who have to provide constant care
+* Decreased monetary cost, but increased emotional cost for family members who have to provide constant care
 
 ##### Robot Caregivers
 ###### *Possible Outcomes* 
@@ -74,8 +79,9 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Helps to solve the caregiver employment shortage 
 * Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.
 * Adequate but also consistent care that may not be provided by a human. Care can be provided 24/7 unlike by a personal caregiver. [Source](http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8)
+* Elderly can feel more independent, knowing they're using a machine instead of human caregivers to increase their quality of life.
 ###### *Should consider the relative value of an outcome to different stake holders*
-* The most people end up happy in this situation because the elderly has the time to social with family and friends while also getting quality care
+* The most people end up happy in this situation because the elderly has the time to socialize with family and friends while also getting quality care
 
 #### 4. Ask what would happen if the action were a policy for all similar situations. 
 ##### First example often turns into a standard. So consider what would happen immediately if these actions were to be implemented
@@ -83,17 +89,18 @@ The elderly who struggle to take care of themselves will be affected. Especially
 * Inadequate care may be provided because so many individuals would be using hospitals/retirement homes/etc.
 * The elderly may not be happy if they were forced and did not want to use an assisted living facility
 ##### Requiring People to Become Caregivers
-* Unhappy caregivers give inaequate care which can lead to health problems for the elderly
+* Unhappy caregivers give inadequate care, which can lead to health problems for the elderly
 ##### Living with Family
 * This ranges greatly depending on family unit
 * Worst case is that there is a lot of tension and disputes between famliy members. Adequate care is not provided because family members are not trained professionals. Leads to a negative impact on the elderly and loved ones.
 ##### Robot Caregivers
-* Notoriety will increase over time as there are new innovations 
-* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers will increase in popularity and be considered a new viable option to personal caregivers
+* Notoriety will increase over time as there are new innovations
+* A policy might receive some backlash from people who trust a human more than a robot, regardless of the quality of care the robots give
+* If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable option to personal caregivers
 
 #### 5. Draw a conclusion 
 ##### Options to Drawing a Conclusion
 1. If the same action is selected in Steps 3 & 4, then this is the ethical action. 
 2. If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term
-##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consist care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy. 
+##### The conclusion is that robot caregivers are a viable option to personal caregivers. They provide adequate and consistent care. Of the options considered, it represents the option that mitigates unqualified/inadequate care while leading to the greatest number of people being happy. 
 
