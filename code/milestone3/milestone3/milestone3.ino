@@ -58,7 +58,9 @@ void loop() {
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
 //  if ((lwRead >= thresh && rwRead >= thresh) && detectCooldown <= 0) {
     detectCooldown = DETECT_COOLDOWN;
-        dfs();
+    left.write(90);
+    right.write(90);
+    dfs();
   }
   else {
     detectCooldown--;

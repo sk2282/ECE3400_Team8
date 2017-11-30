@@ -2,12 +2,12 @@ void leftTurn() {
 //  Serial.println("left turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(77);
+      right.write(83);
       left.write(81);
   }
   while (digitalRead(leftLine) == HIGH) {
 //  while(analogRead(leftLine)<=thresh){
-      right.write(77);
+      right.write(83);
       left.write(81);
   }
   right.write(90);

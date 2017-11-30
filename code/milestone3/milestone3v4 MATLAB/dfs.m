@@ -77,5 +77,5 @@ function dfs(visited,curr_loc, wall_loc, detected_wall_loc)
     end
     detected_wall_loc = detectWalls( r, c, detected_wall_loc, wall_loc );
     draw_walls(detected_wall_loc)
-    disp("done");
+    disp('done');
     

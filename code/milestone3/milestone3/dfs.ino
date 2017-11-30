@@ -44,6 +44,7 @@ char detected_wall_loc[5][4][5] = {
  */
 void dfs() {
   // detect new walls for current square
+  visited[r][c] = 1;
   detectWalls();
 
   // decide on next dir to go
@@ -162,19 +163,19 @@ void updatePosition() {
     // update robot position and squares visited
     if (dir == NORTH) {
       r -= 1;
-      visited[r+1][c] = 1;
+      //visited[r+1][c] = 1;
     }
     else if (dir == SOUTH) {
       r += 1;
-      visited[r-1][c] = 1;
+      //visited[r-1][c] = 1;
     }
     else if (dir == EAST) {
       c += 1;
-      visited[r][c-1] = 1;
+      //visited[r][c-1] = 1;
     }
     else if (dir == WEST) {
       c -= 1;
-      visited[r][c+1] = 1;
+      //visited[r][c+1] = 1;
     }
 }
 
