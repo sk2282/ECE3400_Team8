@@ -48,7 +48,7 @@ void dfs() {
 
   // decide on next dir to go
   if (notDone()) {
-      if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
+    if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
       faceRobot(NORTH);                                                                                              
       stack.push(dir);
     }
@@ -69,6 +69,11 @@ void dfs() {
       faceRobot(newDir);
     }
     updatePosition();
+  }
+  else {
+    left.write(94);
+    right.write(90);
+    while (true) {};
   }
 }
 

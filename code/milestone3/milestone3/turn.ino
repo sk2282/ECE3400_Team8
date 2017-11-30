@@ -35,19 +35,19 @@ void rightTurn(){
 void UTurn() {
 
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(100);
+      right.write(103);
       left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(100);
+      right.write(103);
       left.write(107);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(100);
+      right.write(103);
       left.write(107);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(100);
+      right.write(103);
       left.write(107);
   }
   right.write(90);

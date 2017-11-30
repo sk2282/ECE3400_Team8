@@ -58,14 +58,7 @@ void loop() {
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
 //  if ((lwRead >= thresh && rwRead >= thresh) && detectCooldown <= 0) {
     detectCooldown = DETECT_COOLDOWN;
-        if (!notDone()) {
-          left.write(90);
-          right.write(90);
-          while(true){}
-        }
-        else {
-          dfs();
-        }
+        dfs();
   }
   else {
     detectCooldown--;
@@ -83,16 +76,16 @@ void loop() {
   else if (digitalRead(leftLine) == HIGH) { // left side is out of line
 //  else if (lRead < thresh) { // left side is out of line
     left.write(170);
-    right.write(85);
+    right.write(88);
   }
   else if (digitalRead(rightLine) == HIGH) { // right side is out of line
 //  else if (rRead < thresh) { // right side is out of line
-    left.write(95);
-    right.write(10);
+    left.write(97);
+    right.write(13);
   }
   else {    // go straight
-    left.write(100);
-    right.write(80);
+    left.write(104);
+    right.write(83);
   }
 }
 
