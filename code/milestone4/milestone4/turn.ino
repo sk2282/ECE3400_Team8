@@ -53,13 +53,13 @@ void rightTurn(){
 //  Serial.println("right turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   while (digitalRead(rightLine) == HIGH) {
 //  while(analogRead(rightLine)<=thresh){
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   right.write(90);
   left.write(90);

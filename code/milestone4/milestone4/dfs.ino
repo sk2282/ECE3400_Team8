@@ -94,7 +94,7 @@ void detectWalls() {
     }
     if (analogRead(wallSensorL) >= sideThresh) {
       detected_wall_loc[r][c][SOUTH] = '1';
-      if (r < 4) detected_wall_loc[r+1][c][WEST] = '1';
+      if (r < 4) detected_wall_loc[r+1][c][NORTH] = '1';
     }
   }
 }

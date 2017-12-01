@@ -84,6 +84,7 @@ boolean notDone() {
     }
   }
   digitalWrite(8, HIGH);  
+  halt();
   return false;
 }
 
@@ -157,7 +158,13 @@ void loop() {
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
    // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;
-    if (!notDone()) halt();
+    if (!notDone()) {
+      halt();
+      Serial.println("detected_wall_loc:");
+      Serial.println(detected_wall_loc[5][4][5]);
+      Serial.println("visited:");
+      Serial.println(visited[5][4]);
+    }
     else {
 //      left.write(90);
 //      right.write(90);
