@@ -50,7 +50,8 @@ void setup(void)
   // Print preamble
   //
 
-  Serial.begin(57600);
+//  Serial.begin(57600);
+  Serial.begin(9600);
   printf_begin();
   printf("\n\rRF24/examples/GettingStarted/\n\r");
   printf("ROLE: %s\n\r",role_friendly_name[role]);

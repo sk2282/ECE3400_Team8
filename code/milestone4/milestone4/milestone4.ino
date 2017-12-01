@@ -170,7 +170,9 @@ void loop() {
 //      right.write(90);
       dfs();
       stopDelay(500);
+      Serial.println("Test");
       radioSend();
+      stopDelay(500);
       left.write(100);
       right.write(80);
       //

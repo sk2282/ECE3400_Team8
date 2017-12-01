@@ -2,12 +2,12 @@ void radioSend() {
   //
   // Ping out role.  Repeatedly send the current time
   //
- // Serial.println(F("radio send"));
-//  radio.startListening(); // moved from setup
+  Serial.println(F("radio send"));
+  radio.startListening(); // moved from setup
   if (role == role_ping_out)
   {
     // First, stop listening so we can talk.
-//    radio.stopListening();
+    radio.stopListening();
 
     // SENDER SIDE
     // Define maze
@@ -65,7 +65,7 @@ void radioSend() {
       // Spew it
       printf("Got response %lu, round-trip delay: %lu\n\r",got_time,millis()-got_time);
     }
-
+    radio.stopListening();
     // Try again 1s later
     //delay(1000);
   }
