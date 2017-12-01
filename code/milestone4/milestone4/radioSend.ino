@@ -13,7 +13,7 @@ void radioSend() {
     // Define maze
     unsigned int new_data;
     // pack bits as follows:
-    //  column   | row | data
+    //  row   | column | data
     // 3 bits | 2 bits | 7 bits
 
     // data example:
@@ -23,11 +23,12 @@ void radioSend() {
     // test
     unsigned char row = r;
     unsigned char col = c;
-//    unsigned char d = !notDone() << 6 | treas << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
-    unsigned char d = !notDone() << 6 | 00 << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+    unsigned char d = !notDone() << 6 | treas << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+//    unsigned char d = !notDone() << 6 | 00 << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
 
     // shift bits in order to pack bits, then or them together
-    new_data = col << 7 | row << 9 | d;
+//    new_data = col << 7 | row << 9 | d;
+    new_data = row << 9 | col << 7 | d;
     // (4, 3, 1011000) should give 100111011000 or 2520 in decimal
     //  r  ||  c ||   done  | treasure | wall
     // 100 || 11 ||    1    |    01    | 1000

@@ -37,7 +37,7 @@ int SOUTH = 2;
 int WEST = 3;
 int dir = NORTH;
 
-unsigned char treas;
+unsigned char treas = B00;
 /* Initialize current location maze array
    0 means unvisited
    1 means visited
@@ -47,7 +47,7 @@ boolean visited[5][4] = {
   {0,0,0,0},
   {0,0,0,0},
   {0,0,0,0},
-  {0,0,0,1},
+  {0,0,0,1}, 
 };
 
 /* Set maze walls
@@ -105,7 +105,9 @@ role_e role = role_ping_out; // the role of the current running sketch
 
 
 void setup() {
-  Serial.begin(9600);
+//  Serial.begin(9600);
+  Serial.begin(57600);
+  printf_begin();
   /** RADIO SENDER SETUP: setup and configure rf radio */
   radio.begin();
 //
@@ -168,18 +170,19 @@ void loop() {
     else {
 //      left.write(90);
 //      right.write(90);
-      dfs();
-      stopDelay(500);
-      Serial.println("Test");
       radioSend();
       stopDelay(500);
+      dfs();
+//      stopDelay(500);
+//      Serial.println("what");
+//      radioSend();
+//      stopDelay(500);
       left.write(100);
       right.write(80);
       //
     }
   }
   else {
-    
     detectCooldown--;
     if (detectCooldown < 0) {
       detectCooldown = 0;
