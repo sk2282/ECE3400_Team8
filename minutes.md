@@ -19,3 +19,4 @@
 * [10 November 2017](https://docs.google.com/document/d/1Q4dxydQsXWhqxsBNvucQduFroslpq1IuBVRkWbzZAEE/edit?usp=sharing)
 * [13 November 2017](https://docs.google.com/a/cornell.edu/document/d/1pV-zQDAcFRtTGhghiPE03gBkxMY7FenGvDc1KvgwYtU/edit?usp=sharing)
 * [30 November 2017](https://docs.google.com/document/d/1_8JSm1b6zDBOYd2N2LuCAPtMM--8urobvL28UBVtIGg/edit?usp=sharing)
+* [1 December 2017](https://docs.google.com/document/d/1HbouDgF-JSVLO-wLdLd3TWzk3q2IUd6FYFf8szYkDCQ/edit?usp=sharing)
