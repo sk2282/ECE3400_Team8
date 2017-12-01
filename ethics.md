@@ -12,7 +12,10 @@ To confront the issue, there are numerous possibilities that supplement personal
 
 ### Stake Holders
 * The elderly who struggle to take care of themselves
-* Relatives 
+* Relatives
+* Hospitals
+* Nursing Homes
+* Tech Companies
 
 ### Utilitarian Test
 We have chosen to apply the utilitarian ethics test. This test considers all current and future stakeholders. In this case, this is extremely important since the elderly population is growing so the outcome of this test will only affect more people as time goes on. This test also takes happiness into consideration. This is an important factor to consider because so many people will be affected. The solution that creates the most happiness will be the most desired outcome since it will affect the most people. It will cater to the common case instead of outliers.  
