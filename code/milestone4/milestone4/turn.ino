@@ -37,12 +37,12 @@ void leftTurn() {
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
 //  while(analogRead(leftLine)>=thresh || analogRead(rightLine)>=thresh){
       right.write(74);
-      left.write(81);
+      left.write(77);
   }
   while (digitalRead(leftLine) == HIGH) {
 //  while(analogRead(leftLine)<=thresh){
       right.write(74);
-      left.write(81);
+      left.write(77);
   }
   right.write(90);
   left.write(90);

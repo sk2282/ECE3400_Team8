@@ -37,7 +37,7 @@ int SOUTH = 2;
 int WEST = 3;
 int dir = NORTH;
 
-unsigned char treas = B00;
+unsigned char treas = 0;
 /* Initialize current location maze array
    0 means unvisited
    1 means visited
@@ -165,8 +165,8 @@ void loop() {
       halt();
     }
     else {
-      radioSend();
-      stopDelay(500);
+//      radioSend();
+//      stopDelay(500);
       dfs();
       left.write(100);
       right.write(80);

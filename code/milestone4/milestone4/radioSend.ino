@@ -23,12 +23,15 @@ void radioSend() {
     // test
     unsigned char row = r;
     unsigned char col = c;
-    unsigned char d = !notDone() << 6 | treas << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+    unsigned char wall = detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+    
+    unsigned char d = !notDone() << 6 | treas << 4 | (wall & 15);
 //    unsigned char d = !notDone() << 6 | 00 << 4 | detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
 
     // shift bits in order to pack bits, then or them together
 //    new_data = col << 7 | row << 9 | d;
     new_data = row << 9 | col << 7 | d;
+//    new_data = detected_wall_loc[r][c][NORTH];
     // (4, 3, 1011000) should give 100111011000 or 2520 in decimal
     //  r  ||  c ||   done  | treasure | wall
     // 100 || 11 ||    1    |    01    | 1000

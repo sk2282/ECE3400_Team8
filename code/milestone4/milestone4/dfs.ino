@@ -8,6 +8,9 @@ void dfs() {
   // detect new walls for current square
   detectWalls();
 
+  radioSend();
+  stopDelay(500);
+
   // decide on next dir to go
   if (notDone()) {
     if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
@@ -32,6 +35,11 @@ void dfs() {
     }
     updatePosition();
 //    radioSend();
+  }
+  else {
+    radioSend();
+    stopDelay(500);
+    halt();
   }
 }
 
