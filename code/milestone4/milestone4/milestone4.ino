@@ -84,7 +84,7 @@ boolean notDone() {
     }
   }
   digitalWrite(8, HIGH);  
-  halt();
+//  halt();
   return false;
 }
 
@@ -161,22 +161,13 @@ void loop() {
    // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;
     if (!notDone()) {
+      radioSend(); // send data for last square
       halt();
-      Serial.println("detected_wall_loc:");
-      Serial.println(detected_wall_loc[5][4][5]);
-      Serial.println("visited:");
-      Serial.println(visited[5][4]);
     }
     else {
-//      left.write(90);
-//      right.write(90);
       radioSend();
       stopDelay(500);
       dfs();
-//      stopDelay(500);
-//      Serial.println("what");
-//      radioSend();
-//      stopDelay(500);
       left.write(100);
       right.write(80);
       //
@@ -192,7 +183,6 @@ void loop() {
 
   // Read for treasures
 //   treas = treasureRead();
- // Serial.println("looping");
   followLine();
   
 }
