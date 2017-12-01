@@ -26,6 +26,12 @@ void halt() {
   while (true) {}
 }
 
+void stopDelay(int t) {
+  left.write(90);
+  right.write(90);
+  delay(t);
+}
+
 void leftTurn() {
 //  Serial.println("left turn");
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {

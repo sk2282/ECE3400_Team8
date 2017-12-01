@@ -132,7 +132,7 @@ void setup() {
     radio.openReadingPipe(1,pipes[0]);
   }
 
-  radio.startListening(); // start listening
+//  radio.startListening(); // start listening
   pinMode(8, OUTPUT);
   pinMode(leftLine, INPUT);
   pinMode(rightLine, INPUT);
@@ -159,10 +159,11 @@ void loop() {
     detectCooldown = DETECT_COOLDOWN;
     if (!notDone()) halt();
     else {
-      left.write(90);
-      right.write(90);
+//      left.write(90);
+//      right.write(90);
       dfs();
-//      radioSend();
+      stopDelay(500);
+      radioSend();
       left.write(100);
       right.write(80);
       //
