@@ -17,7 +17,7 @@ int rightWide = 7; //13; //3;    // Pin for right intersection detector
 int detectCooldown = 0;
 int DETECT_COOLDOWN = 300;
 
-int wallSensorF = 0; //11; // front wall sensor
+int wallSensorF = 3; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
 int wallSensorL = 2; //13; // left wall sensor
 int frontThresh = 375; // threshold value for front wall sensor 
@@ -36,6 +36,11 @@ int EAST = 1;
 int SOUTH = 2;
 int WEST = 3;
 int dir = NORTH;
+
+int start = 0;
+
+int tempADCSRA = ADCSRA;
+int tempDIDR0 = DIDR0;
 
 unsigned char treas = 0;
 /* Initialize current location maze array
@@ -142,9 +147,9 @@ void setup() {
   pinMode(leftWide, INPUT);
   pinMode(rightWide, INPUT);
   //Serial.begin(115200); // use the serial port
-//  TIMSK0 = 0; // turn off timer0 for lower jitter
+  TIMSK0 = 0; // turn off timer0 for lower jitter
 //  ADCSRA = 0xe5; // set the adc to free running mode
-//  ADMUX = 0x40; // use adc0
+  ADMUX = 0x40; // use adc0
 //  DIDR0 = 0x01; // turn off the digital input for adc0
   left.attach(5);
   right.attach(6);
@@ -155,8 +160,16 @@ void setup() {
  // analogWrite(A5, 0);
 }
 
+//void start() {
+//  while (!start) {
+//    left.write(90);
+//    right.write(90);
+//  }
+//}
+
 void loop() {
   // INTERSECTION DETECTION
+  
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
    // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;
@@ -167,7 +180,9 @@ void loop() {
     else {
 //      radioSend();
 //      stopDelay(500);
+      printf("in else\n");
       dfs();
+      printf("after dfs\n");
       left.write(100);
       right.write(80);
       //

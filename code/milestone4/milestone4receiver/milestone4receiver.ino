@@ -50,8 +50,8 @@ void setup(void)
   // Print preamble
   //
 
-//  Serial.begin(57600);
-  Serial.begin(9600);
+  Serial.begin(57600);
+//  Serial.begin(9600);
   printf_begin();
   printf("\n\rRF24/examples/GettingStarted/\n\r");
   printf("ROLE: %s\n\r",role_friendly_name[role]);
@@ -116,7 +116,7 @@ void loop(void) {
   //
   // Pong back role.  Receive each packet, dump it out, and send it back
   //
-
+  //sprintf("loop");
   if ( role == role_pong_back )
   {
     // if there is data ready
@@ -135,13 +135,13 @@ void loop(void) {
         String x = String(got_data, BIN);
         digitalWrite(8, x[0]); // x1
         digitalWrite(7, x[1]); // x2
-        digitalWrite(6, x[2]); // y1
-        digitalWrite(5, x[3]); // y2
-        digitalWrite(4, x[4]); // y3
-//        digitalWrite(3, x[5]); // t1
-//        digitalWrite(2, x[6]); // t2
-        digitalWrite(3, LOW);
-        digitalWrite(2, LOW);
+        digitalWrite(6, x[2]); // x3
+        digitalWrite(5, x[3]); // y1
+        digitalWrite(4, x[4]); // y2
+        digitalWrite(3, x[5]); // t1
+        digitalWrite(2, x[6]); // t2
+//        digitalWrite(3, LOW);
+//        digitalWrite(2, LOW);
         analogWrite(0, 255*x[7]); // w1
         analogWrite(1, 255*x[8]); // w2
         analogWrite(2, 255*x[9]); // w3

@@ -1,7 +1,7 @@
 void followLine(){
   if (digitalRead(leftLine) == HIGH && digitalRead(rightLine) == HIGH) { // stop
 //  if (lRead <= thresh && rRead <= thresh || roboStop) { // stop
-    left.write(94);
+    left.write(90);
     right.write(90);
     }
   else if (digitalRead(leftLine) == HIGH) { // left side is out of line
@@ -68,20 +68,20 @@ void rightTurn(){
 
 void UTurn() {
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(100);
-      left.write(107);
+      right.write(95);
+      left.write(112);
   }
   right.write(90);
   left.write(90);

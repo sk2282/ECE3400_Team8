@@ -6,10 +6,17 @@
  */
 void dfs() {
   // detect new walls for current square
+//  stopDelay(500);
+  printf("detecting walls\n");
   detectWalls();
-
+//  stopDelay(500);
+  printf("reading treasure\n");
+  treas = treasureRead();
+  printf("%d\n",treas);
+  stopDelay(250);
   radioSend();
-  stopDelay(500);
+  stopDelay(250);
+  printf("did shit\n");
 
   // decide on next dir to go
   if (notDone()) {
@@ -38,19 +45,21 @@ void dfs() {
   }
   else {
     radioSend();
-    stopDelay(500);
+//    stopDelay(500);
     halt();
   }
 }
 
 void detectWalls() {
- // Serial.println("detecting walls");
+//  Serial.println("detecting walls");
   int dirF = dir;
   int dirR = (dir + 1) % 4;
   int dirL = (dir + 3) % 4;
   
   if (dirF == NORTH) {
+    printf("first if\n");
     if (analogRead(wallSensorF) >= frontThresh) {
+      printf("reading front sensor\n");
       detected_wall_loc[r][c][NORTH] = '1';
       if (r > 0) detected_wall_loc[r-1][c][SOUTH] = '1';
     }
