@@ -167,7 +167,7 @@ void setup() {
   digitalWrite(8, LOW);
  // analogWrite(A5, 0);
 
-   Serial.begin(57600);
+//   Serial.begin(57600);
   
   //treasure interrupt
   TCCR2B = 2; // running with clock divided by 8 TCCR@A=0; // All other functions disabled
