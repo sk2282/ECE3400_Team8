@@ -5,14 +5,16 @@
 #include "RF24.h"
 #include "printf.h"
 //#include <FFT.h>
+//#include <avr/interrupt.h>
+//#include <stdlib.h>
 
 StackArray<int> stack;
 Servo left;
 Servo right;
-int leftLine = 2; //10; //0;     // Pin for left line detector
-int rightLine = 3; //11; //1;    // Pin for right line detector
-int leftWide = 4; //12; //2;     // Pin for left intersection detector
-int rightWide = 7; //13; //3;    // Pin for right intersection detector
+int leftLine = 2;      // Pin for left line detector
+int rightLine = 3; //0?; change for interrupts    // Pin for right line detector
+int leftWide = 4;      // Pin for left intersection detector
+int rightWide = 7; // 1?; change for interrupts    // Pin for right intersection detector
 //int thresh   = 500;     // Threshold for black line detection
 int detectCooldown = 0;
 int DETECT_COOLDOWN = 300;
@@ -20,8 +22,8 @@ int DETECT_COOLDOWN = 300;
 int wallSensorF = 3; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
 int wallSensorL = 2; //13; // left wall sensor
-int frontThresh = 375; // threshold value for front wall sensor 
-int sideThresh = 375; // threshold value for side wall sensor threshold
+int frontThresh = 375; //375; // threshold value for front wall sensor 
+int sideThresh = 375; //375; // threshold value for side wall sensor threshold
 
 int frontRead; // for wall sensors
 int leftRead;
@@ -40,9 +42,16 @@ int dir = NORTH;
 int start = 0;
 
 int tempADCSRA = ADCSRA;
+int tempTIMSK0 = TIMSK0; // turn off timer0 for lower jitter  ADCSRA = 0xe5;
+int tempADMUX = ADMUX; // use adc0
 int tempDIDR0 = DIDR0;
 
-unsigned char treas = 0;
+// TREASURE INTERRUPT STUFF
+//  int period=0;
+  unsigned char treas=0;
+//  volatile boolean triggered = false;
+
+//unsigned char treas = 0;
 /* Initialize current location maze array
    0 means unvisited
    1 means visited
@@ -142,34 +151,54 @@ void setup() {
 
 //  radio.startListening(); // start listening
   pinMode(8, OUTPUT);
+  pinMode(13, OUTPUT);
   pinMode(leftLine, INPUT);
   pinMode(rightLine, INPUT);
   pinMode(leftWide, INPUT);
   pinMode(rightWide, INPUT);
   //Serial.begin(115200); // use the serial port
-  TIMSK0 = 0; // turn off timer0 for lower jitter
+//  TIMSK0 = 0; // turn off timer0 for lower jitter
 //  ADCSRA = 0xe5; // set the adc to free running mode
-  ADMUX = 0x40; // use adc0
+//  ADMUX = 0x40; // use adc0
 //  DIDR0 = 0x01; // turn off the digital input for adc0
   left.attach(5);
+//  right.attach(3); // need digital 6 for comparator
   right.attach(6);
   left.write(90);
   right.write(90);
   stack.push(19);
   digitalWrite(8, LOW);
  // analogWrite(A5, 0);
+
+//   Serial.begin(57600);
+  
+  //treasure interrupt
+//  TCCR2B = 2; // running with clock divided by 8 TCCR@A=0; // All other functions disabled
+//  TCCR2A = 0; // Turn off other timer2 functions
+//  TCNT2 = 0; // Initialize the counter
+//  sei();
+//  ACSR = (1<<ACIE) | (1<<ACIS1) | (1<<ACIS0);
+
+    radioSend();
+
 }
 
-//void start() {
-//  while (!start) {
-//    left.write(90);
-//    right.write(90);
-//  }
+//ISR(ANALOG_COMP_vect){
+//  triggered = true;
+//  period=TCNT2;
+//  TCNT2=0;
 //}
+
 
 void loop() {
   // INTERSECTION DETECTION
   
+  while(!start) {
+    
+//    stopDelay(250);
+    if (analogRead(4)>500 || micRead()) start = 1;
+//    if (
+  }
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
    // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;
@@ -180,9 +209,9 @@ void loop() {
     else {
 //      radioSend();
 //      stopDelay(500);
-      printf("in else\n");
+//      printf("in else\n");
       dfs();
-      printf("after dfs\n");
+//      printf("after dfs\n");
       left.write(100);
       right.write(80);
       //
@@ -196,8 +225,6 @@ void loop() {
     }
   }
 
-  // Read for treasures
-//   treas = treasureRead();
   followLine();
   
 }

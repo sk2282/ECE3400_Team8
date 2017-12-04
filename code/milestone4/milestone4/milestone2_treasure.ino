@@ -1,21 +1,28 @@
-/*
-fft_adc_serial.pde
-guest openmusiclabs.com 7.7.14
-example sketch for testing the fft library.
-it takes in data on ADC0 (Analog0) and processes them
-with the fft. the data is sent out over the serial
-port at 115.2kb.
-*/
-
+///*
+//fft_adc_serial.pde
+//guest openmusiclabs.com 7.7.14
+//example sketch for testing the fft library.
+//it takes in data on ADC0 (Analog0) and processes them
+//with the fft. the data is sent out over the serial
+//port at 115.2kb.
+//*/
+//
 #define LOG_OUT 1 // use the log output function
 #define FFT_N 128 // set to 128 point fft
-
+//
 #include <FFT.h> // include the library
-
+//
 unsigned char treasureRead() {
-  ADCSRA = 0xe5;
-  DIDR0 = 0x01;
-  cli();        // UDRE interrupt slows this way down on arduino1.0
+//  ADCSRA = 0xe5;
+//  DIDR0 = 0x01;
+
+  TIMSK0 = 0; // turn off timer0 for lower jitter
+  ADCSRA = 0xe5; // set the adc to free running mode
+  ADMUX = 0x40; // use adc0
+  DIDR0 = 0x01; // turn off the digital input for adc0
+  delay(10);
+
+  //cli();        // UDRE interrupt slows this way down on arduino1.0
   for (int i = 0 ; i < FFT_N*2 ; i += 2) {      // save 256 samples
 //    printf(ADCSRA);
     while(!(ADCSRA & 0x10)); // wait for adc to be ready
@@ -33,44 +40,66 @@ unsigned char treasureRead() {
   fft_reorder();          // reorder the data before doing the fft
   fft_run();              // process the data in the fft
   fft_mag_log();          // take the output of the fft
-  sei();
+ // sei();
 
-  ADCSRA = tempADCSRA;
-  DIDR0 = tempDIDR0;
-  //printf("sei");
-//
-////    Serial.println("");
-//  for (int i=0; i < FFT_N; i++) {
-////      Serial.println(fft_log_out[i]);
-//  }
-  /*
-  7kHz: [44,49]
-  12kHz: [78,82]
-  17kHz: [112,116]
-  */
+//  ADCSRA = tempADCSRA;
+//  DIDR0 = tempDIDR0;
+//  //printf("sei");
+////
+//////    Serial.println("");
+////  for (int i=0; i < FFT_N; i++) {
+//////      Serial.println(fft_log_out[i]);
+////  }
+//  /*
+//  7kHz: [44,49]
+//  12kHz: [78,82]
+//  17kHz: [112,116]
+//  */
   int max_7k = max_in_range(44/2,48/2);
   int max_12k = max_in_range(78/2,82/2);
   int max_17k = max_in_range(112/2,116/2);
   int RATIO_THRESH = 2.6;
-
+//
   if (max_7k/30 > RATIO_THRESH) {
 //    Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
+    digitalWrite(8, HIGH);
+      TIMSK0 = tempTIMSK0; // turn off timer0 for lower jitter
+  ADCSRA = tempADCSRA; // set the adc to free running mode
+  ADMUX = tempADMUX; // use adc0
+  DIDR0 = tempDIDR0; 
+  delay(10);
     return 1;
   }
   else if (max_12k/30 > RATIO_THRESH) {
 //    Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
+  TIMSK0 = tempTIMSK0; // turn off timer0 for lower jitter
+  ADCSRA = tempADCSRA; // set the adc to free running mode
+  ADMUX = tempADMUX; // use adc0
+  DIDR0 = tempDIDR0; 
+  delay(10);
     return 2;
   }
   else if (max_17k/30 > RATIO_THRESH) {
 //    Serial.println("17k     17k     17k     17k     17k     17k     17k");
+  TIMSK0 = tempTIMSK0; // turn off timer0 for lower jitter
+  ADCSRA = tempADCSRA; // set the adc to free running mode
+  ADMUX = tempADMUX; // use adc0
+  DIDR0 = tempDIDR0; 
+  delay(10);
     return 3;
   }
   else {
 //    Serial.println("No Signal");
+      TIMSK0 = tempTIMSK0; // turn off timer0 for lower jitter
+      ADCSRA = tempADCSRA; // set the adc to free running mode
+      ADMUX = tempADMUX; // use adc0
+      DIDR0 = tempDIDR0; 
+      delay(10);
     return 0;
-  }   
-}
+  } 
 
+}
+//
 int max_in_range(int start, int end0) {
     int the_max = 0;
     for (int i=start; i <= end0; i++) {
@@ -79,6 +108,7 @@ int max_in_range(int start, int end0) {
         the_max = fft_val;
       }
     }
+
     return the_max;
   }
 
