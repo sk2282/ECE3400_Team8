@@ -6,18 +6,16 @@
  */
 void dfs() {
   // detect new walls for current square
-  stopDelay(125);
-//  printf("detecting walls\n");
+  stopDelay(250);
+
   detectWalls();
 //  stopDelay(500);
-//  printf("reading treasure\n");
+
 //  treas = treasureRead();
-//  treas = treasureInterrupt();
-//  printf("%d\n",treas);
+
 //  stopDelay(250);
   radioSend();
-  stopDelay(200);
-//  printf("did shit\n");
+  stopDelay(250);
 
   // decide on next dir to go
   if (notDone()) {

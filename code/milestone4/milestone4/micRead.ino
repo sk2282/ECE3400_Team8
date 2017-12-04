@@ -17,7 +17,7 @@ boolean micRead() {
 //  sei();
   Serial.println("Start");
 
-if(fft_log_out[9] > 60 && fft_log_out[10] > 60){
+if(fft_log_out[9] > 70 && fft_log_out[10] > 70){
   return true;
 } else {
   return false;
