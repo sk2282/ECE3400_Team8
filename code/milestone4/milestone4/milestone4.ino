@@ -5,8 +5,8 @@
 #include "RF24.h"
 #include "printf.h"
 //#include <FFT.h>
-#include <avr/interrupt.h>
-#include <stdlib.h>
+//#include <avr/interrupt.h>
+//#include <stdlib.h>
 
 StackArray<int> stack;
 Servo left;
@@ -22,8 +22,8 @@ int DETECT_COOLDOWN = 300;
 int wallSensorF = 3; //11; // front wall sensor
 int wallSensorR = 1; //12; // right wall sensor
 int wallSensorL = 2; //13; // left wall sensor
-int frontThresh = 300; //375; // threshold value for front wall sensor 
-int sideThresh = 300; //375; // threshold value for side wall sensor threshold
+int frontThresh = 375; //375; // threshold value for front wall sensor 
+int sideThresh = 375; //375; // threshold value for side wall sensor threshold
 
 int frontRead; // for wall sensors
 int leftRead;
@@ -41,13 +41,15 @@ int dir = NORTH;
 
 int start = 0;
 
-//int tempADCSRA = ADCSRA;
-//int tempDIDR0 = DIDR0;
+int tempADCSRA = ADCSRA;
+int tempTIMSK0 = TIMSK0; // turn off timer0 for lower jitter  ADCSRA = 0xe5;
+int tempADMUX = ADMUX; // use adc0
+int tempDIDR0 = DIDR0;
 
 // TREASURE INTERRUPT STUFF
-  int period=0;
+//  int period=0;
   unsigned char treas=0;
-  volatile boolean triggered = false;
+//  volatile boolean triggered = false;
 
 //unsigned char treas = 0;
 /* Initialize current location maze array
@@ -149,6 +151,7 @@ void setup() {
 
 //  radio.startListening(); // start listening
   pinMode(8, OUTPUT);
+  pinMode(13, OUTPUT);
   pinMode(leftLine, INPUT);
   pinMode(rightLine, INPUT);
   pinMode(leftWide, INPUT);
@@ -170,23 +173,32 @@ void setup() {
 //   Serial.begin(57600);
   
   //treasure interrupt
-  TCCR2B = 2; // running with clock divided by 8 TCCR@A=0; // All other functions disabled
-  TCCR2A = 0; // Turn off other timer2 functions
-  TCNT2 = 0; // Initialize the counter
-  sei();
-  ACSR = (1<<ACIE) | (1<<ACIS1) | (1<<ACIS0);
+//  TCCR2B = 2; // running with clock divided by 8 TCCR@A=0; // All other functions disabled
+//  TCCR2A = 0; // Turn off other timer2 functions
+//  TCNT2 = 0; // Initialize the counter
+//  sei();
+//  ACSR = (1<<ACIE) | (1<<ACIS1) | (1<<ACIS0);
+
+    radioSend();
+
 }
 
-ISR(ANALOG_COMP_vect){
-  triggered = true;
-  period=TCNT2;
-  TCNT2=0;
-}
+//ISR(ANALOG_COMP_vect){
+//  triggered = true;
+//  period=TCNT2;
+//  TCNT2=0;
+//}
 
 
 void loop() {
   // INTERSECTION DETECTION
-//  while(analogRead(4)<900);
+  
+  while(!start) {
+    
+//    stopDelay(250);
+    if (analogRead(4)>500 || micRead()) start = 1;
+//    if (
+  }
   if ((digitalRead(leftWide) == LOW && digitalRead(rightWide) == LOW) && detectCooldown <= 0) {
    // analogWrite(A5, 255);
     detectCooldown = DETECT_COOLDOWN;

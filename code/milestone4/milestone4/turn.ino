@@ -76,11 +76,11 @@ void UTurn() {
       left.write(112);
   }
   while (digitalRead(leftLine) == LOW || digitalRead(rightLine) == LOW) {
-      right.write(95);
+      right.write(97);
       left.write(112);
   }
-  while (digitalRead(rightLine) == HIGH || digitalRead(leftLine) == HIGH) {
-      right.write(95);
+  while (digitalRead(rightLine) == HIGH ) {
+      right.write(97);
       left.write(112);
   }
   right.write(90);
