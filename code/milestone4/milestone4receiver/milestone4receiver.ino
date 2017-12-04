@@ -37,13 +37,19 @@ role_e role = role_pong_back;
 void setup(void)
 {
   // setup pins
-  pinMode(8, OUTPUT); // x1
-  pinMode(7, OUTPUT); // x2
-  pinMode(6, OUTPUT); // x3
-  pinMode(5, OUTPUT); // y1
-  pinMode(4, OUTPUT); // y2
-  pinMode(3, OUTPUT); // treasure 1
-
+  pinMode(8, OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(1,OUTPUT);
+  pinMode(A0,OUTPUT);
+  pinMode(A1,OUTPUT);
+  pinMode(A2,OUTPUT);
+  pinMode(A3,OUTPUT);
+  pinMode(A4,OUTPUT);
   
   
   //
@@ -130,26 +136,35 @@ void loop(void) {
       {
         // Fetch the payload, and see if this was the last one.
         done = radio.read(&got_data, sizeof(int) );
-
+        
         // Send to FPGA
         String x = String(got_data, BIN);
-        digitalWrite(8, x[0]); // x1
-        digitalWrite(7, x[1]); // x2
-        digitalWrite(6, x[2]); // x3
-        digitalWrite(5, x[3]); // y1
-        digitalWrite(4, x[4]); // y2
-        digitalWrite(3, x[5]); // t1
-        digitalWrite(2, x[6]); // t2
-//        digitalWrite(3, LOW);
-//        digitalWrite(2, LOW);
-        analogWrite(0, 255*x[7]); // w1
-        analogWrite(1, 255*x[8]); // w2
-        analogWrite(2, 255*x[9]); // w3
-        analogWrite(3, 255*x[10]); // w4
-        analogWrite(4, 255*x[11]); // done
+        while (x.length() < 12) {
+          x = '0' + x;
+        }
+        int got_data_bin[12];
+        dec2bin(got_data,got_data_bin);
+        digitalWrite(8, got_data_bin[8]); // x msb
+        digitalWrite(7, got_data_bin[7]); // x lsb
+        digitalWrite(6, got_data_bin[11]); // y msb
+        digitalWrite(5, got_data_bin[10]); // y
+        digitalWrite(4, got_data_bin[9]); // y lsb
+        digitalWrite(3, got_data_bin[5]); // treasure msb
+        digitalWrite(2, got_data_bin[4]); // treasure lsb
+        digitalWrite(A4,got_data_bin[6]); // done
+//        digitalWrite(A4,0);
+        
+        digitalWrite(A3, got_data_bin[0]); // wallN
+        digitalWrite(A2, got_data_bin[1]); // wallE
+        digitalWrite(A1, got_data_bin[2]); // wallS
+        digitalWrite(A0, got_data_bin[3]); // wallW
 
         // Spew it
-        printf("Got payload %d...",got_data); // display decimal
+        printf("Got payload %d...\n",got_data); // display decimal
+        Serial.println(x);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c\n",x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11]);
+        printf("done: %i, x: %i%i, y: %i%i%i, treasure: %i%i, walls: %i%i%i%i \n",got_data_bin[5],got_data_bin[3],got_data_bin[4],got_data_bin[0],got_data_bin[1],got_data_bin[2],got_data_bin[6],got_data_bin[7],got_data_bin[11],got_data_bin[10],got_data_bin[9],got_data_bin[8]);
+        
 
         // Delay just a little bit to let the other unit
         // make the transition to receiver
@@ -162,7 +177,7 @@ void loop(void) {
 
       // Send the final one back.
       radio.write(&got_data, sizeof(int) );
-      printf("Sent response.\n\r");
+//      printf("Sent response.\n\r");
 
       // Now, resume listening so we catch the next packets.
       radio.startListening();
@@ -170,4 +185,16 @@ void loop(void) {
   }
 }
 
+void dec2bin(int data, int out[12]) {
+  int data_tmp = data;
+  for (int tmp=11; tmp >= 0; tmp--) {
+    if (data_tmp >= pow(2,tmp) && data_tmp < pow(2,tmp+1)) {
+      out[tmp] = HIGH;
+      data_tmp -= pow(2,tmp);
+    }
+    else {
+      out[tmp] = LOW;
+    }
+  }
+}
 
