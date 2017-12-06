@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/W8kWX4A.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+              </ul>
+            </li>    
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li>  
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>                
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>LAB</h1> -->
+      <p><i>RADIO COMMUNICATION AND MAP DRAWING</i></p>  
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        <h4>Objective</h4>
+        The goal of this lab is to figure out the wireless communication between the 2 Arduinos and FPGA.
+
+        <h4>Team Division:</h4>
+        <!--Bullet points-->
+        <ul>
+          <li>Radio: Rohit Krishnakumar, Alice Song, Victoria Tu</li>
+          <li>FPGA: Meghan Chen, Serena Krech, Michael Yee</li>        
+        </ul>
+        </p>
+
+        <p>
+        <h4>Radio Team:</h4>
+        Materials Used:
+        <!--Numbered Bullet points-->
+        <ul>
+          <li>2 Nordic nRF24L01+ transceivers</li>
+          <li>2 Arduino Unos (one must be shared with the other sub-team)</li>
+          <li>2 USB A/B cables</li>
+          <li>2 radio breakout boards with headers</li>
+        </ul>
+        <br>
+        Procedure:
+        <ol>
+          <li>Download the RF24 Arduino library add to Arduino library directory</li>
+          <li>Download Getting Started Sketch from the course repository and replaced Getting Started Sketch from RF24 library</li>
+          <li>Changed identifier numbers for 2 pipes based on our team (22, 23)</li>
+          <li>Programmed both Arduino boards with the Getting Started example</li>
+          <li>Modify code to send the maze as a single packet</li>
+          <li>Modify code to send new data</li>
+        </ol>           
+
+        <h6>1. Download the RF24 Arduino library add to Arduino library directory</h6>
+        <h6>2. Download Getting Started Sketch from the course repository and replaced Getting Started Sketch from RF24 library</h6>
+        <h6>3. Changed identifier numbers for 2 pipes based on our team (22, 23)</h6>
+          <ul>
+            <li>Used formula from lab4 website page 2(3D+N)+X</li>
+            <li>Set the channel numbers for our team by modifying the Arduino code</li>          
+          </ul>
+        <h6>4. Programmed both Arduino boards with the Getting Started example</h6>
+          <ul>
+            <li>Plug both Arduinos to the laptop</li>
+            <li>Select one Arduino to be the transmitter by typing “T” in the serial monitor</li>
+            <li>Switched between the serial monitors of each Arduino to see that one was receiving what the other was transmitting</li>
+          </ul>
+        <h6>5. Modify code to send the maze as a single packet</h6>
+          <ul>
+            <li>Defined the maze
+              <pre>
+                  // Define maze
+                  unsigned char maze[4][5] =
+                  {
+                    3, 3, 3, 3, 3,
+                    3, 1, 1, 1, 3,
+                    3, 2, 0, 1, 2,
+                    3, 1, 3, 1, 3,
+                    //3, 0, 3, 1, 0
+                  };
+              </pre>
+            </li>
+            <li>Modified sender/transmit side
+              <pre>
+                  // Send maze in single payload
+                  printf("Now sending the maze!\n");
+                  bool ok = radio.write( maze, sizeof(maze) );
+
+                  if (ok)
+                    printf("ok...");
+                  else
+                    printf("failed.\n\r");
+              </pre>
+            </li>
+            <li>Modified receiver side
+              <pre>
+                  // Dump the payloads until we've gotten everything
+                  unsigned char got_maze[4][5];
+                  bool done = false;
+                  while (!done)
+                  {
+                    // Fetch the payload, and see if this was the last one.
+                    done = radio.read( got_maze, sizeof(got_maze) );
+
+                    // Print the maze
+                    for (int i=0; i < 4; i++) {
+                      for (int j=0; j < 5; j++) {
+                        printf("%d ", got_maze[i][j]);
+                      }
+                      printf("\n");
+                    }
+
+                    // Spew it
+                    printf("Got payload %lu...",got_time);
+
+                    // Delay just a little bit to let the other unit
+                    // make the transition to receiver
+                    delay(20);
+              </pre>
+            </li>
+            <li>The serial monitor shows what we expect. The transmitting Arduino sends the payload, and the receiving Arduino gets the maze.</li>                     
+            <br>
+            Transmit: 
+            <br>
+            <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/TransmitWholeMaze.png?raw=true" height="100" />
+            <br>
+            Receive: 
+            <br>
+            <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/ReceiveWholeMaze.png?raw=true" height="100" />
+            <li>The RFK library has an Auto-ACK feature</li>
+          </ul>
+      <h6>6. Modify code to send new data</h6>
+      <ul>
+        <li>Send 3 pieces of information: x-coordinate, y-coordinate, state of current position</li>
+        <li>Maze is 4x5, so we define the orientation so that the x-coordinate needs 3 bits, and the y-coordinate needs 2 bits.</li>
+        <li>There are 4 different states (unvisited, no wall, wall, treasure), so the data needs 2 bits.</li>
+        <li>On the transmitter side, we packed the bits together on using left shift and sent the package as a single payload.
+          <pre>
+              // SENDER SIDE
+              // Define maze
+              unsigned char new_data;
+              // pack bits as follows:
+              // x-coor | y-coor | data
+              // 3 bits | 2 bits | 2 bits
+
+              // test
+              unsigned char x = 4;
+              unsigned char y = 3;
+              unsigned char d = 3;
+
+              // shift bits in order to pack bits, then or them together
+              new_data = x << 4 | y << 2 | d;
+              // (4, 3, 3) should give 1001111 or 79 in decimal
+
+              // Send maze in single payload
+              printf("Now sending new map data!\n");
+              bool ok = radio.write(&new_data, sizeof(unsigned char) );
+
+              if (ok)
+                printf("ok...");
+              else
+                printf("failed.\n\r");
+
+              // Now, continue listening
+              radio.startListening();
+          </pre>
+        </li>
+        <li>The receiver side can then unpack the bits.
+          <pre>
+              // RECEIVER SIDE
+              unsigned char got_data;
+              bool done = false;
+              while (!done)
+              {
+                // Fetch the payload, and see if this was the last one.
+                done = radio.read(&got_data, sizeof(unsigned char) );
+
+                // Spew it
+                printf("Got payload %d...",got_data); // display decimal
+
+                // Delay just a little bit to let the other unit
+                // make the transition to receiver
+                delay(20);
+
+              }
+          </pre>
+        </li>
+        <li>The serial monitor verified what we expected, which was to send/receive payload 79 (1001111).</li>
+      </ul>
+      </p>
+    
+    <p>
+    <h4>Graphics Team:</h4>
+    Materials Used:
+      <ul>
+        <li>FPGA</li>
+        <li>1 Arduino Uno</li>
+        <li>1 VGA Cable</li>
+        <li>1 VGA Connector</li>
+        <li>1 VGA Switch</li>
+        <li>Resistors</li>   
+      </ul>
+
+    Procedure:
+      <ol>
+        <li>Make grid from lab 3 bigger</li>
+        <li>Receive packets from the Arduino</li>
+        <li>Highlight the robots current location based on packet information</li>
+        <li>Mark explored territory</li>
+      </ol>
+
+    <h6>1. Make grid from lab 3 bigger</h6>
+      <ul>
+          <li>For this step we needed to scale up what was previously written in Lab 3. </li>
+          <li>To do so, we extended the size of our color-storing grid_array to be 4 by 5 bits. </li> 
+          <li>We also used for loops to assign data to each of the squares in the grid, since the 
+          previous lab’s implementation individually assigned data to grid squares and was non-scalable.</li>
+      </ul>
+
+    <h6>2. Receive packets from the Arduino</h6>
+      <ul>
+
+          <li>The Radio team received packets in 7 bits. We chose to use parallel communication for this lab for simplicity.</li> 
+          <li>In the future, we hope to switch to SPI. This option will reduce the number of connections needed between the 
+          arduino and the FPGA. </li>
+          <li>We sent connected 7 output pins from the Arduino to GPIO pins on the FPGA. </li>
+          <li>Within the code we set the inputs to the corresponding location x and y coordinates and data 
+          (if treasure was found, location visited, etc). 
+          The connections between the Arduino and FPGA are shown below.
+          <br>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/fpga_arduino.jpg?raw=true" height="300" />
+          </li>
+
+      </ul>
+
+    <h6>3. Highlight the robots current location based on packet information</h6>
+      <ul>
+          <li>In order to implement this, we used two for loops to check every square of the array. </li>
+          <li>The output from the Arduino was sent to GPIO pins that stored the current x and y coordinates. </li>
+          <li>In our for loop, if we were on the current coordinates, the grid_array value would be given red. 
+          The rest of the grid within our grid size would be black, and all of the other coordinates would be given blue.
+            <pre>
+                always @ (posedge CLK_1s) begin
+                  for (x=3'b0; x<=3'd3; x=x+3'b1) begin
+                    for (y=3'b0; y <= 3'd4; y=y+3'b1) begin
+                          if (x == highlighted_x && y == highlighted_y) begin
+                        grid_array[x][y] <= RED;
+                      visited[x][y] <= 1'b0;
+                    end
+                          else if (visited[x][y] == 1'b0) begin
+                              grid_array[x][y] <= GREEN;
+                              visited[x][y] <= visited[x][y];
+                          end
+                          else begin
+                              grid_array[x][y] <= BLACK;
+                              visited[x][y] <= visited[x][y];
+                          end
+                      end
+                  end
+              end
+            </pre>
+          </li>
+
+          <li>Initially, we had the above always block execute whenever highlighted_x or highlighted_y changed, 
+          but we changed that to every second because whenever highlighted_x or highlighted_y changed, 
+          the always block would execute multiple times.  
+          Having the block occur every second effectively debounced the changing signal from the Arduino.
+            <pre>
+                localparam secDiv = 25000000/2;
+                reg [24:0] counter_1s;
+
+                always @(posedge CLOCK_25) begin
+                    if(counter_1s == 0) begin
+                        counter_1s <= secDiv-1;
+                        CLK_1s <= ~CLK_1s;
+                    end
+                    else begin
+                        counter_1s <= counter_1s - 1;
+                        CLK_1s <= CLK_1s;
+                    end
+                 end
+            </pre>
+          </li>
+      </ul>
+
+    <h6>4. Mark explored territory</h6>
+      <ul>
+          <li>We created an array that stored whether or not we had already visited the 
+          coordinates corresponding to the coordinates in the grid_array, 
+          initializing all values to 0. visited[x][y] updates to 1 once coordinates (x,y) 
+          are visited by our current location. In drawing the grid using our for loop, if the 
+          current x and y of interest is marked as visited, we set it to green.  </li>
+          <li><a href="https://www.youtube.com/watch?v=LuAxHNnCtWo">Here is a video of the grid updating as the robot's position changes.</a>  </li>
+          <li>Here is the code we used to simulate the robot moving through the maze:
+            <pre>
+              void setup() {
+                // put your setup code here, to run once:
+                pinMode(3, OUTPUT); // y lsb
+                pinMode(4, OUTPUT); // y 
+                pinMode(5, OUTPUT); // y msb
+                pinMode(6, OUTPUT); // x lsb
+                pinMode(7, OUTPUT); // x msb
+                pinMode(8, INPUT);
+              }
+
+              void loop() {
+
+                while(!digitalRead(8));
+
+                digitalWrite(7, LOW);//x msb
+                digitalWrite(6, LOW);//x lsb
+                digitalWrite(5, LOW);//y msb
+                digitalWrite(4, LOW);//y
+                digitalWrite(3, LOW);//y lsb
+                // 0,0
+                delay(1000);
+
+                digitalWrite(7, LOW);//x msb
+                digitalWrite(6, LOW);//x lsb
+                digitalWrite(5, LOW);//y msb
+                digitalWrite(4, LOW);//y
+                digitalWrite(3, HIGH);//y lsb
+                //0,1
+                delay(1000);
+
+                ... etc
+            </pre>
+          </li>
+      </ul>
+
+
+    </p>
+      
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

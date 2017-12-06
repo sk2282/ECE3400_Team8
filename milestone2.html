@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Milestone 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/4ZxCvDp.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    table, th, td {
+      border: 1px solid white;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>   
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li>
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>                   
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>MILESTONE</h1> -->
+      <p><i>TREASURE AND WALL DETECTION</i></p> 
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        
+      <!--start-->
+      <h4>Objective:</h4>
+      The goal of this milestone is to implement treasure detection at three frequencies (7kHz, 12kHz, 17kHz) and add wall detection to our robot by using IR sensors.
+
+      <h4>Treasure Detection:</h4>
+        <ul>
+          <li>To implement treasure detection, we first built a non-inverting amplifier for the phototransistor.</li>
+          <li>To do this we used a <a href="http://www.ti.com/lit/ds/symlink/lm158-n.pdf">LM-358AN Op Amp IC</a></li>
+          <li>The schematic for this circuit is pictured below 
+          <br>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram.png?raw=true" height="300" />  
+          </li>
+
+          <li>We first tested the amplifier with the function generator. The results can be seen below  
+          <br>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/100_1_noninverting_FG.bmp?raw=true" height="300" /> 
+          </li> 
+
+          <li>When we first tested the circuit using the phototransistor we forgot to include the pull down resistor so it did not work properly  </li>
+          <li>Once we added the resistor, we were able to amplify the signal</li>
+          <li>The FFT data for this is pictured below  
+          <br>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/FFTOutput.PNG?raw=true" height="300" />
+          </li>
+
+          <li>
+          <h5>7kHz From 1.5" Away:</h5>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/7kHz_15inAway.bmp?raw=true" height="300" />  
+          </li>
+
+          <li>
+          <h5>12kHz From 2" Away:</h5>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/12kHz_2inAway.bmp?raw=true" height="300" />   
+          </li>
+
+          <li>
+          <h5>17kHz From 2" Away:</h5>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/17kHz_2inAway.bmp?raw=true" height="300" />  
+          </li> 
+
+          <li>The amplifier gave us a gain of about 4  </li>
+          <li>Below is the code we used to identify the frequencies  </li>
+          <li>We checked the bins and compared their averages so if there was a maximum, the program would identify the frequency  
+
+            <pre>
+             while(1) {     // reduces jitter
+                cli();        // UDRE interrupt slows this way down on arduino1.0
+                for (int i = 0 ; i &lt; 512 ; i += 2) {      // save 256 samples
+                  while(!(ADCSRA & 0x10)); // wait for adc to be ready
+                  ADCSRA = 0xf5;        // restart adc
+                  byte m = ADCL;        // fetch adc data
+                  byte j = ADCH;
+                  int k = (j << 8) | m; // form into an int
+                  k -= 0x0200;          // form into a signed int
+                  k <<= 6;              // form into a 16b signed int
+                  fft_input[i] = k;     // put real data into even bins
+                  fft_input[i+1] = 0;   // set odd bins to 0
+                }
+                fft_window();           // window the data for better frequency response
+                fft_reorder();          // reorder the data before doing the fft
+                fft_run();              // process the data in the fft
+                fft_mag_log();          // take the output of the fft
+                sei();
+                /*
+                7kHz: [44,49]
+                12kHz: [78,82]
+                17kHz: [112,116]
+                */
+                int max_7k = max_in_range(44,49);
+                int max_12k = max_in_range(78,82);
+                int max_17k = max_in_range(112,116);
+                int RATIO_THRESH = 2.5;
+
+                if (max_7k/30 &gt; RATIO_THRESH) {
+                  Serial.println("7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k 7k");
+                }
+                else if (max_12k/30 &gt; RATIO_THRESH) {
+                  Serial.println("12k   12k   12k   12k   12k   12k   12k   12k   12k");
+                }
+                else if (max_17k/30 &gt; RATIO_THRESH) {
+                  Serial.println("17k     17k     17k     17k     17k     17k     17k");
+                }
+                else {
+                  Serial.println("No Signal");
+                }   
+              }
+            </pre>
+          </li>
+
+          <li><a href="https://youtu.be/L_e-veB9L3M">The final circuit with amplifier was able to detect each frequency from around 2 inches away</a></li>
+
+        </ul>
+
+      <h4>Wall Detection:</h4>
+        <li>We first tested three IR sensors:  
+          <ul>
+              <li><a href="http://www.sharp-world.com/products/device/lineup/data/pdf/datasheet/gp2y0a41sk_e.pdf">Short range IR</a></li>
+              <li><a href="https://www.sparkfun.com/datasheets/Components/GP2Y0A21YK.pdf">Regular IR</a></li>
+              <li><a href="https://www.sparkfun.com/datasheets/Sensors/Infrared/gp2y0a02yk_e.pdf">Long range IR</a></li>
+          </ul>
+        </li>
+        <li>We connected the IR sensors to an anolog pin on the Arduino and used analogRead() to obtain the data from the sensors</li>
+        <li>We then printed readings from the sensors at three different distances from a wall: 2, 6, and 12 inches  </li>
+        <li>The results from this test is displayed in a table below
+          <ul>
+              <li>We determined which IR sensors would work best for our robot, prioritizing the best range for the distances that our robot would interact with </li> 
+              <li>We decided to use two short range sensors on the sides and one regular sensor on the front  
+              <br>
+
+                <table style="width:50%">
+                  <tr>
+                    <th>IR Sensor</th>
+                    <th>Distance</th> 
+                    <th>Arduino Reading</th>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>2"</td>
+                    <td>1000+</td>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>6"</td>
+                    <td>500 - 550</td>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>12"</td>
+                    <td>370 - 380</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>2"</td>
+                    <td>620 - 630</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>6"</td>
+                    <td>310 - 330</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>12"</td>
+                    <td>170 - 190</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>2"</td>
+                    <td>390 - 405</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>6"</td>
+                    <td>130 - 170</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>12"</td>
+                    <td>60 - 90</td>
+                  </tr>                   
+                </table>
+              </li>
+          </ul>
+        </li>
+
+        <li>We wrote some code to test wall detection  
+          <ul>
+              <li>To test the implementation, we mounted one short range sensor on the robot's right side </li> 
+              <li><a href="https://youtu.be/_vbiJvubCpY">The robot should follow a straight line until the sensor detects a wall and stop when the wall is detected</a></li>
+          </ul>
+          <pre>
+          void loop() {
+
+            // go straight when threshold has not been reached
+            while (analogRead(wallRightSide) <= threshSide) {
+              int lRead = analogRead(leftLine);
+              int rRead = analogRead(rightLine);
+              int lwRead = analogRead(leftWide);
+              int rwRead = analogRead(rightWide);
+
+              if(lRead<=thresh && rRead<=thresh){     // stop
+                left.write(90);
+                right.write(90);
+              }
+              else{
+                if(lRead&lt;thresh){  // left side is out of line
+                  left.write(170);
+                  right.write(89);
+                }
+                else if(rRead&lt;thresh){   // right side is out of line
+                  left.write(91);
+                  right.write(10);
+                }
+                else{     // go straight
+                  left.write(100);
+                  right.write(80);
+                }
+              }
+            }
+
+          //   else stop when wall is detected
+            left.write(90);
+            right.write(90);
+
+          }
+          </pre>
+        </li>
+
+      <h4>Final Robot of Milestone 2:</h4>
+      <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/milestone2robot.jpg?raw=true" height="300" />
+
+      <h4>Update 10/28/17</h4>
+      We added a capacitor to the treasure detection circuit to remove DC bias from the signal.  This way, we could increase the gain and thereby increase the range of the treasure sensor.
+      <br>
+      <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Milestone2/Treasure_detection_circuit_diagram_NEW.png?raw=true" height="300" />
+      <br>
+      Now, the gain is about 22, and <a href="https://www.youtube.com/watch?v=mYrdaRs9rtg">the circuit can detect the treasure up to 9 inches away</a>.
+
+
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

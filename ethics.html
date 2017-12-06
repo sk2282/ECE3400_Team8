@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ethics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/1d6SqhK.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li>
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>LAB</h1> -->
+      <p><i>ETHICS HOMEWORK</i></p> 
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        <h2>Ethics: Elderly Care Robots</h2>
+        <h4>Background</h4>
+        <p>
+          Countries are trying to cope with the growing elderly population. In the United States, approximately 13% of the population is 65 years or older, but that percentage is expected to nearly double by the year 2050. The projected increase in the elderly population will bring with it a growing need to find a way to adequately provide care to the elderly who need it.
+        </p>
+        <p>
+          This problem is not unique to the United States; In Japan, 20% of the population in 65 years or older, and by the year 2025, Japan expects to have a shortage of 1 million caregivers.
+        </p>
+        <p>
+          To confront the issue, there are numerous possibilities that supplement personal caregivers. Alternatives include the elderly living with family, forcing an increase individuals to become personal caregivers, and the utilization of personal care robots to help care for the elderly. <a href="http://www.businessinsider.com/japan-developing-carebots-for-elderly-care-2015-11">Source</a>
+        </p>
+
+        <h4>Stake Holders</h4>
+        <p>
+          <ul>
+            <li>The elderly who struggle to take care of themselves</li>
+            <li>Relatives</li>
+            <li>Hospitals</li>
+            <li>Nursing Homes</li>
+            <li>Tech Companies</li>
+          </ul>
+        </p>
+
+        <h4>Utilitarian Test</h4>
+        <p>
+          We have chosen to apply the utilitarian ethics test. This test considers all current and future stakeholders. In this case, this is extremely important since the elderly population is growing so the outcome of this test will only affect more people as time goes on. This test also takes happiness into consideration. This is an important factor to consider because so many people will be affected. The solution that creates the most happiness will be the most desired outcome since it will affect the most people. It will cater to the common case instead of outliers.
+        </p>
+
+        <h4>Applying the Test</h4>
+        <h5>1. Possible Alternative Actions</h5>
+        <ul>
+          <li>Instead of a personal caregiver one could stay in a hospital or retirement home</li>
+          <li>The elderly could live with their children/Family, however this is not always an available option for them.</li>
+          <li>Requiring people to be caregivers</li>
+          <li>Robot Caregivers</li>
+        </ul>
+
+        <h5>2. Identify the stakeholders who will be affected by these actions</h5>
+        The elderly who struggle to take care of themselves will be affected, especially those that cannot afford personal care. Close relatives and friends of the elderly are also affected.
+        <h5>3. Benefits and Costs to Stake Holders</h5>
+        Forcing Elderly into a hospital or retirement home:<br>
+        <i>Possible Outcome</i>
+        <ul>
+          <li>Some elderly do not want to join an assisted living facility and have trouble adjusting. A study shows that some seniors have had sleep disturbances which lead to a greater need for assistance and/or depression. <a href="https://www.everydayhealth.com/senior-health/are-seniors-unhappy-in-assisted-living-facilities.aspx">Source</a></li>
+          <li>An increase in those who need to use hospital/retirement homes/etc. will make assisted living facilities filled closer and closer to capacity. Increase in individuals using assisted living facilities will increase the price of care and make it unobtainable to some who need it</li>
+        </ul>
+        <i>Short-term and Long-term Consequences</i>
+        <ul>
+          <li>An increase to those using a given facility may decrease the quality of care within it</li>
+          <li>Represents the same problem with personal caregiver: An increase in the amount of elderly using facilities would lead to an increase in the amount of caregivers required within the assisted living facility which may lead to a shortage of staff</li>
+          <li>Financial burden placed on those who pay for the person’s care</li>
+          <li>Harder for family members and friends to visit, but they do not have to personally provide care to the individual</li>
+          <li>The quality of an assisted living facility can range greatly from place to place but some potential benefits are intellectual stimulation, nutritious meals, physical fitness, and social activity. <a href="https://www.aplaceformom.com/blog/4-22-16-assisted-living-better-health-and-happiness/">Source</a></li>
+          <li>Possibly easier to be social with other individuals in assisted living but that ranges depending on the facility. The negative extreme is a feeling of isolation if the person does not have an opportunity to really socialize.</li>
+        </ul>
+        <i>Should consider the relative value of an outcome to different stake holders</i>
+        <ul>
+          <li>Some elderly do not want to utilize assisted living/prefer to stay more independent and would therefore will be unhappy despite quality of care within the place
+          <li>Happiness ranges greatly depending on the quality of the facility care and opportunity to meet other people
+          <li>Even if care for health related reasons is adequate, it may be emotionally difficult to be away from loved ones and result in a feeling of isolation (depends on degree of ability to meet other people in place)
+          <li>Long-term financial expenses may represent a burden to either the person requiring care and/or their family members
+          <li>Can be much more expensive than other options
+        </ul>
+
+        Requiring People to Become Caregivers:<br>
+        <i>Possible Outcomes</i>
+        <ul>
+          <li>People who are unhappy in their jobs do not perform as well and can experience personal consequences. This could decrease the quality of care to the elderly. <a href="https://www.forbes.com/sites/ashleystahl/2016/03/03/hate-your-job-heres-what-its-costing-you/#3a72d4396630">Source</a></li>
+          <li>Employment of many caregivers will increase the cost of using a retirement home, potentially making quality care unaffordable for some families</li>
+        </ul>
+        <i>Short-term and Long-term Consequences</i>
+        <ul>
+          <li>Health problems for the caregivers who are unhappy with their job</li>
+          <li>Inadequate care and negative impact on the elderly</li>
+        </ul>
+        <i>Should consider the relative value of an outcome to different stake holders</i>
+        <ul>
+          <li>The person seeking care may lose feeling of independence</li>
+          <li>Person providing care has the potential to be unhappy in this situation</li>
+          <li>Family members impacted negatively if care is inadequate</li>
+        </ul>
+
+        Living with Family:<br>
+        <i>Possible Outcomes</i>
+        <ul>
+          <li>The family might not know how exactly to handle the needs of the elderly or how to care properly for them which can lead to inadequate care. A report shows that almost three quarters of family caregivers did not go to the doctor as often as they were supposed to.</li>
+          <li>Stress on the family member providing care can have a negative impact on their own health and lead to a greater potential of illness. A study shows that 23% of family caregivers caring for loved ones for 5 years or more report their own health as either fair or poor. Additionally, stress of caregiving for a person with dementia can affect a person’s immune system for up to three years after caregiving ends. <a href="http://caregiveraction.org/resources/caregiver-statistics#Impact%20on%20Family%20Caregiver's%20Health">Source</a></li>
+        </ul>
+        <i>Short-term and Long-term Consequences</i>
+        <ul>
+          <li>Distance/tension created between family members</li>
+          <li>Added stress</li>
+          <li>Family members take on more than a financial burden because they have to sacrifice significant time to provide care</li>
+        </ul>
+        <i>Should consider the relative value of an outcome to different stake holders</i>
+        <ul>
+          <li>People might start happier in this situation, but the quality of care is likely to be inadequate compared to other options</li>
+          <li>The elderly might be happier in this situation compared to alternatives where they would scarcely see their family, but there is also the potential that they feel like a burden or feel guilty for the need of constant care</li>
+          <li>Decreased monetary cost compared to using retirement homes / caregivers, but increased emotional cost for family members who have to provide constant care</li>
+        </ul>
+
+        Robot Caregivers:<br>
+        <i>Possible Outcomes</i>
+        <ul>
+          <li>Robot caregivers will increase in popularity to help supplement the shortage of personal caregivers</li>
+        </ul>
+        <i>Short-term and Long-term consequences</i>
+        <ul>
+          <li>Helps to solve the caregiver employment shortage</li>
+          <li>Family members and loved ones can spend more meaningful time with the elderly because the robot can be delegated for the more mundane tasks they would normally have to do.</li>
+          <li>Adequate and consistent care can be provided 24/7. <a href="http://www.businessinsider.com/robot-caregivers-for-the-elderly-10-years-away-2017-8">Source</a></li>
+        </ul>
+        <i>Should consider the relative value of an outcome to different stake holders</i>
+        <ul>
+          <li>Elderly can spend more time with their family and get quality care</li>
+          <li>Elderly can feel more independent, knowing they’re using a machine instead of human caregivers to increase their quality of life.</li>
+          <li>Affordability for the family depends on what the market price is</li>
+          <li>The robot would alleviate much of the emotional cost imposed on the family that would come with caring for or being away from their loved one</li>
+        </ul>
+
+        <h5>4. Ask what would happen if the action were a policy for all similar situations.</h5>
+        First example often turns into a standard. So consider what would happen immediately if these actions were to be implemented<br>
+
+        Forcing Elderly into a hospital or retirement home
+        <ul>
+          <li>Shortage of workers and high demand for care may compromise the quality of care</li>
+          <li>The elderly may not be happy if they were forced and did not want to use an assisted living facility</li>
+          <li>Increase in number of retirement home / hospital caregiver jobs.</li>
+          <li>Increase in demand for care could create opportunities for retirement home owners.</li>
+        </ul>
+
+        Requiring People to Become Caregivers
+        <ul>          
+        <li>The quality of care would differ on an individual basis. In theory, the quality of care should be high, but there is the potential for human error (e.g. a lack of interest can negatively impact quality of care).</li>
+        <li>It would be expensive to incentivize unmotivated people to become caregivers and nearly impossible to recruit enough caregivers to account for the increasing elderly population.</li>
+        <li>Increase in number of caregiver jobs</li>
+        </ul>
+
+        Living with Family
+        <ul>
+          <li>On average, elderly people wouldn’t receive the quality of care they need, but blame for inadequate care can be placed on families instead of robots, caregivers, or retirement homes. Families able to afford higher quality care will be able to give their loved ones high quality care. Families unable to afford high quality care will have to shoulder the emotional costs of caring for their loved ones themselves.</li>
+          <li>Very inexpensive policy option. Easy to implement, but doesn’t really address the problem.</li>
+        </ul>
+
+        Robot Caregivers
+        <ul>
+          <li>Delivers consistent and good quality care for an increasing elderly population. On average, the quality of care from the robots would be higher than the quality of care by humans. If the market price goes low enough, this could become an economically feasible option for the general population.</li>
+          <li>Use of robot caregivers would stimulate growth in the tech industry</li>
+          <li>A policy might receive some political backlash from people whose jobs feel threatened by the utilization of robot caregivers, or by those who trust a human more than a robot, regardless of the quality of care given by the robots. It is likely that malfunctions or mishaps by the robots will be more heavily scrutinized by the general public than mistakes, neglect, or abuse by humans.</li>
+          <li>If adequate testing is done prior and first implementation runs relatively smoothly, robot caregivers could increase in popularity and be considered a new viable alternative to personal caregivers. However, it will take a lot of time and money to do enough testing for people to feel safe using the robots.</li>
+        </ul>
+
+        <h5>5. Draw a conclusion</h5>
+        Options to Drawing a Conclusion:
+        <ol>
+          <li>If the same action is selected in Steps 3 &amp; 4, then this is the ethical action.</li>
+          <li>If different actions are selected, then decide whether the individual action or the policy will produce the greatest good and the least harm, for all affected, over the long term</li>
+        </ol>
+
+        <p>
+          Of the options listed above, robot caregivers do the best job at dispensing good quality and consistent care to the elderly. For step 3, robot caregivers are decisively the superior option.
+        </p>
+        <p>
+          It can be argued that for Step 4, the “Living with Family” option is favorable compared to the “Robot Caregivers” option due to the ease of implementation, low cost, and ability to make caring for the elderly a “moral problem” instead of an “economic problem”. However, the “Robot Caregivers” option does a better job at addressing and solving the problem and would result in better overall care, albeit with some added costs.
+        </p>
+        <p>
+          The conclusion of the Ethics Test is that robot caregivers are the best option to combat the problem of caring for an increasing elderly population.
+        </p>
+
+
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

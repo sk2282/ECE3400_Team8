@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minutes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/1d6SqhK.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li>
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>LAB</h1> -->
+      <p><i>MEETING MINUTES</i></p> 
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        <h4>Meeting Minutes</h4>
+        <ul>
+            <li><a href="https://docs.google.com/a/cornell.edu/document/d/1dVXc5hVIiBzm_1vL9nOCoFMn-4mMeLHOMNEJl790Ix4/edit?usp=sharing">31 August 2017</a></li>
+            <li><a href="https://docs.google.com/a/cornell.edu/document/d/1AbLZ4Nd0oftpHPPofFHE4el4eL6gsMsTh-VpWx2JPIM/edit?usp=sharing">1 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1IixqAsmoh66EbaAX_XVr76OVa-Bn7eAaO9CXjHz4rTg/edit?usp=sharing">8 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1uVyQNK8VZAKUJo8fKTcOyKW61Ucf-yY_skLPzT-Ufi4/edit?usp=sharing">8 September 2017 Evening</a></li>
+            <li><a href="https://docs.google.com/a/cornell.edu/document/d/1OeqtQIshS4gdi_WunxyUrcH27CYjRShQJg4Ecw0eNZ8/edit?usp=sharing">15 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/19gCUT5O-TwJ66vKWknkjVq6p_PORUAW8sYWhHZy82BU/edit?usp=sharing">16 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1kIWIBmAdaLB9Nr3_8VhhWK_OknhrdcQKYoMpmKMa0pM/edit?usp=sharing">18 September 2017</a></li>
+            <li><a href=https://docs.google.com/a/cornell.edu/document/d/1eQ3Cl3-xMsV-1E5ckTSpjEgFfk9PYuPqYlijXSiSAlw/edit?usp=sharing>22 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/14jsQFXDUww3ztQDiJklo58GNrOQrAAuZo_BPBRdKKbg/edit?usp=sharing">23 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/14jsQFXDUww3ztQDiJklo58GNrOQrAAuZo_BPBRdKKbg/edit?usp=sharing">24 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/12xjy71pxQk41sa3XGKxHc3YcSL7JBOi5fqxk5IpjOd0/edit?usp=sharing">25 September 2017</a></li>
+            <li><a href="https://docs.google.com/a/cornell.edu/document/d/15rDKSE2WFMk-ZKou2i40M6zkAOD6iVYjyoAf3U3xzs8/edit?usp=sharing">29 September 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1L0FCSqawf3SBA3HpldV9yh2gRiSBxYoKKBoJbt71vl0/edit?usp=sharing">13 October 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1RtJzLBMA_dWL9lNCaGAMpJ-TwWYHp_UadeJhXUKmBec/edit?usp=sharing">20 October 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/17PEkTi5sUvCAwdCBt3bdMVzWM3nJG1DwNGU2q3sPa8A/edit?usp=sharing">26 October 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1c8UE7Z0Oq0xp5nR5Xf1Uos_uNsP7wRhOzybtT2yL1YI/edit?usp=sharing">3 November 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1Q4dxydQsXWhqxsBNvucQduFroslpq1IuBVRkWbzZAEE/edit?usp=sharing">10 November 2017</a></li>
+            <li><a href="https://docs.google.com/a/cornell.edu/document/d/1pV-zQDAcFRtTGhghiPE03gBkxMY7FenGvDc1KvgwYtU/edit?usp=sharing">13 November 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1_8JSm1b6zDBOYd2N2LuCAPtMM--8urobvL28UBVtIGg/edit?usp=sharing">30 November 2017</a></li>
+            <li><a href="https://docs.google.com/document/d/1HbouDgF-JSVLO-wLdLd3TWzk3q2IUd6FYFf8szYkDCQ/edit?usp=sharing">1 December 2017</a></li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

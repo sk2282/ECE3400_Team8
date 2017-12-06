@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Milestone 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/7pfOo9m.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>       
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li> 
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>              
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>MILESTONE</h1> -->
+      <p><i>MAZE-MAPPING ROBOT</i></p>
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="To Top">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div> 
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        
+      <!--start-->
+      <h4>Objective:</h4>
+      The goal of this milestone is to have a functioning system that has the robot map the maze and display it on the VGA.
+
+      <h4>Procedure</h4>
+      <h5>1. Treasure Detection Integration</h5>
+        <ul>
+          <li>Changed FFT to 128 point to reduce memory use. Before, we were using 256 point.
+
+            <pre>
+            #define FFT_N 128 // set to 128 point fft
+            </pre>
+          </li>
+
+          <li>This is the treasure read function:
+
+            <pre>
+            unsigned char treasureRead() {
+              cli();        // UDRE interrupt slows this way down on arduino1.0
+              for (int i = 0 ; i < FFT_N*2 ; i += 2) {      // save 256 samples
+                while(!(ADCSRA & 0x10)); // wait for adc to be ready
+                ADCSRA = 0xf5;        // restart adc
+                byte m = ADCL;        // fetch adc data
+                byte j = ADCH;
+                int k = (j << 8) | m; // form into an int
+                k -= 0x0200;          // form into a signed int
+                k <<= 6;              // form into a 16b signed int
+                fft_input[i] = k;     // put real data into even bins
+                fft_input[i+1] = 0;   // set odd bins to 0
+              }
+              fft_window();           // window the data for better frequency response
+              fft_reorder();          // reorder the data before doing the fft
+              fft_run();              // process the data in the fft
+              fft_mag_log();          // take the output of the fft
+              sei();
+
+              int max_7k = max_in_range(44/2,48/2);
+              int max_12k = max_in_range(78/2,82/2);
+              int max_17k = max_in_range(112/2,116/2);
+              int RATIO_THRESH = 2.6;
+
+              if (max_7k/30 > RATIO_THRESH) return 1;
+              else if (max_12k/30 > RATIO_THRESH) return 2;
+              else if (max_17k/30 > RATIO_THRESH) return 3;
+              else return 0;
+            }
+            </pre>
+          </li>
+        </ul>
+
+      <h5>2. VGA Display</h5>
+      Sending Data
+        <ul>
+          <li>We based our code on the radio communication code used in Lab 4. In lab 4, the code included both sender and receiver functionality.</li>
+          <li>For this milestone, we divided the code up so that one Arduino (robot) has the sender code while the other Arduino (base station) has the receiver code</li>
+          <li>Another thing that was changed was in the sender code. In lab 4, we represented the data with 2 bits. Now, we represent data with 7 bits as follows: 3 bits for x-coordinate, 2 bits for y-coordinate, 1 bit for done, 2 bits for treasure detection, and 4 bits for wall detection.</li>
+          <li>To package the data, we followed lab 4 similarly. Instead of shifting x and y by 4 and 2 bits, we are now shifting them by 9 and 7 bits, respectively.
+
+            <pre>
+            // shift bits in order to pack bits, then or them together
+            new_data = x << 7 | y << 9 | d;
+            // (4, 3, 1011001) should give 100111011000 or 2520 in decimal
+            //  x ||  y  ||   done  | treasure | wall
+            // 10 || 011 ||    1    |    01    | 1000
+            </pre>
+          </li>
+
+          <li>We also had to modify the types of some variables to take into consideration the fact that we now have more bits represented in data. Previously, they were char rather than int.
+
+            <pre>
+            unsigned int new_data;
+            ...
+            bool ok = radio.write(&new_data, sizeof(int) );
+            ...
+            radio.read( &got_time, sizeof(int) );
+            </pre>
+          </li>
+
+          <li>We then checked the new code on the 2 Arduinos with the following values: x = 4, y = 3, data = B1011000. The serial monitor confirmed our answer, as the receiver printed that it received payload 2520, which is 100111011000 in decimal.
+          </li>
+        </ul>
+
+      Integrating Radio Communication with Maze-Mapping Code
+        <ul>
+          <li>We added the necessary header files and set-up code to our maze-mapping code from milestone 3</li>
+          <li>We created a new tab to include the sender radio code, which we modified to get information from our milestone 3 code</li>
+
+            <pre>
+            void radioSend() {
+                unsigned char row = r;
+                unsigned char col = c;
+                unsigned char d = !notDone() << 6 | treasureRead() << 4 | detected_wall_loc[r][c];
+            }
+            </pre>
+          </li>
+
+          <li>Each time our robot reads new information about the maze, it should update its row and column coordinates as well as “data,” which contains information about the progress of the robot, the treasures, and the walls.  
+
+            <pre>
+            void dfs() {
+              // detect new walls for current square
+              detectWalls();
+
+              // decide on next dir to go
+              if (notDone()) {
+                  if (r > 0 && detected_wall_loc[r][c][NORTH] == '0' && visited[r-1][c] != 1) {
+                  faceRobot(NORTH);                                                                                              
+                  stack.push(dir);
+                }
+                else if (c < 3 && detected_wall_loc[r][c][EAST] == '0' && visited[r][c+1] != 1) {
+                  faceRobot(EAST);
+                  stack.push(dir);
+                }
+                else if (r < 4 && detected_wall_loc[r][c][SOUTH] == '0' && visited[r+1][c] != 1) {
+                  faceRobot(SOUTH);
+                  stack.push(dir);
+                }
+                else if (c > 0 && detected_wall_loc[r][c][WEST] == '0' && visited[r][c-1] != 1) {
+                  faceRobot(WEST);
+                  stack.push(dir);
+                }
+                else {
+                  int newDir = (stack.pop() + 2) % 4;
+                  faceRobot(newDir);
+                }
+                updatePosition();
+                radioSend();
+              }
+            }
+            </pre>
+          </li>
+
+          <li>We were able to compile our code and believe our logic is correct. However, so far we haven't been able to test it with the robot yet because we had trouble with the treasure detection circuitry.</li>
+        </ul>
+
+      FPGA
+        <ul>
+          <li>Now we will connect the base-station Arduino with the FPGA. We decided against implementing SPI for the communication and used digital and analog pins to send the data.  </li>
+          <li>The Verilog code was also able to compile, but we were unable to test it because our robot has had trouble with the treasure detection circuitry.</li>  
+          <li>Additionally, we did not have access to an FPGA until it was very close to the Milestone 4 deadline. We were then unable to connect it to our base station in the time that our robot circuitry allowed it to move. </li>
+        </ul> 
+
+      <h4>Moving Forward</h4>
+      Unfortunately, the errors we've made and the lack of our materials in the last few weeks didn't allow us to completely satisfy this milestone.  
+      For the upcoming week, we plan on making sure the treasure detection works as intended and then testing it with the FPGA display. In retrospect, it would have been better to guarantee treasure detection on a separate breadboard before adding it to the robot, as well as concurrently setting up the FPGA code.
+
+
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

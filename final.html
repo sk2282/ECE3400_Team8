@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minutes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/XQYwll4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    table, th, td {
+      border: 1px solid white;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab1">Lab 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li>
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>LAB</h1> -->
+      <p><i>SUMMARY</i></p> 
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+        <h2>Preparing for the Final Competition</h2>
+        <p>After struggling with Milestone 4, we summarized the tasks we needed to accomplish to complete our robot for the final competition.
+          <ul>
+            <li>Integrate radio communication with maze navigation</li>
+            <li>Add real-time maze mapping with the FPGA by displaying on the VGA monitor</li>
+            <li>Integrate treasure detection</li>
+            <li>Add start and end signals</li>
+          </ul>
+        </p>
+
+        <h4>Radio</h4>
+        <ul>
+          <li>We first were able to integrate the radio</li>
+          <li>Initially, we changed the format of the data being sent. Previously in lab 4, we sent 3 bits for the row, 2 bits for the column, and 2 bits for data. Now, we sent 7 bits for data represented as 2 bits for treasure, 1 bit for done, and 4 bits for wall location.<br>
+          Before: 
+            <pre>
+                unsigned int new_data;
+                // pack bits as follows:
+                // x-coor | y-coor | data
+                // 3 bits | 2 bits | 2 bits
+
+                unsigned char x = 4;
+                unsigned char y = 3;
+                unsigned char d = 3;
+
+                // shift bits in order to pack bits, then or them together
+                new_data = x << 4 | y << 2 | d;
+            </pre>
+          <br>
+          After: 
+            <pre>
+              unsigned int new_data;
+              // pack bits as follows:
+              //  row   | column | data
+              // 3 bits | 2 bits | 7 bits
+
+              // data example:
+              //  done   treasure    wall
+              //    1       00       1001
+
+              unsigned char row = r;
+              unsigned char col = c;
+              unsigned char wall = detected_wall_loc[r][c][NORTH] << 3 | detected_wall_loc[r][c][EAST] << 2 | detected_wall_loc[r][c][SOUTH] << 1 | detected_wall_loc[r][c][WEST];
+    
+              unsigned char d = !notDone() << 6 | treas << 4 | (wall &amp; 15);
+              new_data = row << 9 | col << 7 | d;
+            </pre>
+          </li>
+          <li>We tested the new format of the data on two Arduinos. After that worked, we proceeded to integrate this with our dfs</li>
+          <li>Initially, we had issues adding radio communication within dfs. Our robot no longer navigated the maze or sensed anything correctly because we were “listening” at the incorrect place. 
+            <pre>
+              void radioSend() {
+                //
+                // Ping out role.  Repeatedly send the current time
+                //
+                Serial.println(F("radio send"));
+                radio.startListening(); // moved from setup
+                if (role == role_ping_out)
+                {
+                  // First, stop listening so we can talk.
+                  radio.stopListening();
+                  .
+                  .
+                  .
+                }
+                .
+                .
+                .
+                radio.startListening();
+                .
+                .
+                .
+                radio.stopListening();
+              }
+            </pre>
+          </li>
+          <li>Once we fixed that, our radio communication no longer interfered with maze mapping. However, we couldn’t get the receiver Arduino to indicate that it was receiving (print statements in serial monitor). We realized that was a silly mistake due to not including “printf_begin()” in our code.</li>
+
+        </ul>
+
+        <h4>FPGA and VGA Display</h4>
+        <ul>
+          <li>From lab 4, we had to make some modifications to display the newly formatted data correctly</li>
+          <li>We first tested the implementation by hard-coding a maze like a simulation. Once we were comfortable with that, we remodified the code to display the maze as the receiver Arduino listened to the sender Arduino on the robot.</li>
+        </ul>
+
+        <h4>Start/End Signals</h4>
+        <i>Start Signals:</i><br>
+        <h5>Push Button</h5>
+          <ul>
+            <li>We first added a small push button to our circuit on the robot. </li>
+            <li>The push button was connected to analog pin 4, power, and a pull-down resistor of 10kOhms to ground<br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/pushbutton.jpg?raw=true" height="200" />
+            </li>
+            <li>This was straightforward since the only code that we added was a simple while loop polling analog pin 4 and exiting once the button was pressed
+              <pre>
+                while(!start) {
+                  if (analogRead(4)>500) start = 1;
+                }
+              </pre>
+            </li>
+          </ul>
+        <h5>Microphone (660Hz Detection)</h5>
+          <ul>
+            <li>We connected the microphone to analog pin 5</li>
+            <li>For the microphone to detect 660Hz, we created a function micRead() to do the fft frequency detection. We chose to not use free-running mode and to instead simply poll until 660Hz is detected. </li>
+            <li>Initially, we still had problem with the fft interfering with our servos. To fix this, we got rid of sei() and cli() from our code, which were likely messing up the clock that also controlled the PWM module on the servo pins.</li>
+            <li>To get the thresholds, we used the serial plotter first to see if any peaks occurred. We were able to determine that for 660Hz, a consistent peak above occured above 60. Then, we used the serial monitor to print out the values of the fft function and to count which bins the peak occurred in (9 and 10).
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/660hz.png?raw=true" height="300" />
+              <br>
+              <pre>
+                boolean micRead() {
+                  for (int i = 0 ; i < 256 ; i += 2) {
+                      fft_input[i] = analogRead(A5); // <-- NOTE THIS LINE
+                      fft_input[i+1] = 0;
+                    }
+                  fft_window();           // window the data for better frequency response
+                  fft_reorder();          // reorder the data before doing the fft
+                  fft_run();              // process the data in the fft
+                  fft_mag_log();          // take the output of the fft
+                  Serial.println("Start");
+
+                  if(fft_log_out[9] > 70 &amp;&amp; fft_log_out[10] > 70){
+                    return true;
+                  } 
+                  else {
+                    return false;
+                  }
+                }
+              </pre>
+            </li>
+            <li>When micRead() detected 660Hz, it returns true. We added polling analog pin 5 to our while loop from before with the push button.
+              <pre>
+                while(!start) {
+                    if (analogRead(4)>500 || micRead()) start = 1;
+                }
+              </pre>
+            </li>
+            <li>Now, if the robot detects the button pushed or 660Hz, it starts</li>
+            <li>In order to verify that the robot would not start at other frequencies. We tested varying frequencies within 300Hz above and below 660Hz and did not get any false starts.</li>
+          </ul>
+        <i>End Signals:</i><br>
+        <h5>Green LED</h5>
+          <ul>
+            <li>We added a green LED to our circuit connected to digital pin 8
+              <pre>
+                void setup() {
+                  .
+                  .
+                  .
+                  digitalWrite(8, LOW);
+                }
+              </pre>
+            </li>
+            <li>When the robot is done mapping the maze, we turn digital pin 8 from low to high to signal on the LED
+            <pre>
+              boolean notDone() {
+                  for (int R = 0; R < 5; R++) {
+                    for (int C = 0; C < 4; C++) {
+                      if (...) {
+                        return true;
+                      }
+                    }
+                  }
+                  digitalWrite(8, HIGH);  
+                  return false;
+                }
+            </pre>
+            </li>
+          </ul>
+        <h5>Monitor</h5>
+          <ul>
+            <li>We modified our FPGA code to change the display when the robot is done
+              <pre>
+                wire [7:0] TAN =    8'b111_111_10; // out of bounds not done
+                wire [7:0] BLACK =  8'b000_000_00; // out of bounds done
+                .
+                .
+                .
+                always @ (PIXEL_COORD_X,PIXEL_COORD_Y) begin
+                  // Current square color
+                  if (!done ...) begin
+                    ...
+                    PIXEL_COLOR = YELLOW;
+                  end
+                  else if (done ...) begin
+                    PIXEL_COLOR = WHITE;
+                  end
+                  .
+                  .
+                  .
+                  // Background color
+                  else if (...) begin
+                    if (done) begin
+                      PIXEL_COLOR = BLACK; // out of bounds (background)
+                      origin_x = origin_x;
+                      origin_y = origin_y;
+                    end
+                    else begin
+                      PIXEL_COLOR = TAN; // out of bounds (background)
+                      origin_x = origin_x;
+                      origin_y = origin_y;
+                    end
+                  end
+                end
+              </pre>
+            </li>
+            <li>When the robot finishes the maze, the monitor changes the background color from white to black
+            </li>
+          </ul>
+        <h5>Three-Tone Sound</h5>
+          <ul>
+            <li>We integrated our code from lab 3, which plays 3 different tones
+            </li>
+            <li>Now, the speaker plays an arpeggio when the robot is done
+            <pre>
+              // 3 tones
+              localparam CLKDIVIDER_1k = 25000000/622/255;
+              localparam CLKDIVIDER_1250 = 25000000/778/255;
+              localparam CLKDIVIDER_1500 = 25000000/933/255;
+              .
+              .
+              .
+              always @(soundCount) begin
+                if (done) begin
+                  if (soundCount == 3'b1) out = signal;
+                  else if (soundCount == 3'd2) out = signal2;
+                  else if (soundCount == 3'd3) out = signal3;
+                  else out = 8'b0;
+                end
+                else out = 8'b0;
+              end
+              always @(posedge CLK_1k) begin
+                ...
+              end
+              always @(posedge CLK_1250) begin
+                ...
+              end
+              .
+              .
+              .
+              initial begin 
+                soundCount = 3'b0;
+                out = signal;
+                counter = 8'd255;
+                sin[0]<=8'd128;
+                sin[1]<=8'd134;
+                sin[2]<=8'd141;
+                .
+                .
+                .
+                sin[253]<=8'd115;
+                sin[254]<=8'd122;
+                sin[255]<=8'd128;
+              end
+            </pre>
+            </li>
+          </ul>
+
+        <h4>Treasure Detection</h4>
+        <ul>
+          <li>We had trouble with using fft with our treasure detection since it kept interfering with our system.</li>
+          <li>We tried to fix this by using interrupts instead. We were able to detect treasures with interrupts. However, we were running low on available pins, and this required digital pins 6 and 7 as comparators, so we decided to scrap the idea.</li>
+          <li>After successfully using fft for the microphone 660Hz detection, we wanted to try this method for the treasure detection. However, we were still struggling with the treasure circuitry itself. The amplification circuit wasn’t working very well or consistently despite it working before.</li>
+          <li>With little time left to add more to our robot and test it, we weren’t confident in our treasure detection. As a result, our decision to not include treasure detection in our final robot design was our way to prioritize overall accuracy.</li>
+        </ul>
+
+
+        <h2>Final Robot Design</h2>
+        <h4>Line Sensors</h4>
+        <ul>
+          <li>We have a total of 4 line sensors: 2 for the front, 2 for the side</li>
+          <li>The 2 front sensors are close together to detect the line and implement line following.</li>
+          <li>The 2 side sensors are our wide sensors for intersection detection.</li>
+          <li>Initially, we used analog pins for the line sensors. However, we began to run out of available pins. So, we decided to use Schmitt triggers instead.</li>
+          <li>The Schmitt triggers we built were inverting Schmitt triggers. We decided to inverting because the non-inverting version required extra circuitry for a reference voltage.
+          <br>
+          <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/schmitt_trigger_schem.PNG?raw=true" height="300" />
+          </li>
+        </ul>
+
+        <h4>Wall Sensors</h4>
+        <ul>
+          <li>We have a total of 3 wall sensors: 1 mid-range for the front, 2 short-range for the side</li>
+          <li>Our decision for which range sensors to use was based on our measurements from milestone 2:
+            <br>
+            <table style="width:50%">
+                  <tr>
+                    <th>IR Sensor</th>
+                    <th>Distance</th> 
+                    <th>Arduino Reading</th>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>2"</td>
+                    <td>1000+</td>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>6"</td>
+                    <td>500 - 550</td>
+                  </tr>
+                  <tr>
+                    <td>Long Range</td>
+                    <td>12"</td>
+                    <td>370 - 380</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>2"</td>
+                    <td>620 - 630</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>6"</td>
+                    <td>310 - 330</td>
+                  </tr>
+                  <tr>
+                    <td>Regular</td>
+                    <td>12"</td>
+                    <td>170 - 190</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>2"</td>
+                    <td>390 - 405</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>6"</td>
+                    <td>130 - 170</td>
+                  </tr>
+                  <tr>
+                    <td>Short Range</td>
+                    <td>12"</td>
+                    <td>60 - 90</td>
+                  </tr>                   
+                </table>
+          </li>
+          <li>Before, we used Schmitt triggers for the wall sensors. However, our range of detection wasn’t very good. Therefore, we switched the line and wall sensors. Now, the line sensors used Schmitt triggers and the wall sensors used analog pins.</li>
+        </ul>
+
+        <h4>Other</h4>
+        <ul>
+          <li>Our final robot has its chassis base very close to the ground in order to have the center of gravity close to the ground as well. With our large wheels, we believed this to be the best way to structure our robot.</li>
+          <li>We chose larger wheels to maximize distance travelled per servo rotation</li>
+          <li>Circuitry:
+            <li>We designed a <a href="https://github.com/sk2282/ECE3400_Team8/tree/master/PCB" title="PCB Diagrams">PCB</a> for our robot, but we decided against using it because our circuit design changed</li>
+            <li>As an alternative, we created a protoboard. However, we realized our treasure detection circuit was incorrect (before we decided to not include treasure detection), so we decided to use our small breadboard until everything was finalized.</li>
+            <li>We did create a final protoboard, but we ran out of time to include it on our robot. Since the breadboard worked, we didn’t want to risk messing up connecting the robot too close to the competition.</li>
+          </li>
+          <li>We also assembled a base-station for our VGA display. We mounted the FPGA, Arduino, and breadboard on a small piece of wood.</li>
+        </ul>
+
+        <h4>Final System</h4>
+        <h5>BB-8</h5>
+        <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/robot.jpg?raw=true" height="300" />
+        <br>
+        Front:<br>
+        <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/robot_front.jpg?raw=true" height="300" />
+        <br>
+        Side:<br>
+        <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/robot_side.jpg?raw=true" height="300" />
+        <br>
+        Top:<br>
+        <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/robot_top.jpg?raw=true" height="300" />
+        <br>
+        Base Station:<br>
+        <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Final/basestation.jpg?raw=true" height="300" />
+        
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>

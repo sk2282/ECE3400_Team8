@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+    .jumbotron { 
+        background-color: #000000; /* Black */
+        background-image: url(https://i.imgur.com/anWbK48.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        color: #FFFB00; /* Yellow */
+        height: 100vh;
+        padding: 100px 25px;
+        align-items: center;
+    }
+    
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    
+    .bg-blk {
+        background-color: #000000;
+    }
+    
+    .txt-white {
+        color: #fff;
+    }
+    
+    .txt-yellow {
+        color: #FFFB00;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #FFFB00 !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #000 !important;
+        background-color: #FFFB00 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #FFFB00 !important;
+    }
+
+    header .glyphicon {
+        font-size: 20px;
+        margin-bottom: 0px;
+        color: #FFFB00;
+        background-color: transparent;
+    }
+    
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #FFFB00;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+      font-weight:bold;
+      cursor: url(https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/General/LightSaber_Blue.cur?raw=true), auto;
+    }
+
+    
+  </style>
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#myPage">
+            <span class="glyphicon glyphicon-king"></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/">HOME</a></li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">MILESTONES
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone1">Milestone 1</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone2">Milestone 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone3">Milestone 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/milestone4">Milestone 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LABS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab2">Lab 2</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab3">Lab 3</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/lab4">Lab 4</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LINKS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu bg-blk">
+                <li><a href="https://github.com/sk2282/ECE3400_Team8">GitHub</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/minutes">Meeting Minutes</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/ethics">Ethics Homework</a></li>
+                <li><a href="https://sk2282.github.io/ECE3400_Team8/cost">Robot Cost</a></li>
+                <li><a href="https://www.sparkfun.com/products/9453">Line Sensor Info</a></li>
+                <li><a href="https://www.fairchildsemi.com/datasheets/LM/LM358A.pdf">Op Amp Data Sheet</a></li>
+              </ul>
+            </li> 
+
+            <li><a href="https://sk2282.github.io/ECE3400_Team8/final">DESIGN</a></li>          
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  
+    <!--TITLE-->
+    <div id="myPage" class="jumbotron text-center">
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+      <!--<h1>LAB</h1> -->
+      <p><i>MICROCONTROLLERS</i></p> 
+      <div class="container">
+          <header class="container-fluid text-center">
+            <a href="#content" title="Enter">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+            </a> 
+          </header>
+      </div>
+    </div>
+    
+    <!--THIS IS WHERE THE TEXT WILL GO-->
+    <div id="content" class="container-fluid bg-blk txt-white">
+      <div class="row">
+
+        <!--start-->
+        <h4>Objective:</h4>
+          The objective of this lab was to learn how to use Arduino Uno and Arduino IDE by implementing simple tasks. By the end we had a basic robot that could autonomously move back and forth and spin in place.
+
+          <h4>Team Division:</h4>
+            <ul>
+            <li>Meghan Chen, Serena Krech, Alice Song</li>
+            <li>Rohit Krishnakumar, Victoria Tu, Michael Yee</li>
+            </ul>
+
+          Materials used:
+            <ul>
+              <li>1 Arduino Uno</li>
+              <li>1 USB A/B cable</li>
+              <li>1 Continuous rotation servo</li>
+              <li>1 blue LED (could be any visible color)</li>
+              <li>1 Potentiometer</li>
+              <li>Several resistors (kΩ range)</li>
+              <li>1 Solderless breadboard</li>
+            </ul>
+
+          <h4>Procedure:</h4>
+            <ol>
+              <li>Install the Arduino IDE</li>
+              <li>Test the built-in blink sketch</li>
+              <li>Modify the blink sketch to blink an external LED</li>
+              <li>Add a potentiometer to control brightness of the external LED</li>
+              <li>Check the duty cycle on oscilloscope</li>
+              <li>Use the potentiometer to control a continuous rotation servo motor</li>
+              <li>Assemble a robot and program it to run autonomously</li>
+            </ol>
+
+          <h6>1. Install the Arduino IDE:</h6>
+            <ul>
+              <li>Before the lab, each of us downloaded <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> to our laptops.</li>
+              <li>We read the documentation for the <a href="http://www.parallax.com/downloads/continuous-rotation-servo-documentation">Parallax Continuous Rotation Servo</a> and the <a href="http://arduino.cc/en/Reference/HomePage">Arduino Reference pages</a> for additional help.
+              </li>
+            </ul>
+
+          <h6>2. Testing the Built-in Blink Sketch:</h6>
+            <ul>
+              <li>We tested the blink example code provided by the Arduino IDE (File > Examples > 1.Basics > Blink) to <a href="https://youtu.be/fLsoTSbzcxY">test the internal LED</a>.  
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/blink.JPG?raw=true" height="300" />
+              </li>
+            </ul>
+
+          <h6>3. Testing Arduino Digital I/O Pins:</h6>
+            <ul>
+              <li>We modified the sample internal blink code to <a href="https://youtu.be/SOBKV8ZrKtU">blink the external blue LED</a>.</li>
+
+              <li>For each digital pin on the Arduino, we then connected a resistor and the blue LED in series in order to be sure that each pin was functional. The LED was connected in series with a resistor to control the current and protect the board.  
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/blue_LED.JPG?raw=true" height="300" />
+              </li>
+            </ul>
+
+          <h6>4. Reading Potentiometer Using Serial Communication:</h6>
+            <ul>
+              <li>We tested the serial communication between the Arduino and the laptop by inserting a Serial.begin(9600) command in the setup function and multiple Serial.println commands in the loop function.
+              </li>
+
+              <li>We then added a potentiometer to <a href="https://youtu.be/141hdDL86oY">control the brightness of the LED</a> by reading an analog input from A0. 
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/serial_monitor.PNG?raw=true" height="300" />
+              </li>
+            </ul>
+
+          <h6>5. Oscilloscope Reading of Potentiometer-Controlled LED Circuit:</h6>
+            <ul>
+              <li>We hooked up the circuit to an oscilloscope to see the frequency and <a href="https://youtu.be/mmyfeO612Gs">duty cycles</a> of the signal as the potentiometer changed.
+              </li>
+            </ul>
+
+          <h6>6. Potentiometer-Controlled Servo:</h6>
+            <ul>
+              <li>We then edited the code to <a href="https://youtu.be/uiUPPhVC5jA">control the servo</a> with the potentiometer.  
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/Servo_setup.JPG?raw=true" height="300" />
+              </li>
+            </ul>
+
+          <h6>7. Robot Demo:</h6>
+            <ul>
+              <li><a href="https://youtu.be/NYUtKrzdNKc">Our robot was programmed to turn, move forward, and move backward autonomously</a> to simulate movements it would do in the maze. </li>
+              <li>Our battery pack wasn’t charged, so we had our Arduino connected to a laptop, which only served as a power source.  
+              <br>
+              <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab1/assembled_robot.png?raw=true" height="300" />
+              </li>
+            </ul>
+
+      </div>
+    </div>
+
+
+    
+    <footer class="container-fluid text-center bg-blk txt-white">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Theme By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+    </footer>
+
+    <!-- SMOOTH SCROLL -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage'], header a[href='#content']").on('click', function(event) {
+
+         // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
+    </script>
+    
+  </body>
+  
+</html>
