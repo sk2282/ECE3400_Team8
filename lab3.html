@@ -183,7 +183,7 @@
             <li>Modify code to change grid color depending from the two switches</li>
           </ol>
 
-        <h6>1. Download example code on the FPGA:</h6>
+        <h5>1. Download example code on the FPGA:</h5>
           <ul>
             <li>Used VGA connector to connect the FPGA GPIO pins to the VGA switch</li>
             <li>Example code showed green screen on monitor and flashed green LED
@@ -199,7 +199,7 @@
           </ul>
 
 
-        <h6>2. Modify code to display a 2x2 grid:</h6>
+        <h5>2. Modify code to display a 2x2 grid:</h5>
           <ul>
             <li>Created a 2x2 register array with each value as 8 bits called grid_array which stores the colors</li>
             <li>Check which grid a pixel is in and assign the grid whichever color corresponds to it in grid_array</li>
@@ -225,7 +225,7 @@
             <li>Set PIXEL_COLOR to background color if pixel is not within the 2x2 grids</li>
           </ul>
 
-        <h6>3. Modify code to change grid color from the two switches:</h6>
+        <h5>3. Modify code to change grid color from the two switches:</h5>
             <ul>
               <li>Use highlighted_x and highlighted_y to modify the colors in grid_array
 
@@ -314,7 +314,7 @@
             <li>Make a tune with at least three frequencies that plays when you receive a done signal from the Arduino</li>
           </ol>
 
-        <h6>1. Generate and play a square wave of a desired frequency</h6>
+        <h5>1. Generate and play a square wave of a desired frequency</h5>
           <ul>
             <li>This was done by using one GPIO pin. We toggled this pin high and low (0 and 1) based on a clock input. We chose to to create a 1kHz Square wave. The FPGA’s clock runs at 50MHz and the example code showed us how to set up a 25MHz clock by toggling a variable every other time. We used the 25MHz clock and used a clock divider to get our desired frequency and set up a 1kHz clock.
 
@@ -348,7 +348,7 @@
 
           </ul>
 
-        <h6>2. Generate a more complicated waveform and play sound using the 8-bit DAC</h6>
+        <h5>2. Generate a more complicated waveform and play sound using the 8-bit DAC</h5>
           <ul>
             <li>For a more complicated waveform, we chose to make a 1kHz  triangle wave. To do this we set up an 8 bit output signal and started at 0. Then when we reached a peak, we decremented back to zero and started again. The code and waveform for this is pictured below. 
 
@@ -394,7 +394,7 @@
             <li>This voltage is connected to the input to the audio jack, which  in turn makes the speakers play.</li>
           </ul>
 
-        <h6>3. Turn on/off your sound with an enable signal</h6>
+        <h5>3. Turn on/off your sound with an enable signal</h5>
           <ul>
             <li>The FPGA reads in the signal from the Arduino in the input pin GPIO_0_IN[0], polling every second.  If GPIO_0_IN[0] is HIGH, the start tone arpeggio plays. </li> 
 
@@ -442,7 +442,7 @@
             </li>
           </ul>
 
-        <h6>4. Make a tune with at least three frequencies that plays when you receive a done signal from the Arduino</h6>
+        <h5>4. Make a tune with at least three frequencies that plays when you receive a done signal from the Arduino</h5>
           <ul>
             <li>We made an arpeggio by generating a sine wave in matlab and sampling it at different rates with different clock cycles (1000, 1250, and 1500 Hz) and <a href="https://youtu.be/WXv8SHkbqRc">played each tone for one second each</a>.  
             <br>

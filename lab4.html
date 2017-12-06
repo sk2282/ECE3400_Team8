@@ -187,20 +187,20 @@
           <li>Modify code to send new data</li>
         </ol>           
 
-        <h6>1. Download the RF24 Arduino library add to Arduino library directory</h6>
-        <h6>2. Download Getting Started Sketch from the course repository and replaced Getting Started Sketch from RF24 library</h6>
-        <h6>3. Changed identifier numbers for 2 pipes based on our team (22, 23)</h6>
+        <h5>1. Download the RF24 Arduino library add to Arduino library directory</h5>
+        <h5>2. Download Getting Started Sketch from the course repository and replaced Getting Started Sketch from RF24 library</h5>
+        <h5>3. Changed identifier numbers for 2 pipes based on our team (22, 23)</h5>
           <ul>
             <li>Used formula from lab4 website page 2(3D+N)+X</li>
             <li>Set the channel numbers for our team by modifying the Arduino code</li>          
           </ul>
-        <h6>4. Programmed both Arduino boards with the Getting Started example</h6>
+        <h5>4. Programmed both Arduino boards with the Getting Started example</h5>
           <ul>
             <li>Plug both Arduinos to the laptop</li>
             <li>Select one Arduino to be the transmitter by typing “T” in the serial monitor</li>
             <li>Switched between the serial monitors of each Arduino to see that one was receiving what the other was transmitting</li>
           </ul>
-        <h6>5. Modify code to send the maze as a single packet</h6>
+        <h5>5. Modify code to send the maze as a single packet</h5>
           <ul>
             <li>Defined the maze
               <pre>
@@ -264,7 +264,7 @@
             <img src="https://github.com/sk2282/ECE3400_Team8/blob/master/pictures/Lab4/ReceiveWholeMaze.png?raw=true" height="100" />
             <li>The RFK library has an Auto-ACK feature</li>
           </ul>
-      <h6>6. Modify code to send new data</h6>
+      <h5>6. Modify code to send new data</h5>
       <ul>
         <li>Send 3 pieces of information: x-coordinate, y-coordinate, state of current position</li>
         <li>Maze is 4x5, so we define the orientation so that the x-coordinate needs 3 bits, and the y-coordinate needs 2 bits.</li>
@@ -344,7 +344,7 @@
         <li>Mark explored territory</li>
       </ol>
 
-    <h6>1. Make grid from lab 3 bigger</h6>
+    <h5>1. Make grid from lab 3 bigger</h5>
       <ul>
           <li>For this step we needed to scale up what was previously written in Lab 3. </li>
           <li>To do so, we extended the size of our color-storing grid_array to be 4 by 5 bits. </li> 
@@ -352,7 +352,7 @@
           previous lab’s implementation individually assigned data to grid squares and was non-scalable.</li>
       </ul>
 
-    <h6>2. Receive packets from the Arduino</h6>
+    <h5>2. Receive packets from the Arduino</h5>
       <ul>
 
           <li>The Radio team received packets in 7 bits. We chose to use parallel communication for this lab for simplicity.</li> 
@@ -368,7 +368,7 @@
 
       </ul>
 
-    <h6>3. Highlight the robots current location based on packet information</h6>
+    <h5>3. Highlight the robots current location based on packet information</h5>
       <ul>
           <li>In order to implement this, we used two for loops to check every square of the array. </li>
           <li>The output from the Arduino was sent to GPIO pins that stored the current x and y coordinates. </li>
@@ -418,7 +418,7 @@
           </li>
       </ul>
 
-    <h6>4. Mark explored territory</h6>
+    <h5>4. Mark explored territory</h5>
       <ul>
           <li>We created an array that stored whether or not we had already visited the 
           coordinates corresponding to the coordinates in the grid_array, 

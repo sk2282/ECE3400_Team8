@@ -186,13 +186,13 @@
             <li>Tested mic at different distances</li>
           </ol>
 
-        <h6>1. Read Over FFT Library:</h6>
+        <h5>1. Read Over FFT Library:</h5>
           <ul>
             <li>We read <a href="http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf">documentation</a> about the FFT library</li>
             <li>We used fft_adc_serial as an example to see how the ADC worked as well as fourier transforms</li>
           </ul>
 
-        <h6>2. Tested Example Code fft_adc_serial:</h6>
+        <h5>2. Tested Example Code fft_adc_serial:</h5>
           <ul>
             <li>Initially, we ran the code by using just the function generator and Arduino without the microphone  
             <br>
@@ -220,7 +220,7 @@
             <li>The first few points were disregarded since they were the exact same value for all frequency values</li>
           </ul>
 
-        <h6>3. Testing with Microphone #1:</h6>
+        <h5>3. Testing with Microphone #1:</h5>
           <ul>
             <li>We then built a circuit to connect the microphone to the Arduino</li>
             <li>We tested the FFT with a single microphone without any amplifying</li>
@@ -233,7 +233,7 @@
             <li>We also tested the microphone by clapping to see if the oscilloscope output reflected the change in sound</li>
           </ul>
 
-        <h6>4. Building Amplifier #1:</h6>
+        <h5>4. Building Amplifier #1:</h5>
           <ul>
             <li>We first attempted to build a simple non-inverting amplifier for our microphone</li>
             <li>We used resistance values of 1000Ω and 10kΩ in order to achieve a gain of 10</li>
@@ -241,7 +241,7 @@
             <li>Our results were surprising because we did not see a change in the output</li>
           </ul>
 
-        <h6>5. Using New Microphone:</h6>
+        <h5>5. Using New Microphone:</h5>
           <ul>
             <li>After attempting to build our own amplifier, we tried using <a href="https://www.adafruit.com/product/1063">Adafruit’s Electret Microphone Amplifier with Adjustable Gain.</a> From the <a href="https://cdn-shop.adafruit.com/datasheets/MAX4465-MAX4469.pdf">datasheet</a> we learned that the board had a small trimmer potentiometer that we could adjust using a screwdriver. The potentiometer could adjust the gain from 25 times the original up to 125 times the original. The circuit that supports the op amp can be seen below. 
             <br>
@@ -261,7 +261,7 @@
             </li>
           </ul>
 
-        <h6>6. Testing Microphone at Different Distances:</h6>
+        <h5>6. Testing Microphone at Different Distances:</h5>
           <ul>
             <li>We also tested our circuit by placing the microphone at different distances to see how it affected our results</li>
             <li>We noticed that the tone was detected correctly, but the amplitude was much smaller (refer to graph above)</li>
@@ -289,13 +289,13 @@
             <li>Plot output of FFT at different frequencies</li>
           </ol>
 
-        <h6>1. Read Over FFT Library:</h6>
+        <h5>1. Read Over FFT Library:</h5>
           <ul>
             <li>We read the documentation provided (refer to Audio Team)</li>
             <li>The provided code used the ADC and because we are using the treasure boards at high frequencies like 17kHz, we continued to use the ADC, as the analogRead() function would not be fast enough</li>
           </ul>
 
-        <h6>2. Tested FFT Output with Square Wave:</h6>
+        <h5>2. Tested FFT Output with Square Wave:</h5>
           <ul>
             <li>We used the function generator to create a 7 kHz square wave</li>
             <li>We connected the output of the function generator to an analog pin on the Arduino</li>
@@ -315,7 +315,7 @@
             <li>This data seemed reasonable and showed us that the fft was working</li>
           </ul>
 
-        <h6>3. Assemble Circuit with Phototransistor:</h6>
+        <h5>3. Assemble Circuit with Phototransistor:</h5>
           <ul>
             <li>We assembled the circuit as shown in the picture below on a breadboard using the Arduino 5V and ground, a phototransistor, and a 2000 ohm resistor  
             <br>
@@ -326,20 +326,20 @@
             <li>The phototransistor allows current to pass under light so the circuit is completed when an IR light shines upon it</li>
           </ul>
 
-        <h6>4. Test Frequency of IR LED on Treasure Board:</h6>
+        <h5>4. Test Frequency of IR LED on Treasure Board:</h5>
           <ul>
             <li>We used a screwdriver to manipulate the potentiometer on the treasure board</li>
             <li>We probed the treasure board and checked that the frequency output was actually changing with the potentiometer</li>
           </ul>
 
-        <h6>5. Test Phototransistor Circuit Output with Treasure Board IR LED:</h6>
+        <h5>5. Test Phototransistor Circuit Output with Treasure Board IR LED:</h5>
           <ul>
             <li>Using the oscilloscope we set the treasure board LED to 7 kHz</li>
             <li>We held the treasure board IR near the phototransistor</li>
             <li>We probed the circuit with the oscilloscope to <a href="https://youtu.be/5V0mCAM8lDY">view the output</a> as we vary the distance between the treasure board and the photoresistor.</li>
           </ul>
 
-        <h6>6. Connect Circuit to Arduino Pins and Use Given FFT Code:</h6>
+        <h5>6. Connect Circuit to Arduino Pins and Use Given FFT Code:</h5>
           <ul>
             <li>We connected the phototransistor circuit to the Arduino using analog pins</li>
             <li>We put a 300Ω resistor in the circuit to protect the Arduino pin</li>
@@ -347,14 +347,14 @@
             <li>We ran the provided fft sample code on the data the Arduino collected</li>
           </ul>
 
-        <h6>7. Plot Output of FFT for Treasure Board at Different Frequencies:</h6>
+        <h5>7. Plot Output of FFT for Treasure Board at Different Frequencies:</h5>
           <ul>
             <li>We repeated the previous step but set the treasure board IR to 12 kHz and 17 kHz as well</li>
             <li>We collected the data outputted from the FFT for each frequency and plotted it on the same graph:</li>
             <li>This data shows discernible peaks for each frequency making us confident that our robot will be able to distinguish between the different treasures</li>
           </ul>
 
-        <h6>8. Made Non-Inverting Amplifier Circuit</h6>
+        <h5>8. Made Non-Inverting Amplifier Circuit</h5>
           <ul>
             <li>Since the raw phototransistor signal was weak when the treasure board was too far, we had to build an amplifier circuit.</li>
             <li>We built a simple non-inverting op-amp circuit:  
